@@ -1,6 +1,7 @@
 [
     {
         "categoria": "IT",
+        "url": "../escuelas_iade_it/index.html",
         "cursos": [
             {
                 "nombre": "Transformación Digital",

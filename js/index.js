@@ -62,6 +62,9 @@ const categories = datos;
 const categorias = categories.map( (item) => {
     return item.categoria;
 })
+const urls = categories.map( (item) => {
+    return item.url;
+})
 
 // Categories Iteration //
 categorias.forEach(function(item, index) {
@@ -76,7 +79,7 @@ categorias.forEach(function(item, index) {
     const a = document.createElement("a");
     a.classList.add("dropdown-item");
     a.classList.add(`categoria${index}`)
-    a.setAttribute("href", ".");
+    a.setAttribute("href", urls[index]);
     a.textContent = `${item}`;
     a.style = 'position: relative';
     // br //
