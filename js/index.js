@@ -40,7 +40,6 @@ function hideModal() {
 const containerScroll = document.querySelector('.container-scroll');
 
 // Utilizando AJAX para mostrar datos desde JSON con Promise //
-
 let capturarDatos = new Promise((resolve, reject) => {
 
     setTimeout(() => {
@@ -52,13 +51,14 @@ let capturarDatos = new Promise((resolve, reject) => {
                 dataType: 'json',
                 success: function (data) {
                     sessionStorage.setItem("data", JSON.stringify(data));
-                }
+                    console.log("Datos de JSON guardados en sessionStorage");
+                } 
             });
         });
         if(sessionStorage.getItem("data")) {
-            resolve(console.log("perfecto"));
+            resolve(console.log("Lectura de datos por AJAX completa"));
         } else {
-            reject(console.log("algo falló"));
+            reject(console.log("Algo falló en la lectura de datos en JSON"));
         }
     }, 1000);
 
@@ -82,10 +82,10 @@ setTimeout(() => {
     const categorias = categories.map( (item) => {
         return item.categoria;
     })
+    // Map para extraer "url" del json //
     const urls = categories.map( (item) => {
         return item.url;
     })
-
     // Categories Iteration //
     categorias.forEach(function(item, index) {
         // li //
@@ -93,7 +93,7 @@ setTimeout(() => {
         // imagen //
         const img = document.createElement("img");
         img.setAttribute('src', '../images/arrowright.svg');
-        img.setAttribute('alt', 'alt');
+        img.setAttribute('alt', 'arrow');
         img.style = 'position: absolute; right: 10px; top: 13px';
         // a //
         const a = document.createElement("a");
@@ -320,4 +320,70 @@ setTimeout(() => {
             <button class='btn btn-dark'>Ver todos los cursos</button>
         </div> `
     }
+
+    // ESCUELAS (EN MAIN) //
+    categorias.forEach((item, index) => {
+        // DOM Principal //
+        const containerEscuelas = document.querySelector(".container-escuelas");
+        // Creando Instancias //
+        const a = document.createElement("a");
+        a.setAttribute("href", urls[index]);
+        const escuela = document.createElement("div");
+        escuela.classList.add("escuela");
+        const p = document.createElement("p");
+        p.textContent = item;
+        // Vincular DOM //
+        escuela.appendChild(p);
+        a.appendChild(escuela);
+        containerEscuelas.appendChild(a);
+    });
+
 }, 1050)
+
+/////----- / Navbar -----/////
+
+/////----- Main -----/////
+
+// PIE DE PORTADA //
+// Creando array con datos de iconos e información //
+const informacionPieDePortada = [
+    {
+        imagen: "./images/diploma.png",
+        informacion: "Certificacion Nacional e Internacional"
+    },
+    {
+        imagen: "./images/university.png",
+        informacion: "Avalados por España y Estados Unidos"
+    },
+    {
+        imagen: "./images/campus.png",
+        informacion: "Campus virtual para tu enseñanza"
+    },
+    {
+        imagen: "./images/horario.png",
+        informacion: "Horarios flexibles a tu ritmo"
+    }
+];
+// Buscando datos para imprimir por pantalla mediante DOM //
+informacionPieDePortada.map((item) => {
+    // DOM Principal //
+    const pieDePortada = document.querySelector(".pie-de-portada");
+    // Creando Instancias //
+    const card = document.createElement("div");
+    card.classList.add("card");
+    const icono = document.createElement("div");
+    icono.classList.add("icono");
+    const img = document.createElement("img");
+    img.setAttribute("src", item.imagen);
+    img.setAttribute("alt", "imagen_icono");
+    const informacion = document.createElement("div");
+    informacion.classList.add("informacion");
+    const h5 = document.createElement("h5");
+    h5.textContent = item.informacion;
+    // Vincular DOM //
+    informacion.appendChild(h5);
+    icono.appendChild(img);
+    card.appendChild(icono);
+    card.appendChild(informacion);
+    pieDePortada.appendChild(card);
+});

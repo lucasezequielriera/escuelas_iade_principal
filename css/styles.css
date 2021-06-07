@@ -553,7 +553,7 @@ body #slider-valoraciones .card-valoracion .left-part {
 body #slider-valoraciones .card-valoracion .left-part img {
   width: 100px;
   height: 100px;
-  border-radius: 900px;
+  border-radius: 100px;
 }
 body #slider-valoraciones .card-valoracion .right-part {
   width: 100%;
