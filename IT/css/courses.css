@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "system-ui";
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+  z-index: 0;
+}
+body #header .navbar {
+  box-shadow: 0px 0px 10px #bbbbbb;
+  padding: 3px;
+}
+body #header .navbar .container-fluid .navbar-brand img {
+  width: 80px;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
+  margin: 0px 5px;
+  align-self: center;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+  width: 700px;
+  height: 400px;
+  padding: 0px;
+  top: 50px;
+  box-shadow: 0px 0px 30px #878787;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown {
+  width: 700px;
+  height: 400px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown {
+  width: 200px;
+  height: 399px;
+  border-right: 1px solid grey;
+  overflow-x: hidden;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll {
+  overflow-x: scroll;
+  width: 100%;
+  height: 396px;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll li {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll li .dropdown-item {
+  width: 98%;
+  height: 50px;
+  background-color: whitesmoke;
+  margin: 0 auto;
+  margin-top: 2px;
+  padding: 6px 5px;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll li .dropdown-item span {
+  font-size: 10px;
+  font-weight: 300;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll li .dropdown-item:hover {
+  background-color: #c00000;
+  color: white;
+  transform: translateX(10px);
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown {
+  width: calc(700px - 200px);
+  height: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 98%;
+  height: 79%;
+  border: 1px solid #d5d5d5;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul h6 {
+  font-weight: 700;
+  text-decoration: underline;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul a {
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0px 1px;
+  font-weight: 300;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul a li {
+  border: 1px solid transparent;
+  margin: 0px 0px;
+  padding: 0px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul a li:hover {
+  color: #b60000;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top .button-verCursos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top .button-verCursos button {
+  width: 100%;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-bottom {
+  width: 98%;
+  height: 18%;
+  background-color: #c00000;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-bottom .container-images {
+  display: flex;
+  flex-flow: row nowrap;
+  animation: miniSlider 30s infinite alternate linear;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-bottom .container-images img {
+  width: 30px;
+  height: 30px;
+  margin: 20px 10px;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:first-child a {
+  padding-left: 0px;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:last-child a {
+  padding: 7.5px 15px;
+  text-decoration: bold;
+  margin-left: 7.5px;
+}
+body #header .navbar .container-fluid .navbar-collapse form {
+  white-space: nowrap;
+  transition: all 0.5s;
+}
+body #main {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 56.66px);
+  z-index: 0;
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body #main .left-part {
+  width: 70%;
+  height: 100%;
+  border: 1px solid red;
+}
+body #main .right-part {
+  position: relative;
+  width: 360px;
+  height: 100%;
+}
+body #main .right-part .container-form {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.568);
+  width: 360px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.397);
+}
+body #main .right-part .container-form .imagen-curso {
+  width: 100%;
+  height: 40%;
+}
+body #main .right-part .container-form .imagen-curso img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+body #main .right-part .container-form .precio {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 10px;
+}
+body #main .right-part .container-form .precio .actual {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+body #main .right-part .container-form .precio .actual h1 {
+  margin-left: 5px;
+  margin: 0px;
+  font-weight: 600;
+}
+body #main .right-part .container-form .precio .actual h5 {
+  margin-left: 10px;
+}
+body #main .right-part .container-form .precio .anterior {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body #main .right-part .container-form .precio .anterior p {
+  margin: 0px;
+  margin-left: 55px;
+  font-weight: 300;
+  color: red;
+}
+body #main .right-part .container-form .precio .anterior p span {
+  text-decoration: line-through;
+}
+body #main .right-part .container-form .botones {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+body #main .right-part .container-form .botones .comprar {
+  padding: 3px 30px;
+  margin-bottom: 5px;
+}
+body #main .right-part .container-form .botones .cesta {
+  padding: 3px 30px;
+}
+body #main .right-part .container-form .informacion-extra {
+  width: 90%;
+  margin: auto;
+  height: 200px;
+  margin-top: 15px;
+}
+body #main .right-part .container-form .informacion-extra h6 {
+  font-weight: 600;
+}
+body #main .right-part .container-form .informacion-extra p {
+  margin: 0px;
+}
+
+@keyframes miniSlider {
+  from {
+    transform: translateX(400px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+/*# sourceMappingURL=courses.css.map */
