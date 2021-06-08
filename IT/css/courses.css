@@ -228,30 +228,33 @@ body #main .right-part .container-form .precio .anterior {
   width: 95%;
   margin: auto;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
 }
 body #main .right-part .container-form .precio .anterior p {
   margin: 0px;
   margin-left: 55px;
   font-weight: 300;
-  color: red;
 }
 body #main .right-part .container-form .precio .anterior p span {
   text-decoration: line-through;
+}
+body #main .right-part .container-form .precio .anterior p:last-child {
+  color: red;
+  font-weight: 400;
 }
 body #main .right-part .container-form .botones {
   display: flex;
   flex-flow: column nowrap;
   width: 90%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 body #main .right-part .container-form .botones .comprar {
-  padding: 3px 30px;
+  padding: 5px 30px;
   margin-bottom: 5px;
 }
 body #main .right-part .container-form .botones .cesta {
-  padding: 3px 30px;
+  padding: 5px 30px;
 }
 body #main .right-part .container-form .informacion-extra {
   width: 90%;

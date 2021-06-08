@@ -238,15 +238,18 @@ body {
                         width: 95%;
                         margin: auto;
                         display: flex;
-                        flex-flow: row nowrap;
+                        flex-flow: column nowrap;
                         p {
                             margin: 0px;
                             margin-left: 55px;
                             font-weight: 300;
-                            color: red;
                             span {
                                 text-decoration: line-through;
                             }
+                        }
+                        p:last-child {
+                            color: red;
+                            font-weight: 400;
                         }
                     }
                 }
@@ -255,13 +258,13 @@ body {
                     flex-flow: column nowrap;
                     width: 90%;
                     margin: 0 auto;
-                    margin-top: 20px;
+                    margin-top: 10px;
                     .comprar{
-                        padding: 3px 30px;
+                        padding: 5px 30px;
                         margin-bottom: 5px;
                     }
                     .cesta{
-                        padding: 3px 30px;
+                        padding: 5px 30px;
                     }
                 }
                 .informacion-extra {
