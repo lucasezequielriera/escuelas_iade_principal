@@ -73,6 +73,19 @@
                             aria-label="Search">
                         <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
                     </form>
+                    <!-- Cart -->
+                    <button class="btn btn-dark btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img src="../images/carrito.png" width="20px">
+                    </button>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Este es tu carrito de compras</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <p>Por ahora no tienes ningún producto en tu carrito</p>
+                        </div>
+                    </div>
+                    <!-- / Cart -->
                 </div>
             </div>
         </nav>

@@ -15,6 +15,10 @@ body {
   position: relative;
   z-index: 0;
 }
+body #header {
+  width: 100%;
+  height: 56.66px;
+}
 body #header .navbar {
   box-shadow: 0px 0px 10px #bbbbbb;
   padding: 3px;
@@ -160,14 +164,18 @@ body #header .navbar .container-fluid .navbar-collapse form {
   white-space: nowrap;
   transition: all 0.5s;
 }
+body #header .navbar .container-fluid .navbar-collapse .btn-cart {
+  margin-left: 5px;
+}
 body #main {
   display: flex;
   flex-flow: column nowrap;
   max-width: 1200px;
   margin: 0 auto;
-  height: calc(100vh - 56.66px);
+  height: calc(100% - 56.66px);
   z-index: 0;
   margin-top: 30px;
+  margin-bottom: 30px;
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -175,7 +183,112 @@ body #main {
 body #main .left-part {
   width: 70%;
   height: 100%;
-  border: 1px solid red;
+}
+body #main .left-part .nav-curso .breadcrumb .breadcrumb-item {
+  font-size: 14px;
+  font-weight: 500;
+}
+body #main .left-part .nav-curso .breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+  color: #e90000;
+  transition: all 0.2s;
+}
+body #main .left-part .nav-curso .breadcrumb .breadcrumb-item a:hover {
+  color: #ff6464;
+}
+body #main .left-part .titulo-curso h1 {
+  font-weight: 600;
+}
+body #main .left-part .subtitulo-curso h2 {
+  font-size: 15px;
+  font-weight: 300;
+  color: #494949;
+}
+body #main .left-part .subtitulo-curso .iconos {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #242424;
+  padding: 10px 0px;
+}
+body #main .left-part .subtitulo-curso .iconos p {
+  font-size: 13px;
+  margin: 0px 15px;
+  color: white;
+  font-weight: 500;
+}
+body #main .left-part .subtitulo-curso .iconos p img {
+  width: 15px;
+  vertical-align: sub;
+}
+body #main .left-part .container-profesor {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 50px;
+}
+body #main .left-part .container-profesor h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-profesor .card-profesor {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 15px;
+}
+body #main .left-part .container-profesor .card-profesor .imagen-profesor {
+  width: 100px;
+  height: 100px;
+  border-radius: 90px;
+  box-shadow: 0px 0px 10px #969696;
+  background-image: url("../images/persona.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body #main .left-part .container-profesor .card-profesor .informacion-profesor {
+  margin-left: 10px;
+}
+body #main .left-part .container-profesor .card-profesor .informacion-profesor p {
+  margin: 0px;
+}
+body #main .left-part .container-profesor .card-profesor .informacion-profesor p img {
+  width: 15px;
+  vertical-align: text-bottom;
+}
+body #main .left-part .container-profesor .card-profesor .informacion-profesor p:first-child {
+  font-size: 20px;
+  font-weight: 500;
+}
+body #main .left-part .container-profesor .card-profesor .informacion-profesor p:last-child {
+  margin-top: 10px;
+}
+body #main .left-part .container-requisitos {
+  margin-top: 50px;
+}
+body #main .left-part .container-requisitos h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-requisitos ul li {
+  color: #414141;
+}
+body #main .left-part .container-contenido {
+  margin-top: 50px;
+}
+body #main .left-part .container-contenido h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-contenido .accordion {
+  margin-top: 15px;
+}
+body #main .left-part .container-contenido .accordion .accordion-item {
+  display: flex;
+  flex-flow: column nowrap;
+}
+body #main .left-part .container-contenido .accordion .accordion-item .accordion-header .accordion-button {
+  font-weight: 600;
+  font-size: 15px;
 }
 body #main .right-part {
   position: relative;
@@ -262,11 +375,70 @@ body #main .right-part .container-form .informacion-extra {
   height: 200px;
   margin-top: 15px;
 }
-body #main .right-part .container-form .informacion-extra h6 {
+body #main .right-part .container-form .informacion-extra h5 {
   font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 17px;
 }
 body #main .right-part .container-form .informacion-extra p {
   margin: 0px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+body #main .right-part .container-form .informacion-extra p img {
+  width: 15px;
+  margin-right: 5px;
+}
+body #main .right-part .container-form .informacion-extra p:last-child {
+  margin-bottom: 0px;
+}
+body #footer {
+  width: 100%;
+  height: 50px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body #footer .left-part {
+  width: 48%;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body #footer .left-part p {
+  margin: 0px;
+  padding: 5px;
+}
+body #footer .left-part p a {
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #d30000;
+  transition: all 0.2s;
+}
+body #footer .left-part p a:hover {
+  background-color: whitesmoke;
+  color: #d30000;
+  border: 1px solid #d30000;
+}
+body #footer .right-part {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #footer .right-part p {
+  letter-spacing: 0px;
+  margin: 0px;
+}
+body #footer .right-part p span {
+  font-weight: 600;
 }
 
 @keyframes miniSlider {

@@ -15,6 +15,8 @@ body {
     position: relative;
     z-index: 0;
     #header {
+        width: 100%;
+        height: 56.66px;
         .navbar {
             box-shadow: 0px 0px 10px rgb(187, 187, 187);
             padding: 3px;
@@ -170,6 +172,9 @@ body {
                         white-space: nowrap;
                         transition: all .5s;
                     }
+                    .btn-cart {
+                        margin-left: 5px;
+                    }
                 }
             }
         }
@@ -179,16 +184,134 @@ body {
         flex-flow: column nowrap;
         max-width: 1200px;
         margin: 0 auto;
-        height: calc(100vh - 56.66px);
+        height: calc(100% - 56.66px);
         z-index: 0;
         margin-top: 30px;
+        margin-bottom: 30px;
         position: relative;
         display: flex;
         flex-flow: row nowrap;
         .left-part{
             width: 70%;
             height: 100%;
-            border: 1px solid red;
+            .nav-curso {
+                .breadcrumb {
+                    .breadcrumb-item {
+                        font-size: 14px;
+                        font-weight: 500;
+                        a {
+                            text-decoration: none;
+                            color: rgb(233, 0, 0);
+                            transition: all .2s;
+                        }
+                        a:hover {
+                            color: rgb(255, 100, 100);
+                        }
+                    }
+                }
+            }
+            .titulo-curso {
+                h1 {
+                    font-weight: 600;
+                }
+            }
+            .subtitulo-curso {
+                h2 {
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: rgb(73, 73, 73);
+                }
+                .iconos {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    background-color: rgb(36, 36, 36);
+                    padding: 10px 0px;
+                    p {
+                        font-size: 13px;
+                        margin: 0px 15px;
+                        color: white;
+                        font-weight: 500;
+                        img {
+                            width: 15px;
+                            vertical-align: sub;
+                        }
+                    }
+                }
+            }
+            .container-profesor{
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                margin-top: 50px;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                .card-profesor {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    margin-top: 15px;
+                    .imagen-profesor{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 90px;
+                        box-shadow: 0px 0px 10px rgb(150, 150, 150);
+                        background-image: url('../images/persona.jpeg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .informacion-profesor {
+                        margin-left: 10px;
+                        p {
+                            margin: 0px;
+                            img {
+                                width: 15px;
+                                vertical-align: text-bottom;
+                            }
+                        }
+                        p:first-child {
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                        p:last-child {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+            .container-requisitos {
+                margin-top: 50px;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                ul {
+                    li {
+                        color: rgb(65, 65, 65);
+                    }
+                }
+            }
+            .container-contenido {
+                margin-top: 50px;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                .accordion {
+                    margin-top: 15px;
+                    .accordion-item {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        .accordion-header {
+                            .accordion-button {
+                                font-weight: 600;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
         }
         .right-part{
             position: relative;
@@ -272,13 +395,73 @@ body {
                     margin: auto;
                     height: 200px;
                     margin-top: 15px;
-                    h6 {
+                    h5 {
                         font-weight: 600;
+                        margin-bottom: 10px;
+                        font-size: 17px;
                     }
                     p {
                         margin: 0px;
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                        img {
+                            width: 15px;
+                            margin-right: 5px;
+                        }
+                    }
+                    p:last-child {
+                        margin-bottom: 0px;
                     }
                 }
+            }
+        }
+    }
+    #footer {
+        width: 100%;
+        height: 50px;
+        background-color: whitesmoke;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        .left-part {
+            width: 48%;
+            height: 100%;
+            border-radius: 5px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            p {
+                margin: 0px;
+                padding: 5px;
+                a {
+                    padding: 5px 10px;
+                    text-decoration: none;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    color: rgb(211, 0, 0);
+                    transition: all .2s;
+                }
+                a:hover {
+                    background-color: whitesmoke;
+                    color: rgb(211, 0, 0);
+                    border: 1px solid rgb(211, 0, 0);
+                }
+            }
+            
+        }
+        .right-part {
+            width: 48%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                letter-spacing: 0px;
+                margin: 0px;
+                span {
+                    font-weight: 600;
+                } 
             }
         }
     }

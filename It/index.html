@@ -28,10 +28,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"> Cursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,6 +76,19 @@
                             aria-label="Search">
                         <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
                     </form>
+                    <!-- Cart -->
+                    <button class="btn btn-dark btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img src="./images/carrito.png" width="20px">
+                    </button>
+                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Este es tu carrito de compras</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body small">
+                            <p>Por ahora no tienes ningún producto en tu carrito</p>
+                        </div>
+                    </div>
+                    <!-- / Cart -->
                 </div>
             </div>
         </nav>
@@ -176,17 +189,13 @@
     </main>
 
     <footer id="footer">
-        <button class="btn btn-dark btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img src="./images/carrito.png" width="20px">
-            <span class="badge bg-danger">0</span></button>
-
-        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Este es tu carrito de compras</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body small">
-                <p>Por ahora no tienes ningún producto en tu carrito</p>
-            </div>
+        <div class="left-part">
+            <p><a href="#">Términos de Uso</a></p>
+            <p><a href="#">Preguntar Frecuentes</a></p>
+            <p><a href="#">Protección de Datos Personales</a></p>
+        </div>
+        <div class="right-part">
+            <p>All Right Reserved 2021 | Designed & Engineered by <span>Agrowd</span></p>
         </div>
     </footer>
 

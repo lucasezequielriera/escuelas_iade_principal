@@ -160,6 +160,9 @@ body #header .navbar .container-fluid .navbar-collapse form {
   white-space: nowrap;
   transition: all 0.5s;
 }
+body #header .navbar .container-fluid .navbar-collapse .btn-cart {
+  margin-left: 5px;
+}
 body #main {
   width: 100%;
   height: calc(100% - 56.66px);
