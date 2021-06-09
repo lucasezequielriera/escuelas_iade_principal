@@ -255,6 +255,7 @@ body #main .middle-part .card .icono {
   text-align: center;
   padding-top: 10px;
   margin-right: 2px;
+  overflow: hidden;
 }
 body #main .middle-part .card .icono img {
   width: 30px;

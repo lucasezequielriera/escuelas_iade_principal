@@ -307,8 +307,65 @@ body {
                             .accordion-button {
                                 font-weight: 600;
                                 font-size: 15px;
+                                background-color: transparent;
+                            }
+                            .accordion-button:focus {
+                                box-shadow: none;
+                            }
+                            .accordion-button:not(.collapsed) {
+                                background-color: transparent;
+                                color: black;
                             }
                         }
+                    }
+                }
+            }
+            .container-valoraciones {
+                margin-top: 50px;
+                width: 100%;
+                .card-puntaje {
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    margin-top: 15px;
+                    .puntaje {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        padding: 5px 15px;
+                        width: 20%;
+                        h1 {
+                            font-size: 60px;
+                            text-align: center;
+                            margin: 0px;
+                        }
+                        p {
+                            align-self: center;
+                            margin: 0px;
+                            img {
+                                width: 20px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .porcentaje {
+                        width: 70%;
+                        padding: 5px 10px;
+                        margin: auto;
+                        margin-top: 5px;
+                        --bs-gutter-x: 0rem;
+                        .barra-porcentaje {
+                            padding: 0px;
+                            margin-top: 2px;
+                        }
+                        .estrellas {
+                            padding: 0px;
+                            padding-left: 5px;
+                            text-align: center;
+                            img {
+                                width: 13px;
+                                vertical-align: super;
+                        }
+                    }
                     }
                 }
             }
@@ -319,7 +376,7 @@ body {
             height: 100%;
             .container-form {
                 position: fixed;
-                background-color: rgba(255, 255, 255, 0.568);
+                background-color: rgba(255, 255, 255, 0.952);
                 width: 360px;
                 height: 600px;
                 border-radius: 10px;

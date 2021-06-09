@@ -289,6 +289,63 @@ body #main .left-part .container-contenido .accordion .accordion-item {
 body #main .left-part .container-contenido .accordion .accordion-item .accordion-header .accordion-button {
   font-weight: 600;
   font-size: 15px;
+  background-color: transparent;
+}
+body #main .left-part .container-contenido .accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: none;
+}
+body #main .left-part .container-contenido .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: black;
+}
+body #main .left-part .container-valoraciones {
+  margin-top: 50px;
+  width: 100%;
+}
+body #main .left-part .container-valoraciones .card-puntaje {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 15px;
+}
+body #main .left-part .container-valoraciones .card-puntaje .puntaje {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5px 15px;
+  width: 20%;
+}
+body #main .left-part .container-valoraciones .card-puntaje .puntaje h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0px;
+}
+body #main .left-part .container-valoraciones .card-puntaje .puntaje p {
+  align-self: center;
+  margin: 0px;
+}
+body #main .left-part .container-valoraciones .card-puntaje .puntaje p img {
+  width: 20px;
+  text-align: center;
+}
+body #main .left-part .container-valoraciones .card-puntaje .porcentaje {
+  width: 70%;
+  padding: 5px 10px;
+  margin: auto;
+  margin-top: 5px;
+  --bs-gutter-x: 0rem;
+}
+body #main .left-part .container-valoraciones .card-puntaje .porcentaje .barra-porcentaje {
+  padding: 0px;
+  margin-top: 2px;
+}
+body #main .left-part .container-valoraciones .card-puntaje .porcentaje .estrellas {
+  padding: 0px;
+  padding-left: 5px;
+  text-align: center;
+}
+body #main .left-part .container-valoraciones .card-puntaje .porcentaje .estrellas img {
+  width: 13px;
+  vertical-align: super;
 }
 body #main .right-part {
   position: relative;
@@ -297,7 +354,7 @@ body #main .right-part {
 }
 body #main .right-part .container-form {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.568);
+  background-color: rgba(255, 255, 255, 0.952);
   width: 360px;
   height: 600px;
   border-radius: 10px;
