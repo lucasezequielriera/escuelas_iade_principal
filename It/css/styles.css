@@ -280,9 +280,9 @@ body #main .bottom-part {
   height: calc(50%);
   display: flex;
   flex-flow: row nowrap;
+  margin-top: 30px;
 }
 body #main .bottom-part .right-part {
-  display: flex;
   width: 100%;
   height: 100%;
 }
@@ -295,6 +295,7 @@ body #main .bottom-part .right-part .container-courses {
 }
 body #main .bottom-part .right-part .container-courses a {
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 body #main .bottom-part .right-part .container-courses a .course {
   border: 1px solid none;
