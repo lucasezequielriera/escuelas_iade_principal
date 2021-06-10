@@ -292,6 +292,14 @@ body {
                     }
                 }
             }
+            .container-descripcion {
+                margin-top: 50px;
+                ul {
+                    li {
+                        color: rgb(65, 65, 65);
+                    }
+                }
+            }
             .container-contenido {
                 margin-top: 50px;
                 h3 {
@@ -320,9 +328,31 @@ body {
                     }
                 }
             }
-            .container-valoraciones {
+            .container-certificaciones {
                 margin-top: 50px;
                 width: 100%;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                .card-certificaciones{
+                    margin-top: 15px;
+                    img {
+                        width: 80px;
+                        margin-right: 20px;
+                    }
+                    img:last-child {
+                        margin-right: 0px;
+                    }
+                }
+            }
+            .container-ranking {
+                margin-top: 50px;
+                width: 100%;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
                 .card-puntaje {
                     width: 100%;
                     display: flex;
@@ -366,6 +396,167 @@ body {
                                 vertical-align: super;
                         }
                     }
+                    }
+                }
+            }
+            .container-valoraciones {
+                width: 100%;
+                height: 100%;
+                margin-top: 15px;
+                hr {
+                    margin-top: 0px;
+                }
+                .card-valoracion {
+                    width: 100%;
+                    min-height: 120px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    .imagen {
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 90px;
+                        img {
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 90px;
+                            box-shadow: 0px 0px 10px rgb(163, 163, 163);
+                        }
+                    }
+                    .informacion {
+                        width: calc(100% - 110px);
+                        height: 100%;
+                        margin-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        h1 {
+                            font-size: 20px;
+                            margin: 0px;
+                        }
+                        .estrellas {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            img {
+                                width: 15px;
+                                height: 15px;
+                            }
+                            p {
+                                margin: 0px;
+                                margin-left: 5px;
+                                color: grey;
+                                font-weight: 300;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    .valoracion {
+                        width: 100%;
+                        height: 50%;
+                        margin-top: 15px;
+                        border-radius: 5px;
+                        padding: 2px 5px;
+                        overflow: hidden;
+                        p {
+                            overflow-x: scroll;
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .container-cursos-recomendados {
+                margin-top: 50px;
+                width: 100%;
+                height: 100%;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                .card-curso {
+                    width: 100%;
+                    height: 80px;
+                    margin-top: 15px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    .imagen {
+                        width: 83.8px;
+                        min-width: 83.8px;
+                        height: 100%;
+                        margin-right: 10px;
+                        // background-image: url('../images/criptomonedas.jpeg');
+                        // background-position: center;
+                        // background-repeat: no-repeat;
+                        // background-size: cover;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 3px;
+                        }
+                    }
+                    .titulo {
+                        width: 60%;
+                        height: 100%;
+                        margin-right: 10px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: space-around;
+                        p {
+                            font-weight: 400;
+                            font-size: 13px;
+                            margin: 0px;
+                            span {
+                                font-weight: 700;
+                            }
+                        }
+                        p:last-child {
+                            color: rgb(0, 148, 0);
+                            font-weight: 600;
+                        }
+                    }
+                    .valoracion {
+                        width: 10%;
+                        height: 100%;
+                        margin-right: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p {
+                            font-weight: 500;
+                            margin: 0px;
+                            img {
+                                margin-top: -2px;
+                            }
+                        }
+                    }
+                    .precio {
+                        width: 10%;
+                        height: 100%;
+                        margin-right: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-weight: 500;
+                            margin: 0px;
+                        }
+                    }
+                    .comprar-guardar {
+                        width: 10%;
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content:space-around;
+                        align-items: center;
+                        p{
+                            font-weight: 500;
+                            margin: 0px;
+                            img {
+                                border-radius: 90px;
+                                padding: 4px;
+                                text-align: center;
+                                width: 35px;
+                            }
+                        }
                     }
                 }
             }

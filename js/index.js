@@ -162,7 +162,7 @@ setTimeout(() => {
         topSection.innerHTML = `
         <ul>
             <h6>Publicidad y Marketing</h6>
-            <a href="."><li>Transformación Digital</li></a>
+            <a href="./IT/views/transformacion_digital.html"><li>Transformación Digital</li></a>
             <a href="."><li>Facebook Ads</li></a>
             <a href="."><li>Google Ads</li></a>
             <a href="."><li>Microsoft Office</li></a>

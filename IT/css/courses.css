@@ -272,6 +272,12 @@ body #main .left-part .container-requisitos h3 {
 body #main .left-part .container-requisitos ul li {
   color: #414141;
 }
+body #main .left-part .container-descripcion {
+  margin-top: 50px;
+}
+body #main .left-part .container-descripcion ul li {
+  color: #414141;
+}
 body #main .left-part .container-contenido {
   margin-top: 50px;
 }
@@ -298,54 +304,233 @@ body #main .left-part .container-contenido .accordion .accordion-item .accordion
   background-color: transparent;
   color: black;
 }
-body #main .left-part .container-valoraciones {
+body #main .left-part .container-certificaciones {
   margin-top: 50px;
   width: 100%;
 }
-body #main .left-part .container-valoraciones .card-puntaje {
+body #main .left-part .container-certificaciones h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-certificaciones .card-certificaciones {
+  margin-top: 15px;
+}
+body #main .left-part .container-certificaciones .card-certificaciones img {
+  width: 80px;
+  margin-right: 20px;
+}
+body #main .left-part .container-certificaciones .card-certificaciones img:last-child {
+  margin-right: 0px;
+}
+body #main .left-part .container-ranking {
+  margin-top: 50px;
+  width: 100%;
+}
+body #main .left-part .container-ranking h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-ranking .card-puntaje {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   margin-top: 15px;
 }
-body #main .left-part .container-valoraciones .card-puntaje .puntaje {
+body #main .left-part .container-ranking .card-puntaje .puntaje {
   display: flex;
   flex-flow: column nowrap;
   padding: 5px 15px;
   width: 20%;
 }
-body #main .left-part .container-valoraciones .card-puntaje .puntaje h1 {
+body #main .left-part .container-ranking .card-puntaje .puntaje h1 {
   font-size: 60px;
   text-align: center;
   margin: 0px;
 }
-body #main .left-part .container-valoraciones .card-puntaje .puntaje p {
+body #main .left-part .container-ranking .card-puntaje .puntaje p {
   align-self: center;
   margin: 0px;
 }
-body #main .left-part .container-valoraciones .card-puntaje .puntaje p img {
+body #main .left-part .container-ranking .card-puntaje .puntaje p img {
   width: 20px;
   text-align: center;
 }
-body #main .left-part .container-valoraciones .card-puntaje .porcentaje {
+body #main .left-part .container-ranking .card-puntaje .porcentaje {
   width: 70%;
   padding: 5px 10px;
   margin: auto;
   margin-top: 5px;
   --bs-gutter-x: 0rem;
 }
-body #main .left-part .container-valoraciones .card-puntaje .porcentaje .barra-porcentaje {
+body #main .left-part .container-ranking .card-puntaje .porcentaje .barra-porcentaje {
   padding: 0px;
   margin-top: 2px;
 }
-body #main .left-part .container-valoraciones .card-puntaje .porcentaje .estrellas {
+body #main .left-part .container-ranking .card-puntaje .porcentaje .estrellas {
   padding: 0px;
   padding-left: 5px;
   text-align: center;
 }
-body #main .left-part .container-valoraciones .card-puntaje .porcentaje .estrellas img {
+body #main .left-part .container-ranking .card-puntaje .porcentaje .estrellas img {
   width: 13px;
   vertical-align: super;
+}
+body #main .left-part .container-valoraciones {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+}
+body #main .left-part .container-valoraciones hr {
+  margin-top: 0px;
+}
+body #main .left-part .container-valoraciones .card-valoracion {
+  width: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body #main .left-part .container-valoraciones .card-valoracion .imagen {
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+}
+body #main .left-part .container-valoraciones .card-valoracion .imagen img {
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+  box-shadow: 0px 0px 10px #a3a3a3;
+}
+body #main .left-part .container-valoraciones .card-valoracion .informacion {
+  width: calc(100% - 110px);
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+body #main .left-part .container-valoraciones .card-valoracion .informacion h1 {
+  font-size: 20px;
+  margin: 0px;
+}
+body #main .left-part .container-valoraciones .card-valoracion .informacion .estrellas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body #main .left-part .container-valoraciones .card-valoracion .informacion .estrellas img {
+  width: 15px;
+  height: 15px;
+}
+body #main .left-part .container-valoraciones .card-valoracion .informacion .estrellas p {
+  margin: 0px;
+  margin-left: 5px;
+  color: grey;
+  font-weight: 300;
+  font-size: 13px;
+}
+body #main .left-part .container-valoraciones .card-valoracion .valoracion {
+  width: 100%;
+  height: 50%;
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  overflow: hidden;
+}
+body #main .left-part .container-valoraciones .card-valoracion .valoracion p {
+  overflow-x: scroll;
+  font-weight: 400;
+  font-size: 13px;
+}
+body #main .left-part .container-cursos-recomendados {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+body #main .left-part .container-cursos-recomendados h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-cursos-recomendados .card-curso {
+  width: 100%;
+  height: 80px;
+  margin-top: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .imagen {
+  width: 83.8px;
+  min-width: 83.8px;
+  height: 100%;
+  margin-right: 10px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .titulo {
+  width: 60%;
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .titulo p {
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .titulo p span {
+  font-weight: 700;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .titulo p:last-child {
+  color: #009400;
+  font-weight: 600;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .valoracion {
+  width: 10%;
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .valoracion p {
+  font-weight: 500;
+  margin: 0px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .valoracion p img {
+  margin-top: -2px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .precio {
+  width: 10%;
+  height: 100%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .precio p {
+  font-weight: 500;
+  margin: 0px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .comprar-guardar {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .comprar-guardar p {
+  font-weight: 500;
+  margin: 0px;
+}
+body #main .left-part .container-cursos-recomendados .card-curso .comprar-guardar p img {
+  border-radius: 90px;
+  padding: 4px;
+  text-align: center;
+  width: 35px;
 }
 body #main .right-part {
   position: relative;

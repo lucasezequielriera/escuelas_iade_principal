@@ -55,7 +55,7 @@ categories.forEach(function(item, index) {
     const a = document.createElement("a");
     a.classList.add("dropdown-item");
     a.classList.add(`categoria${index}`)
-    a.setAttribute("href", ".");
+    a.setAttribute("href", `../../${item}`);
     a.textContent = `${item}`;
     a.style = 'position: relative';
     // br //
@@ -118,7 +118,7 @@ function mostrar0() {
     topSection.innerHTML = `
     <ul>
         <h6>Publicidad y Marketing</h6>
-        <a href="."><li>Transformación Digital</li></a>
+        <a href="./"><li>Transformación Digital</li></a>
         <a href="."><li>Facebook Ads</li></a>
         <a href="."><li>Google Ads</li></a>
         <a href="."><li>Microsoft Office</li></a>
