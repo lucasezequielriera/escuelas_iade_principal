@@ -1,0 +1,204 @@
+// Responsive Media Queries //
+@media screen and (max-width: 1202px) {
+    #footer {
+        flex-direction: column !important;
+        margin-bottom: 5px !important;
+        justify-content: center !important;
+        .left-part {
+            width: 100% !important;
+            font-size: 13px !important;
+            white-space: nowrap;
+        }
+        .right-part {
+            width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width:1109px) {
+    #institucional {
+        .top-part {
+            width: 100% !important;
+            justify-content: center;
+            .left-content {
+                width: 100% !important;
+            }
+            .right-content {
+                width: 100% !important;
+            }
+        }
+        .bottom-part {
+            width: 100% !important;
+            justify-content: center;
+            .left-content {
+                width: 100% !important;
+            }
+            .right-content {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    #header {
+        .navbar {
+            .container-fluid {
+                .navbar-collapse {
+                    form {
+                        display: flex !important;
+                        width: 93% !important;
+                    }
+                    .btn-cart {
+                        position: absolute;
+                        bottom: 3px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 799px) {
+    #informacion {
+        .container-informacion {
+            height: 100% !important;
+            .card {
+                justify-content: flex-start !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:738px) {
+    #header {
+        .navbar {
+            .container-fluid {
+                .navbar-collapse {
+                    .navbar-nav {
+                        .dropdown {
+                            .dropdown-menu {
+                                width: 500px !important;
+                                .container-dropdown {
+                                    width: 500px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:639px) {
+    #header {
+        .navbar {
+            .container-fluid {
+                .navbar-collapse {
+                    form {
+                        display: flex !important;
+                        width: 89% !important;
+                    }
+                    .btn-cart {
+                        position: absolute;
+                        bottom: 3px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    #header {
+        .navbar {
+            .container-fluid {
+                .navbar-collapse {
+                    .navbar-nav {
+                        .dropdown {
+                            .dropdown-menu {
+                                width: 350px !important;
+                                .container-dropdown {
+                                    width: 350px !important;
+                                    .left-part-dropdown {
+                                        width: 100% !important;
+                                    }
+                                    .right-part-dropdown {
+                                        display: none !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 525px) {
+    #footer {
+        .left-part {
+            display: none !important;
+        }
+        .right-part {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:413px) {
+    #header {
+        .navbar {
+            .container-fluid {
+                .navbar-collapse {
+                    form {
+                        display: flex !important;
+                        width: 85% !important;
+                    }
+                    .btn-cart {
+                        position: absolute;
+                        bottom: 3px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-part {
+        .container-courses {
+            a {
+                margin: 10px;
+                .course {
+                    width: 300px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 404px) {
+    #informacion {
+        .container-informacion {
+            height: 100% !important;
+            .card {
+                justify-content: center !important;
+                width: 100% !important;
+                min-width: 200px !important;
+                .informacion {
+                    h5 {
+                        border-left: none !important;
+                        font-weight: 500 !important;
+                        font-size: 15px !important;
+                    }
+                }
+                .icono {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

@@ -344,7 +344,7 @@ setTimeout(() => {
 
 /////----- Main -----/////
 
-// PIE DE PORTADA //
+// Información //
 // Creando array con datos de iconos e información //
 const informacionPieDePortada = [
     {
@@ -367,7 +367,7 @@ const informacionPieDePortada = [
 // Buscando datos para imprimir por pantalla mediante DOM //
 informacionPieDePortada.map((item) => {
     // DOM Principal //
-    const pieDePortada = document.querySelector(".pie-de-portada");
+    const pieDePortada = document.querySelector(".container-informacion");
     // Creando Instancias //
     const card = document.createElement("div");
     card.classList.add("card");

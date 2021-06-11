@@ -1,0 +1,135 @@
+@media screen and (max-width: 1202px) {
+  #footer {
+    flex-direction: column !important;
+    margin-bottom: 5px !important;
+    justify-content: center !important;
+  }
+  #footer .left-part {
+    width: 100% !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+  #footer .right-part {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1109px) {
+  #institucional .top-part {
+    width: 100% !important;
+    justify-content: center;
+  }
+  #institucional .top-part .left-content {
+    width: 100% !important;
+  }
+  #institucional .top-part .right-content {
+    width: 100% !important;
+  }
+  #institucional .bottom-part {
+    width: 100% !important;
+    justify-content: center;
+  }
+  #institucional .bottom-part .left-content {
+    width: 100% !important;
+  }
+  #institucional .bottom-part .right-content {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  #header .navbar .container-fluid .navbar-collapse form {
+    display: flex !important;
+    width: 93% !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 799px) {
+  #informacion .container-informacion {
+    height: 100% !important;
+  }
+  #informacion .container-informacion .card {
+    justify-content: flex-start !important;
+  }
+}
+@media screen and (max-width: 738px) {
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
+    width: 500px !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown {
+    width: 500px !important;
+  }
+}
+@media screen and (max-width: 639px) {
+  #header .navbar .container-fluid .navbar-collapse form {
+    display: flex !important;
+    width: 89% !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
+    width: 350px !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown {
+    width: 350px !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown .left-part-dropdown {
+    width: 100% !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown .right-part-dropdown {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 525px) {
+  #footer .left-part {
+    display: none !important;
+  }
+  #footer .right-part {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 413px) {
+  #header .navbar .container-fluid .navbar-collapse form {
+    display: flex !important;
+    width: 85% !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+  }
+
+  .bottom-part .container-courses a {
+    margin: 10px;
+  }
+  .bottom-part .container-courses a .course {
+    width: 300px !important;
+  }
+}
+@media screen and (max-width: 404px) {
+  #informacion .container-informacion {
+    height: 100% !important;
+  }
+  #informacion .container-informacion .card {
+    justify-content: center !important;
+    width: 100% !important;
+    min-width: 200px !important;
+  }
+  #informacion .container-informacion .card .informacion h5 {
+    border-left: none !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+  }
+  #informacion .container-informacion .card .icono {
+    display: none !important;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

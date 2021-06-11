@@ -170,10 +170,10 @@ body #main {
 body #main .portada {
   width: 100%;
   height: 80vh;
-  background-image: url("../images/fondo-pantalla4.jpeg");
+  background-image: url("../images/fondo.jpg");
+  background-position-y: -20px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   position: relative;
   z-index: 1;
 }
@@ -197,44 +197,57 @@ body #main .portada::after {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.116);
+  background-color: rgba(0, 0, 0, 0.377);
   z-index: -1;
 }
-body #main .slider-iconos {
+body #main .pie-de-portada {
   width: 100%;
-  min-height: calc(20vh - 56.66px);
+  height: calc(20vh - 56.66px);
   background: #8e0000;
   background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.555);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.322);
   display: flex;
-  justify-content: flex-end;
-  overflow: hidden;
+  justify-content: space-evenly;
 }
-body #main .slider-iconos .card {
-  min-width: 90px;
+body #main .pie-de-portada .card {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   background-color: transparent;
   border: none;
-  animation: slider 30s infinite linear;
-  margin-right: 20px;
 }
-body #main .slider-iconos .card .icono {
+body #main .pie-de-portada .card .icono {
   width: 50px;
   height: 50px;
   text-align: center;
-  padding-top: 0px;
+  padding-top: 10px;
   margin-right: 2px;
   overflow: hidden;
-  margin: 0px 10px;
 }
-body #main .slider-iconos .card .icono img {
-  width: 50px;
+body #main .pie-de-portada .card .icono img {
+  width: 30px;
+  animation: mostrarIcono 1s;
+}
+body #main .pie-de-portada .card .informacion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+body #main .pie-de-portada .card .informacion h5 {
+  color: white;
+  margin: 0px;
+  padding: 0px 5px;
+  line-height: 49px;
+  font-weight: 300;
+  font-size: 18px;
+  align-self: center;
+  border-left: 1px solid #e2e2e2;
+  animation: mostrarTexto 1s;
 }
 body #escuelas {
   width: 100%;
-  height: 100%;
+  height: 400px;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -358,59 +371,36 @@ body #escuelas .part .container-escuelas a:hover .escuela p {
 body #escuelas .part .container-escuelas a:hover .escuela::after {
   background-color: rgba(0, 0, 0, 0.253);
 }
-body #informacion {
-  display: flex;
-  flex-flow: row nowrap;
+body #slider-iconos {
   width: 100%;
-  height: 100%;
-}
-body #informacion .container-informacion {
-  width: 100%;
-  height: 150px;
+  height: calc(20vh - 56.66px);
   background: #8e0000;
   background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.322);
   margin: 50px 0px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  overflow: hidden;
 }
-body #informacion .container-informacion .card {
+body #slider-iconos .card {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   background-color: transparent;
   border: none;
-  min-width: 400px;
-  white-space: nowrap;
-  justify-content: center;
+  animation: slider 30s infinite linear;
 }
-body #informacion .container-informacion .card .icono {
+body #slider-iconos .card .icono {
   width: 50px;
   height: 50px;
   text-align: center;
   padding-top: 10px;
   margin-right: 2px;
   overflow: hidden;
+  margin: 0px 10px;
 }
-body #informacion .container-informacion .card .icono img {
+body #slider-iconos .card .icono img {
   width: 30px;
-  animation: mostrarIcono 1s;
-}
-body #informacion .container-informacion .card .informacion {
-  display: flex;
-  overflow: hidden;
-}
-body #informacion .container-informacion .card .informacion h5 {
-  color: white;
-  margin: 0px;
-  padding: 0px 5px;
-  line-height: 49px;
-  font-weight: 300;
-  font-size: 18px;
-  align-self: center;
-  border-left: 1px solid #e2e2e2;
-  animation: mostrarTexto 1s;
 }
 body #institucional {
   width: 100%;
@@ -549,8 +539,9 @@ body #slider-valoraciones .card-valoracion {
   border-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
-  box-shadow: 0px 0px 20px #bbbbbb;
-  background: #e4e4e4;
+  box-shadow: 0px 0px 20px #7a7a7a;
+  background: #8e0000;
+  background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
   animation: sliderReputation 50s infinite linear;
 }
 body #slider-valoraciones .card-valoracion .left-part {
@@ -574,21 +565,20 @@ body #slider-valoraciones .card-valoracion .right-part {
   color: white;
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo h3 {
-  color: #3b3b3b;
+  color: white;
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo p {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
   margin-top: 5px;
-  color: #cc0000;
+  color: whitesmoke;
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo p img {
   margin-right: 5px;
 }
 body #slider-valoraciones .card-valoracion .right-part .texto p {
   font-weight: 500;
-  color: #353535;
 }
 body #footer {
   width: 100%;
