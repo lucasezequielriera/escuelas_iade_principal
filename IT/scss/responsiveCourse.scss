@@ -4,6 +4,9 @@
         .left-part {
             width: 80% !important;
             margin: auto;
+            .container-imagen-curso {
+                display: block !important;
+            }
         }
         .right-part {
             display: none;
@@ -86,6 +89,32 @@
                                 width: 25% !important;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    #main {
+        .left-part {
+            .container-imagen-curso {
+                height: 500px !important;
+                .container-buttons-curso {
+                    .box-precio {
+                        bottom: 80px !important;
+                        left: 0;
+                        right: 0;
+                        .anterior {
+                            p:last-child {
+                                margin: 0px;
+                            }
+                        }
+                    }
+                    .box-buttons {
+                        display: flex !important;
+                        flex-flow: column nowrap !important;
                     }
                 }
             }

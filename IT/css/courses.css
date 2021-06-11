@@ -216,6 +216,60 @@ body #main .left-part .subtitulo-curso .iconos p img {
   width: 15px;
   vertical-align: sub;
 }
+body #main .left-part .container-imagen-curso {
+  width: 100%;
+  height: 300px;
+  background-image: url("../images/transformacion-digital.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  position: relative;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.493);
+  padding: 10px;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .actual {
+  display: flex;
+  flex-flow: row nowrap;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .actual h1 {
+  color: white;
+  margin-right: 5px;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .anterior {
+  display: flex;
+  flex-flow: column nowrap;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .anterior p {
+  color: white;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .anterior p span {
+  text-decoration: line-through;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .anterior p:last-child {
+  color: red;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-buttons {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+}
+body #main .left-part .container-imagen-curso .container-buttons-curso .box-buttons button {
+  flex: auto;
+  padding: 8px 0px;
+}
 body #main .left-part .container-profesor {
   width: 100%;
   display: flex;

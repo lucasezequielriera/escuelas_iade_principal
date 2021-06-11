@@ -3,6 +3,9 @@
     width: 80% !important;
     margin: auto;
   }
+  #main .left-part .container-imagen-curso {
+    display: block !important;
+  }
   #main .right-part {
     display: none;
   }
@@ -57,6 +60,23 @@
   }
   #main .left-part .container-ranking .card-puntaje .porcentaje .caja-barra-porcentaje .estrellas {
     width: 25% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main .left-part .container-imagen-curso {
+    height: 500px !important;
+  }
+  #main .left-part .container-imagen-curso .container-buttons-curso .box-precio {
+    bottom: 80px !important;
+    left: 0;
+    right: 0;
+  }
+  #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .anterior p:last-child {
+    margin: 0px;
+  }
+  #main .left-part .container-imagen-curso .container-buttons-curso .box-buttons {
+    display: flex !important;
+    flex-flow: column nowrap !important;
   }
 }
 @media screen and (max-width: 738px) {

@@ -236,6 +236,60 @@ body {
                     }
                 }
             }
+            .container-imagen-curso {
+                width: 100%;
+                height: 300px;
+                background-image: url('../images/transformacion-digital.jpeg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-bottom: 10px;
+                position: relative;
+                .container-buttons-curso {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    .box-precio {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        position: absolute;
+                        bottom: 40px;
+                        background-color: rgba(0, 0, 0, 0.493);
+                        padding: 10px;
+                        .actual {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            h1 {
+                                color: white;
+                                margin-right: 5px;
+                            }
+                        }
+                        .anterior {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            p {
+                                color: white;
+                                span {
+                                    text-decoration: line-through;
+                                }
+                            }
+                            p:last-child {
+                                color: red;
+                            }
+                        }
+                    }
+                    .box-buttons {
+                        width: 100%;
+                        display: inline-flex;
+                        flex-flow: row nowrap;
+                        button {
+                            flex: auto;
+                            padding: 8px 0px;
+                        }
+                    }
+                }
+            }
             .container-profesor{
                 width: 100%;
                 display: flex;
