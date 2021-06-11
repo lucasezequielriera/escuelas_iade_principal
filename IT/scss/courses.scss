@@ -15,10 +15,8 @@ body {
     position: relative;
     z-index: 0;
     #header {
-        width: 100%;
-        height: 56.66px;
         .navbar {
-            box-shadow: 0px 0px 10px rgb(187, 187, 187);
+            box-shadow: 0px 0px 10px rgb(129, 129, 129);
             padding: 3px;
             .container-fluid {
                 .navbar-brand {
@@ -474,7 +472,7 @@ body {
                 }
                 .card-curso {
                     width: 100%;
-                    height: 80px;
+                    height: 100%;
                     margin-top: 15px;
                     display: flex;
                     flex-flow: row nowrap;
@@ -488,8 +486,8 @@ body {
                         // background-repeat: no-repeat;
                         // background-size: cover;
                         img {
-                            width: 100%;
-                            height: 100%;
+                            width: 80px;
+                            height: 70px;
                             border-radius: 3px;
                         }
                     }
@@ -519,7 +517,7 @@ body {
                         margin-right: 10px;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
+                        align-self: center;
                         p {
                             font-weight: 500;
                             margin: 0px;
@@ -534,7 +532,7 @@ body {
                         margin-right: 10px;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
+                        align-self: center;
                         p{
                             font-weight: 500;
                             margin: 0px;
@@ -546,7 +544,7 @@ body {
                         display: flex;
                         flex-flow: column;
                         justify-content:space-around;
-                        align-items: center;
+                        align-self: center;
                         p{
                             font-weight: 500;
                             margin: 0px;
@@ -555,6 +553,7 @@ body {
                                 padding: 4px;
                                 text-align: center;
                                 width: 35px;
+                                margin: 5px 0px;
                             }
                         }
                     }

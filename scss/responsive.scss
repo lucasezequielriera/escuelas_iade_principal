@@ -202,3 +202,30 @@
         }
     }
 }
+
+@media screen and (max-width:394px) {
+    #header {
+        .navbar {
+            .container-fluid {
+                .navbar-collapse {
+                    .navbar-nav {
+                        .dropdown {
+                            .dropdown-menu {
+                                width: 250px !important;
+                                .container-dropdown {
+                                    width: 250px !important;
+                                    .left-part-dropdown {
+                                        width: 100% !important;
+                                    }
+                                    .right-part-dropdown {
+                                        display: none !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

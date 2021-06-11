@@ -1,73 +1,32 @@
 // Responsive Media Queries //
-
-@media screen and (max-width:1315px) {
-    .middle-part {
-        .card {
-            .icono {
-                padding-top: 13px !important;
-                width: 30px !important;
-                img {
-                    width: 20px !important;
-                }
-            }
-            .informacion {
-                h5 {
-                    font-size: 14px !important;
-                }
-            }
-        }
-    }
-    #footer {
+@media screen and (max-width:1230px) {
+    #main {
         .left-part {
-            p {
-                font-size: 13px !important;
-                white-space: nowrap;
-            }
+            width: 80% !important;
+            margin: auto;
         }
         .right-part {
-            p {
-                font-size: 13px !important;
-            }
+            display: none;
         }
     }
 }
 
-@media screen and (max-width:1161px) {
-    .top-part {
-        flex-direction: column !important;
-        .right-part {
-            img {
-                width: 400px !important;
-                animation: slider 40s infinite linear !important;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:1042px) {
-    body {
-        height: 100%;
-    }
-    .middle-part {
-        flex-flow: row wrap;
-        height: 100%;
-        .card {
-            min-width: 300px !important;
-        }
-    }
-    .bottom-part {
-        .container-courses {}
-        a {
-            margin: 10px;
-        }
-    }
+@media screen and (max-width: 1202px) {
     #footer {
+        flex-direction: column !important;
+        margin-bottom: 5px !important;
         justify-content: center !important;
         .left-part {
-            display: none !important;
+            width: 100% !important;
+            font-size: 13px !important;
+            white-space: nowrap;
         }
         .right-part {
             width: 100% !important;
+        }
+    }
+    .container-certificaciones {
+        .card-certificaciones {
             text-align: center !important;
         }
     }
@@ -93,15 +52,41 @@
     }
 }
 
-@media screen and (max-width: 894px) {
-    body {
-        #main {
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-items: center;
-            .left-part {
-                .title {
-                    white-space: nowrap;
+@media screen and (max-width:975px) {
+    #main {
+        .left-part {
+            .subtitulo-curso {
+                .iconos {
+                    p {
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:916px) {
+    #main {
+        .left-part {
+            .container-ranking {
+                .card-puntaje {
+                    flex-direction: column !important;
+                    .puntaje {
+                        width: 100% !important;
+                    }
+                    .porcentaje {
+                        width: 100% !important;
+                        .caja-barra-porcentaje {
+                            --bs-gutter-x: 0px !important;
+                            .barra-porcentaje {
+
+                            }
+                            .estrellas {
+                                width: 25% !important;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -129,6 +114,23 @@
     }
 }
 
+@media screen and (max-width:698px) {
+    #main {
+        .left-part {
+            .subtitulo-curso {
+                .iconos {
+                    p {
+                        font-size: 10px !important;
+                        img {
+                            width: 12px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:639px) {
     #header {
         .navbar {
@@ -142,6 +144,26 @@
                         position: absolute;
                         bottom: 3px;
                         right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:619px) {
+    #main {
+        .left-part {
+            .container-cursos-recomendados {
+                .card-curso {
+                    .titulo {
+                        width: 70% !important;
+                    }
+                    .valoracion {
+                        display: none !important;
+                    }
+                    .precio {
+                        display: none !important;
                     }
                 }
             }
@@ -176,23 +198,60 @@
     }
 }
 
-@media screen and (max-width:537px) {
-    .top-part {
+@media screen and (max-width: 525px) {
+    #footer {
         .left-part {
-            h1 {
-                font-size: 60px !important;
+            display: none !important;
+        }
+        .right-part {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:454px) {
+    #main {
+        .left-part {
+            .container-ranking {
+                .card-puntaje {
+                    margin-bottom: 30px !important;
+                    .porcentaje {
+                        display: none !important;
+                    }
                 }
-                .it {
-                    font-size: 120px !important;
-                }
-            }
-            p {
-                font-size: 20px !important;
-                margin: 0px !important;
             }
         }
     }
-    
+}
+
+@media screen and (max-width:443px) {
+    #main {
+        .left-part {
+            .subtitulo-curso {
+                .iconos {
+                    p {
+                        font-size: 10px !important;
+                        width: 100% !important;
+                        text-align: center;
+                        img {
+                            display: none;
+                        }
+                    }
+                    p:nth-child(2) {
+                        display: none !important;
+                    }
+                    p:nth-child(4) {
+                        display: none !important;
+                    }
+                    p:nth-child(5) {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:413px) {
     #header {
         .navbar {
@@ -207,16 +266,6 @@
                         bottom: 3px;
                         right: 10px;
                     }
-                }
-            }
-        }
-    }
-    .bottom-part {
-        .container-courses {
-            a {
-                margin: 10px;
-                .course {
-                    width: 300px !important;
                 }
             }
         }
@@ -247,16 +296,5 @@
                 }
             }
         }
-    }
-}
-
-// Keyframes //
-@keyframes oscilarIt {
-    0% {
-        color: transparent;
-    }
-    100% {
-        color: rgb(228, 3, 3);
-        margin-left: -70px;
     }
 }

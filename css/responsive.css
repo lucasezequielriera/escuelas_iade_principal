@@ -131,5 +131,19 @@
     display: none !important;
   }
 }
+@media screen and (max-width: 394px) {
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
+    width: 250px !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown {
+    width: 250px !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown .left-part-dropdown {
+    width: 100% !important;
+  }
+  #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown .right-part-dropdown {
+    display: none !important;
+  }
+}
 
 /*# sourceMappingURL=responsive.css.map */
