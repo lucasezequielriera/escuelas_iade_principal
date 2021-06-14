@@ -761,7 +761,8 @@ body #responsive-footer {
   bottom: 0;
   text-align: center;
   display: none;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border: 1px solid black;
 }
 body #responsive-footer .contenido {
