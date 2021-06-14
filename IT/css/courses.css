@@ -312,6 +312,30 @@ body #main .left-part .container-profesor .card-profesor .informacion-profesor p
 body #main .left-part .container-profesor .card-profesor .informacion-profesor p:last-child {
   margin-top: 10px;
 }
+body #main .left-part .container-descripcion {
+  margin-top: 50px;
+}
+body #main .left-part .container-descripcion h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-descripcion ul li {
+  color: #414141;
+}
+body #main .left-part .container-modalidad {
+  margin-top: 50px;
+}
+body #main .left-part .container-modalidad h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-modalidad ul li {
+  color: #414141;
+}
+body #main .left-part .container-modalidad ul .info {
+  color: #222222;
+  font-weight: 500;
+}
 body #main .left-part .container-requisitos {
   margin-top: 50px;
 }
@@ -320,12 +344,6 @@ body #main .left-part .container-requisitos h3 {
   font-weight: 600;
 }
 body #main .left-part .container-requisitos ul li {
-  color: #414141;
-}
-body #main .left-part .container-descripcion {
-  margin-top: 50px;
-}
-body #main .left-part .container-descripcion ul li {
   color: #414141;
 }
 body #main .left-part .container-contenido {
@@ -686,8 +704,8 @@ body #main .right-part .container-form .informacion-extra p:last-child {
   margin-bottom: 0px;
 }
 body #footer {
-  width: 100%;
-  height: 50px;
+  width: 100% !important;
+  height: 100%;
   background-color: whitesmoke;
   display: flex;
   flex-flow: row nowrap;
@@ -732,6 +750,68 @@ body #footer .right-part p {
 }
 body #footer .right-part p span {
   font-weight: 600;
+}
+body #responsive-footer {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.664);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  display: none;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+body #responsive-footer .contenido {
+  width: 100%;
+}
+body #responsive-footer .contenido .precio {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 0px;
+}
+body #responsive-footer .contenido .precio .actual {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+body #responsive-footer .contenido .precio .actual h1 {
+  margin-left: 5px;
+  margin: 0px;
+  font-weight: 600;
+  font-size: 30px;
+  color: white;
+}
+body #responsive-footer .contenido .precio .actual h5 {
+  margin-left: 10px;
+}
+body #responsive-footer .contenido .precio .actual h5 .badge {
+  font-size: 10px;
+}
+body #responsive-footer .contenido .precio .anterior {
+  height: 100%;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+body #responsive-footer .contenido .precio .anterior p {
+  margin: 0px;
+  font-weight: 300;
+  font-size: 12px;
+  padding-right: 80px;
+  margin-top: -5px;
+  color: whitesmoke;
+}
+body #responsive-footer .contenido .precio .anterior p span {
+  text-decoration: line-through;
 }
 
 @keyframes miniSlider {

@@ -1,13 +1,80 @@
 @media screen and (max-width: 1230px) {
   #main .left-part {
-    width: 80% !important;
+    width: 100% !important;
     margin: auto;
   }
+  #main .left-part .nav-curso {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #main .left-part .nav-curso ol {
+    justify-content: center;
+  }
+  #main .left-part .titulo-curso {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #main .left-part .subtitulo-curso h2 {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
   #main .left-part .container-imagen-curso {
+    max-width: 100% !important;
+    margin: 0 auto;
     display: block !important;
+  }
+  #main .left-part .container-imagen-curso .container-buttons-curso .box-precio {
+    border-radius: 5px;
+  }
+  #main .left-part .container-imagen-curso .container-buttons-curso .box-buttons button {
+    border-radius: 0px;
+  }
+  #main .left-part .container-profesor {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-descripcion {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-modalidad {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-contenido {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-requisitos {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-certificaciones {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-ranking {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-valoraciones {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  #main .left-part .container-cursos-recomendados {
+    width: 95% !important;
+    margin: 0 auto;
   }
   #main .right-part {
     display: none;
+  }
+
+  #footer {
+    padding-bottom: 100px;
+    width: 95% !important;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 1202px) {

@@ -2,15 +2,87 @@
 @media screen and (max-width:1230px) {
     #main {
         .left-part {
-            width: 80% !important;
+            width: 100% !important;
             margin: auto;
+            .nav-curso {
+                width: 95%;
+                margin: 0 auto;
+                ol {
+                    justify-content: center;
+                }
+            }
+            .titulo-curso {
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .subtitulo-curso {
+                h2 {
+                    width: 95%;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                }
+            }
             .container-imagen-curso {
+                max-width: 100% !important;
+                margin: 0 auto;
                 display: block !important;
+                .container-buttons-curso {
+                    .box-precio {
+                        border-radius: 5px;
+                    }
+                    .box-buttons {
+                        button {
+                            border-radius: 0px;
+                        }
+                    }
+                }
+            }
+            .container-profesor {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-descripcion {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-modalidad {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-contenido {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-requisitos {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-certificaciones {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-ranking {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-valoraciones {
+                width: 95% !important;
+                margin: 0 auto;
+            }
+            .container-cursos-recomendados {
+                width: 95% !important;
+                margin: 0 auto;
             }
         }
         .right-part {
             display: none;
         }
+    }
+    #footer {
+        padding-bottom: 100px;
+        width: 95% !important;
+        margin: 0 auto;
     }
 }
 

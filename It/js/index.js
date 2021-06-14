@@ -276,3 +276,21 @@ function mostrar8() {
         <button class='btn btn-dark'>Ver todos los cursos</button>
     </div> `
 }
+
+// Apareciendo el footer "Comprar" //
+
+window.onscroll = () => {
+    const y = window.scrollY;
+    const responsiveFooter = document.querySelector("#responsive-footer");
+    if(y > 750 & screen.width < 1230) {
+        responsiveFooter.style.display = 'block';
+        responsiveFooter.classList.remove('animate__fadeOutDown');
+        responsiveFooter.classList.add('animate__fadeInUp');
+
+    } else {
+        responsiveFooter.classList.remove('animate__fadeInUp');
+        responsiveFooter.classList.add('animate__fadeOutDown');
+
+    }
+}
+
