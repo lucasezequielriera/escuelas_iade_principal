@@ -1,1 +1,1 @@
-# Instalar dependencias con ## npm i
+# Instalar dependencias con: npm i
