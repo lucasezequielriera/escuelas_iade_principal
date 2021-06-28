@@ -302,6 +302,8 @@ var usuario = {
 
 firebase.database().ref('usuarios/' + usuario_id).set(usuario);
 
+
+
 firebase.database().ref('usuarios/' + usuario_id).once('value').then(
     function(snapshot){
             var title = snapshot.val().title;
