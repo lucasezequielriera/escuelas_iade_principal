@@ -102,15 +102,15 @@ categoria6.addEventListener("mouseover", mostrar6);
 categoria7.addEventListener("mouseover", mostrar7);
 categoria8.addEventListener("mouseover", mostrar8);
 
- // Add slideDown animation to Bootstrap dropdown when expanding.
- $('.dropdown').on('show.bs.dropdown', function() {
+// Add slideDown animation to Bootstrap dropdown when expanding.
+$('.dropdown').on('show.bs.dropdown', function() {
     $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-  });
+});
 
-  // Add slideUp animation to Bootstrap dropdown when collapsing.
-  $('.dropdown').on('hide.bs.dropdown', function() {
+// Add slideUp animation to Bootstrap dropdown when collapsing.
+$('.dropdown').on('hide.bs.dropdown', function() {
     $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-  });
+});
 
 
 // Functions //
@@ -301,8 +301,6 @@ var usuario = {
         }
 
 firebase.database().ref('usuarios/' + usuario_id).set(usuario);
-
-
 
 firebase.database().ref('usuarios/' + usuario_id).once('value').then(
     function(snapshot){

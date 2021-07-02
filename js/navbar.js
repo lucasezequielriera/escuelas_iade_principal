@@ -58,6 +58,7 @@ const navbar = `
                     aria-label="Search">
                 <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
             </form>
+            <div>
             <!-- User -->
             <button class="btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="imagen-perfil"></div>
             </button>
@@ -71,10 +72,11 @@ const navbar = `
                     <a href="#" class="border"><p class="border">Mi aprendizaje</p></a>
                     <a href="#" class="border"><p class="border">Cursos comprados</p></a>
                     <a href="#" class="border"><p class="border">Mi carrito</p></a>
-                    <a href="#" class="border"><p class="border">Cerrar mi sesión</p></a>
+                    <a href="#" class="border" onclick=logOut()><p class="border">Cerrar sesión</p></a>
                 </div>
             </div>
             <!-- / User -->
+            </div>
         </div>
     </div>
 </nav>

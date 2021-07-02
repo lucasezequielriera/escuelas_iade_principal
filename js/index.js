@@ -387,3 +387,159 @@ informacionPieDePortada.map((item) => {
     card.appendChild(informacion);
     pieDePortada.appendChild(card);
 });
+
+/////----- / Main -----/////
+
+/////----- Register -----/////
+
+// Constantes //
+const btnRegistrar = document.querySelector('#registrarse');
+const registrarNombres = document.querySelector('.registrar-nombres');
+const registrarApellidos = document.querySelector('.registrar-apellidos');
+const registrarUbicacion = document.querySelector('.registrar-ubicacion');
+const registrarTelefono = document.querySelector('.registrar-telefono');
+const registrarUsuario = document.querySelector('.registrar-usuario');
+const registrarPassword = document.querySelector('.registrar-password');
+const btnLogin = document.querySelector('#ingresar');
+const ingresarUsuario = document.querySelector('.ingresar-usuario');
+const ingresarPassword = document.querySelector('.ingresar-password');
+
+// Listeners //
+btnRegistrar.addEventListener("click", Registrarse);
+btnLogin.addEventListener("click", Login);
+
+// Funciones //
+function Registrarse(e) {
+    e.preventDefault();
+    if (registrarNombres.value && registrarApellidos.value && registrarUbicacion.value && registrarTelefono.value && registrarUsuario.value && registrarPassword.value) {
+        const nuevoUsuario = [{
+            id: Math.floor(Math.random() * 1000000),
+            nombre: registrarNombres.value,
+            apellido: registrarApellidos.value,
+            ubicacion: registrarUbicacion.value,
+            telefono: registrarTelefono.value,
+            usuario: registrarUsuario.value,
+            password: registrarPassword.value
+        }]
+        const usuario_id = nuevoUsuario[0].id;
+        const usuario = {
+            'nombre': registrarNombres.value,
+            'apellido': registrarApellidos.value,
+            'ubicacion': registrarUbicacion.value,
+            'telefono': registrarTelefono.value,
+            'usuario': registrarUsuario.value,
+            'password': registrarPassword.value
+            }
+        firebase.auth().createUserWithEmailAndPassword(registrarUsuario.value, registrarPassword.value)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            alert("perfecto")
+            console.log(user)
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert("algo falló")
+            // ..
+        });
+        firebase.database().ref('usuarios/' + usuario_id).set(usuario);
+        firebase.database().ref('usuarios/' + usuario_id).once('value').then(
+            function(snapshot){
+                    var nombre = snapshot.val().nombre;
+                    console.log(nombre);
+            }
+        )} else {
+            alert("Te faltó completar algún campo");
+        }
+}
+
+firebase.auth().onAuthStateChanged((user) => {
+if (user) {
+    document.querySelector('#usuario-desconectado').style.display = 'none';
+    document.querySelector('#usuario-conectado').style.display = 'initial';
+
+    const user = firebase.auth().currentUser;
+    if(user != null) {
+        const email_id = user.email;
+        document.querySelector('#submit-button').textContent = email_id;
+    }
+
+} else {
+    document.querySelector('#usuario-desconectado').style.display = 'initial';
+    document.querySelector('#usuario-conectado').style.display = 'none';
+}});
+
+function Login(e) {
+    e.preventDefault();
+    if (ingresarUsuario.value && ingresarPassword.value) {
+        firebase.auth().signInWithEmailAndPassword(ingresarUsuario.value, ingresarPassword.value)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            swal({
+                title: "Bienvenido/a!",
+                icon: "success",
+                button: "Aceptar",
+                timer: 2000
+            });
+            setTimeout(() => {
+                location.reload();
+            }, 2000)
+            }
+        )
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorCode)
+            alert(errorMessage)
+        });
+    } else {
+        alert("Has ingresado mal los datos o no tienes un usuario registrado");
+    }
+}
+
+function logOut() {
+    firebase.auth().signOut().then(() => {
+        swal({
+            title: "Sesión cerrada con éxito!",
+            icon: "success",
+            timer: 2000
+        });
+        setTimeout(() => {
+            location.reload();
+        }, 2000)
+    }).catch((error) => {
+        // An error happened.
+    });
+}
+
+
+
+/////----- / Register -----/////
+
+// FIREBASE //
+
+// var usuario_id = (usuario_id === usuario_id ? usuario_id++ : usuario_id);
+// var usuario = {
+//         'title': 'Conectar Firebase con tu app de JavaScript',
+//         }
+
+// firebase.database().ref('usuarios/' + usuario_id).set(usuario);
+
+// firebase.database().ref('usuarios/' + usuario_id).once('value').then(
+//     function(snapshot){
+//             var nombredsa = snapshot.val().nombredsa;
+//             console.log(nombredsa);
+//     }
+// )
+
+// firebase.database().ref('usuarios/' + usuario_id).once('value').then(
+//     function(snapshot){
+//             var nombre = snapshot.val().nombre;
+//             console.log(nombre);
+//     }
+// )
+
+// / FIREBASE //
