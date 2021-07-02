@@ -155,13 +155,60 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:las
   padding: 7.5px 15px;
   text-decoration: bold;
   margin-left: 7.5px;
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.253);
+  transition: all 0.3s;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:last-child a:hover {
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0);
 }
 body #header .navbar .container-fluid .navbar-collapse form {
   white-space: nowrap;
   transition: all 0.5s;
 }
+body #header .navbar .container-fluid .navbar-collapse .btn-login {
+  margin-left: 8px;
+  border-radius: 90px;
+  padding: 5px;
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.637);
+  transition: all 0.3s;
+}
+body #header .navbar .container-fluid .navbar-collapse .btn-login .imagen-login {
+  width: 22px;
+  height: 22px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../images/login.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  transition: all 0.1s;
+}
+body #header .navbar .container-fluid .navbar-collapse .btn-login:hover {
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0);
+}
 body #header .navbar .container-fluid .navbar-collapse .btn-cart {
-  margin-left: 5px;
+  margin-left: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid transparent;
+  border-radius: 90px;
+  box-shadow: 0px 0px 15px red;
+  transition: all 0.3s;
+}
+body #header .navbar .container-fluid .navbar-collapse .btn-cart .imagen-perfil {
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  border-radius: 90px;
+  background-image: url("../IT/images/persona.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s;
+}
+body #header .navbar .container-fluid .navbar-collapse .btn-cart:hover {
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0);
+}
+body #header .navbar .container-fluid .navbar-collapse .btn-cart:hover .imagen-perfil {
+  background-size: 80px;
 }
 body #main {
   width: 100%;

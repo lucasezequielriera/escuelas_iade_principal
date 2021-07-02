@@ -74,19 +74,51 @@
                             aria-label="Search">
                         <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
                     </form>
-                    <!-- Cart -->
-                    <button class="btn btn-dark btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img src="../images/carrito.png" width="20px">
-                    </button>
-                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Este es tu carrito de compras</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body small">
-                            <p>Por ahora no tienes ningún producto en tu carrito</p>
+                    <!-- Iniciar sesión o Registrarse -->
+                    <button class="btn btn-danger btn-login" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><div class="imagen-login"></div></button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center bg-light">
+                                    <h5 class="text-center mb-3">Inicia sesión en tu cuenta</h5>
+                                    <label for="user"></label>
+                                    <input class="px-1" type="text" placeholder="Ingresa tu usuario">
+                                    <label for="password"></label>
+                                    <input class="px-1" type="password" placeholder="Ingresa tu contraseña">
+                                    <input class="btn-success px-2" type="submit" value="Ingresar">
+                                </div>
+                                <div class="modal-body text-center bg-danger text-light">
+                                    <h5 class="text-center mb-3">Registrate en Escuelas iade</h5>
+                                    <p class="parrafo-form d-flex justify-content-evenly"><label for="user">Nombres</label>
+                                        <input class="px-1" type="text" placeholder="Nombres">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-evenly"><label for="text">Apellidos</label>
+                                        <input class="px-1" type="password" placeholder="Apellidos">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-evenly"><label for="user">Ubicación</label>
+                                        <input class="px-1" type="text" placeholder="Ubicación">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-evenly"><label for="text">Teléfono</label>
+                                        <input class="px-1" type="password" placeholder="Teléfono">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-evenly"><label for="user">Elige tu usuario</label>
+                                        <input class="px-1" type="text" placeholder="Elige tu usuario">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-evenly"><label for="password">Elige tu contraseña</label>
+                                        <input class="px-1" type="password" placeholder="Elige una contraseña">
+                                    </p>
+                                    <input class="btn-dark px-2" type="submit" value="Registrarme">
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="footer-link">Si aún no te has registrado, pulsa aquí</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- / Cart -->
+                    <!-- / Iniciar sesión o Registrarse -->
                 </div>
             </div>
         </nav>

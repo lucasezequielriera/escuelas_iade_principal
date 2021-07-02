@@ -298,7 +298,7 @@ window.onscroll = () => {
 var usuario_id = 2;
 var usuario = {
         'title': 'Conectar Firebase con tu app de JavaScript',
-}
+        }
 
 firebase.database().ref('usuarios/' + usuario_id).set(usuario);
 
