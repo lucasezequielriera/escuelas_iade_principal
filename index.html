@@ -87,7 +87,7 @@
                                     <hr>
                                     <p id="datos-ingreso">
                                         <label for="user"></label>
-                                        <input class="ingresar-usuario px-1" type="text" placeholder="Ingresa tu usuario">
+                                        <input class="ingresar-usuario px-1" type="text" placeholder="Ingresa tu email">
                                         <label for="password"></label>
                                         <input class="ingresar-password px-1" type="password" placeholder="Ingresa tu contraseña">
                                     </p>
@@ -114,12 +114,12 @@
                                         <input class="registrar-telefono px-1" type="number" placeholder="Ej: +54 011 3578 9876" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="user">Elige tu usuario</label>
-                                        <input class="registrar-usuario px-1" type="text" placeholder="Usuario" style="width: 300px;">
+                                        <label for="user">Ingresa tu email</label>
+                                        <input class="registrar-usuario px-1" type="text" placeholder="xxx@gmail.com" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="password">Elige tu contraseña</label>
-                                        <input class="registrar-password px-1" type="password" placeholder="Contraseña" style="width: 300px;">
+                                        <input class="registrar-password px-1" type="password" placeholder="xxxxxx (6 caracteres mínimo)" style="width: 300px;">
                                     </p>
                                     <input id="registrarse" class="btn-danger px-2 rounded" type="button" value="Registrarme" style="width: 250px;">
                                 </div>
@@ -132,7 +132,7 @@
                     </button>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Hola #usuario!</h5>
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Hola <span id="nombre-de-usuario">!</span></h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body small">
@@ -416,7 +416,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
 
-
     <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -439,6 +438,8 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Session File -->
+    <script src="./js/session.js"></script>
     <!-- JS Styles -->
     <script src="./js/index.js"></script>
 </body>

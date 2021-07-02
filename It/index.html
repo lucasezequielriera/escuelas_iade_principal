@@ -77,19 +77,76 @@
                             aria-label="Search">
                         <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
                     </form>
-                    <!-- Cart -->
-                    <button class="btn btn-dark btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><img src="./images/carrito.png" width="20px">
+                    <!-- Iniciar sesión o Registrarse -->
+                    <button id="usuario-desconectado" class="btn btn-danger btn-login" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><div class="imagen-login"></div></button>
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center bg-danger text-light">
+                                    <h5 class="text-center mb-3">Inicia sesión en tu cuenta</h5>
+                                    <hr>
+                                    <p id="datos-ingreso">
+                                        <label for="user"></label>
+                                        <input class="ingresar-usuario px-1" type="text" placeholder="Ingresa tu email">
+                                        <label for="password"></label>
+                                        <input class="ingresar-password px-1" type="password" placeholder="Ingresa tu contraseña">
+                                    </p>
+                                    <input id="ingresar" class="btn-success px-2 rounded" type="submit" value="Ingresar">
+                                </div>
+                                <p class="text-center py-2 bg-light m-0">ó</p>
+                                <div class="modal-body text-center bg-light">
+                                    <h5 class="text-center mb-3">Registrate en Escuelas iade</h5>
+                                    <hr>
+                                    <p class="parrafo-form d-flex justify-content-between">
+                                        <label for="nombres">Nombres</label>
+                                        <input class="registrar-nombres px-1" type="text" placeholder="Ej: Martin Ezequiel" style="width: 300px;">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-between">
+                                        <label for="apellidos">Apellidos</label>
+                                        <input class="registrar-apellidos px-1" type="text" placeholder="Ej: Rojas Ríos" style="width: 300px;">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-between">
+                                        <label for="ubicacion">Ubicación</label>
+                                        <input class="registrar-ubicacion px-1" type="text" placeholder="Ej: Buenos Aires, Argentina" style="width: 300px;">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-between">
+                                        <label for="telefono">Teléfono</label>
+                                        <input class="registrar-telefono px-1" type="number" placeholder="Ej: +54 011 3578 9876" style="width: 300px;">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-between">
+                                        <label for="user">Ingresa tu email</label>
+                                        <input class="registrar-usuario px-1" type="text" placeholder="xxx@gmail.com" style="width: 300px;">
+                                    </p>
+                                    <p class="parrafo-form d-flex justify-content-between">
+                                        <label for="password">Elige tu contraseña</label>
+                                        <input class="registrar-password px-1" type="password" placeholder="xxxxxx (6 caracteres mínimo)" style="width: 300px;">
+                                    </p>
+                                    <input id="registrarse" class="btn-danger px-2 rounded" type="button" value="Registrarme" style="width: 250px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Iniciar sesión o Registrarse -->
+                    <!-- User -->
+                    <button id="usuario-conectado" class="btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="imagen-perfil"></div>
                     </button>
-                    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Este es tu carrito de compras</h5>
+                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Hola <span id="nombre-de-usuario">!</span></h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body small">
-                            <p>Por ahora no tienes ningún producto en tu carrito</p>
+                            <a href="#" class="border"><p class="border">Mi perfil</p></a>
+                            <a href="#" class="border"><p class="border">Mi aprendizaje</p></a>
+                            <a href="#" class="border"><p class="border">Cursos comprados</p></a>
+                            <a href="#" class="border"><p class="border">Mi carrito</p></a>
+                            <a href="#" class="border" onclick=logOut()><p class="border">Cerrar sesión</p></a>
                         </div>
                     </div>
-                    <!-- / Cart -->
+                    <!-- / User -->
                 </div>
             </div>
         </nav>
@@ -200,25 +257,25 @@
         </div>
     </footer>
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
 
-
-<script>
-// Your web app's Firebase configuration
-var firebaseConfig = {
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
     apiKey: "AIzaSyC61-Jm6mEjIjGACKMcWw1iAPgtdSWt54M",
     authDomain: "escuelas-iade.firebaseapp.com",
     projectId: "escuelas-iade",
     storageBucket: "escuelas-iade.appspot.com",
     messagingSenderId: "419022039248",
     appId: "1:419022039248:web:1d6841214d6678ae9396d5"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-</script>
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -226,6 +283,10 @@ firebase.initializeApp(firebaseConfig);
     </script>
     <!-- JQuery -->
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Session File -->
+    <script src="../js/session.js"></script>
     <!-- JS Styles -->
     <script src="./js/index.js"></script>
 </body>

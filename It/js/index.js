@@ -293,18 +293,3 @@ window.onscroll = () => {
 
     }
 }
-
-// Firebase //
-var usuario_id = 2;
-var usuario = {
-        'title': 'Conectar Firebase con tu app de JavaScript',
-        }
-
-firebase.database().ref('usuarios/' + usuario_id).set(usuario);
-
-firebase.database().ref('usuarios/' + usuario_id).once('value').then(
-    function(snapshot){
-            var title = snapshot.val().title;
-            console.log(title);
-    }
-)
