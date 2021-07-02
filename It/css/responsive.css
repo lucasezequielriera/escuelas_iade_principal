@@ -62,8 +62,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 894px) {
@@ -91,8 +91,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -128,8 +128,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 
   .bottom-part .container-courses a {

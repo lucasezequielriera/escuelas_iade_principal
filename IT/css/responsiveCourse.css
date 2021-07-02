@@ -103,8 +103,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 975px) {
@@ -169,8 +169,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 619px) {
@@ -240,8 +240,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 394px) {

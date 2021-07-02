@@ -36,14 +36,24 @@
   }
 }
 @media screen and (max-width: 991px) {
+  #header .navbar .container-fluid .navbar-collapse {
+    position: relative;
+  }
   #header .navbar .container-fluid .navbar-collapse form {
     display: flex !important;
     width: 93% !important;
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
+    display: flex;
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    right: 0px;
+    bottom: 1px;
+  }
+  #header .navbar .container-fluid .navbar-collapse .btn-login {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 799px) {
@@ -69,8 +79,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -102,8 +112,8 @@
   }
   #header .navbar .container-fluid .navbar-collapse .btn-cart {
     position: absolute;
-    bottom: 3px;
-    right: 10px;
+    bottom: 1px;
+    right: 0px;
   }
 
   .bottom-part .container-courses a {

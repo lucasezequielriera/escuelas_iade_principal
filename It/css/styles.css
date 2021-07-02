@@ -22,6 +22,9 @@ body #header .navbar {
 body #header .navbar .container-fluid .navbar-brand img {
   width: 80px;
 }
+body #header .navbar .container-fluid .navbar-collapse {
+  position: relative;
+}
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
   margin: 0px 5px;
   align-self: center;

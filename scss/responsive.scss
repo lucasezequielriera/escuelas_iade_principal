@@ -45,14 +45,22 @@
         .navbar {
             .container-fluid {
                 .navbar-collapse {
+                    position: relative;
                     form {
                         display: flex !important;
                         width: 93% !important;
                     }
                     .btn-cart {
+                        display: flex;
                         position: absolute;
-                        bottom: 3px;
-                        right: 10px;
+                        right: 0px;
+                        bottom: 1px;
+                    }
+                    .btn-login {
+                        display: flex;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0;
                     }
                 }
             }
@@ -103,8 +111,8 @@
                     }
                     .btn-cart {
                         position: absolute;
-                        bottom: 3px;
-                        right: 10px;
+                        bottom: 1px;
+                        right: 0px;
                     }
                 }
             }
@@ -161,8 +169,8 @@
                     }
                     .btn-cart {
                         position: absolute;
-                        bottom: 3px;
-                        right: 10px;
+                        bottom: 1px;
+                        right: 0px;
                     }
                 }
             }
