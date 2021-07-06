@@ -102,10 +102,12 @@ function Login(e) {
             // Signed in
             const user = userCredential.user;
             localStorage.setItem('uidKey', user)
-            swal({
-                title: "Bienvenido/a!",
+            Swal.fire({
+                title: "Bienvenido/a a Escuelas iade!",
                 icon: "success",
-                timer: 2000
+                showCancelButton: false,
+                showConfirmButton: false,
+                timer: 2000,
             });
             setTimeout(() => {
                 location.reload();
@@ -113,26 +115,51 @@ function Login(e) {
             }
         )
         .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            alert(errorCode)
-            alert(errorMessage)
+            Swal.fire({
+                icon: 'error',
+                text: error.message,
+                showCancelButton: false,
+                showConfirmButton: false,
+                timer: 2000
+            })
+            // const errorCode = error.code;
         });
     } else {
-        alert("Has ingresado mal los datos o no tienes un usuario registrado");
+        Swal.fire({
+            icon: 'error',
+            text: "No has ingresado datos en algun de los dos campos",
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 }
 
 function logOut() {
     firebase.auth().signOut().then(() => {
-        swal({
-            title: "Sesión cerrada con éxito!",
-            icon: "success",
-            timer: 2000
+        Swal.fire({
+            title: 'Estás seguro/a de cerrar sesión?',
+            icon: 'warning',
+            showDenyButton: true,
+            showCancelButton: true,
+            showConfirmButton: false,
+            denyButtonText: 'Cerrar sesión',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isDenied) {
+                Swal.fire({
+                    title: 'Sesión cerrada con éxito!',
+                    icon: 'success',
+                    timer: 2000,
+                    showCancelButton: false,
+                    showConfirmButton: false
+                })
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            };
         });
-        setTimeout(() => {
-            location.reload();
-        }, 2000)
     }).catch((error) => {
         // An error happened.
     });
@@ -143,12 +170,6 @@ function logOut() {
 // Mostrar ventana de registrarse //
 const ventanaRegistrarse = document.querySelector('#ventanaRegistrarse');
 const botonVentanaRegistrarse = document.querySelector('#botonVentanaRegistrarse');
-
-// botonVentanaRegistrarse.addEventListener('click', mostrarVentana);
-
-// function mostrarVentana() {
-//     ventanaRegistrarse.style.display = 'initial';
-// }
 
 $(document).ready(function() {
     $('#botonVentanaRegistrarse').click(function() {

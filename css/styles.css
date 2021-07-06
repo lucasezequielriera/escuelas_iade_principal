@@ -256,6 +256,9 @@ body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:last-child:hover li {
   background-color: #2b2b2b;
 }
+body #header .navbar .container-fluid .navbar-collapse .menu-usuario .buttonCancelSweetAlert {
+  background-color: red;
+}
 body #main {
   width: 100%;
   height: calc(100% - 56.66px);

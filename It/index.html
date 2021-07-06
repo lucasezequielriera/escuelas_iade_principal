@@ -78,53 +78,50 @@
                         <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
                     </form>
                     <!-- Iniciar sesión o Registrarse -->
-                    <button id="usuario-desconectado" class="btn btn-danger btn-login" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><div class="imagen-login"></div></button>
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <button id="usuario-desconectado" class="btn btn-danger btn-login" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="imagen-login"></div>
+                    </button>
+                    <div class="modal fade ventanaModalSesion" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body text-center bg-danger text-light">
-                                    <h5 class="text-center mb-3">Inicia sesión en tu cuenta</h5>
-                                    <hr>
+                                <div class="modal-body text-center">
+                                    <h5 class="text-center mb-1 fw-light">Inicia sesión en tu cuenta</h5>
                                     <p id="datos-ingreso">
-                                        <label for="user"></label>
-                                        <input class="ingresar-usuario px-1" type="text" placeholder="Ingresa tu email">
-                                        <label for="password"></label>
-                                        <input class="ingresar-password px-1" type="password" placeholder="Ingresa tu contraseña">
+                                        <label for="user" class="form-label"></label>
+                                        <input type="email" class="form-control ingresar-usuario" id="user" placeholder="Ingresa tu email">
+                                        <label for="password" class="form-label"></label>
+                                        <input type="password" class="form-control ingresar-password" id="password" placeholder="Ingresa tu contraseña">
                                     </p>
-                                    <input id="ingresar" class="btn-success px-2 rounded" type="submit" value="Ingresar">
+                                    <input id="botonVentanaRegistrarse" class="btn btn-dark px-5 mt-2 text-white fw-light" type="button" value="Registrarme">
+                                    <input id="ingresar" class="btn btn-danger px-5 rounded mt-2 fw-light" type="submit" value="Ingresar">
                                 </div>
-                                <p class="text-center py-2 bg-light m-0">ó</p>
-                                <div class="modal-body text-center bg-light">
-                                    <h5 class="text-center mb-3">Registrate en Escuelas iade</h5>
-                                    <hr>
+                                <div id="ventanaRegistrarse" class="modal-body text-center bg-light mt-1">
+                                    <h5 class="text-center mb-4 fw-light">Registrate en Escuelas iade</h5>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="nombres">Nombres</label>
-                                        <input class="registrar-nombres px-1" type="text" placeholder="Ej: Martin Ezequiel" style="width: 300px;">
+                                        <label for="nombres" class="form-label">Nombres</label>
+                                        <input type="text" class="form-control registrar-nombres" id="nombres" placeholder="Ej: Martin Ezequiel" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="apellidos">Apellidos</label>
-                                        <input class="registrar-apellidos px-1" type="text" placeholder="Ej: Rojas Ríos" style="width: 300px;">
+                                        <label for="apellidos" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control registrar-apellidos" id="user" placeholder="Ej: Rojas Ríos" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="ubicacion">Ubicación</label>
-                                        <input class="registrar-ubicacion px-1" type="text" placeholder="Ej: Buenos Aires, Argentina" style="width: 300px;">
+                                        <label for="ubicacion" class="form-label">Ubicación</label>
+                                        <input type="text" class="form-control registrar-ubicacion" id="ubicacion" placeholder="Ej: Buenos Aires, Argentina" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="telefono">Teléfono</label>
-                                        <input class="registrar-telefono px-1" type="number" placeholder="Ej: +54 011 3578 9876" style="width: 300px;">
+                                        <label for="telefono" class="form-label">Teléfono</label>
+                                        <input type="number" class="form-control registrar-telefono" id="user" placeholder="Ej: +54 011 3578 9876" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="user">Ingresa tu email</label>
-                                        <input class="registrar-usuario px-1" type="text" placeholder="xxx@gmail.com" style="width: 300px;">
+                                        <label for="user" class="form-label">Ingresa tu email</label>
+                                        <input type="email" class="form-control registrar-usuario" id="user" placeholder="xxx@gmail.com" style="width: 300px;">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="password">Elige tu contraseña</label>
-                                        <input class="registrar-password px-1" type="password" placeholder="xxxxxx (6 caracteres mínimo)" style="width: 300px;">
+                                        <label for="password" class="form-label">Elige tu contraseña</label>
+                                        <input type="password" class="form-control registrar-password" id="password" placeholder="xxxxxx (6 caracteres mínimo)" style="width: 300px;">
                                     </p>
-                                    <input id="registrarse" class="btn-danger px-2 rounded" type="button" value="Registrarme" style="width: 250px;">
+                                    <input id="registrarse" class="btn btn-danger px-2 rounded" type="button" value="Registrarme" style="width: 250px;">
                                 </div>
                             </div>
                         </div>
@@ -133,17 +130,19 @@
                     <!-- User -->
                     <button id="usuario-conectado" class="btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="imagen-perfil"></div>
                     </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas offcanvas-end menu-usuario" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Hola <span id="nombre-de-usuario">!</span></h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body small">
-                            <a href="#" class="border"><p class="border">Mi perfil</p></a>
-                            <a href="#" class="border"><p class="border">Mi aprendizaje</p></a>
-                            <a href="#" class="border"><p class="border">Cursos comprados</p></a>
-                            <a href="#" class="border"><p class="border">Mi carrito</p></a>
-                            <a href="#" class="border" onclick=logOut()><p class="border">Cerrar sesión</p></a>
+                            <ul class="list-group">
+                                <a href="#"><li class="list-group-item">Mi perfil</li></a>
+                                <a href="#"><li class="list-group-item">Mi aprendizaje</li></a>
+                                <a href="#"><li class="list-group-item">Cursos comprados</li></a>
+                                <a href="#"><li class="list-group-item">Mi carrito</li></a>
+                                <a href="#" onclick=logOut()><li class="list-group-item">Cerrar sesión</li></a>
+                            </ul>
                         </div>
                     </div>
                     <!-- / User -->
@@ -284,7 +283,7 @@
     <!-- JQuery -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <!-- Sweet Alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Session File -->
     <script src="../js/session.js"></script>
     <!-- JS Styles -->
