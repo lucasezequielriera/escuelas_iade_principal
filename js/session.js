@@ -57,6 +57,9 @@ function Registrarse(e) {
             registrarUsuario.value = '';
             registrarPassword.value = '';
             // ...
+            setTimeout(() => {
+                location.reload();
+            }, 2000)
         })
         .catch((error) => {
             console.log(error)
@@ -136,3 +139,19 @@ function logOut() {
 }
 
 /////----- / Register -----/////
+
+// Mostrar ventana de registrarse //
+const ventanaRegistrarse = document.querySelector('#ventanaRegistrarse');
+const botonVentanaRegistrarse = document.querySelector('#botonVentanaRegistrarse');
+
+// botonVentanaRegistrarse.addEventListener('click', mostrarVentana);
+
+// function mostrarVentana() {
+//     ventanaRegistrarse.style.display = 'initial';
+// }
+
+$(document).ready(function() {
+    $('#botonVentanaRegistrarse').click(function() {
+        $("#ventanaRegistrarse").slideToggle();
+    });
+});

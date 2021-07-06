@@ -221,6 +221,60 @@ body {
                             background-size: 80px;
                         }
                     }
+                    .ventanaModalSesion {
+                        .modal-content {
+                            padding-bottom: 10px;
+                            background-color: whitesmoke;
+                            box-shadow: 0px 0px 30px black;
+                            #datos-ingreso::placeholder {
+                                color: red !important;
+                            }
+                            #botonVentanaRegistrarse {
+                                color: black;
+                                text-decoration: none;
+                            }
+                            #ventanaRegistrarse {
+                                display: none;
+                                padding-top: 0;
+                                label {
+                                    align-self: flex-end;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                    .menu-usuario {
+                        .offcanvas-body {
+                            .list-group {
+                                a:first-child {
+                                    margin-top: 10px;
+                                }
+                                a {
+                                    text-decoration: none;
+                                    margin-bottom: 2px;
+                                    border-radius: 3px;
+                                    li {
+                                        color: rgb(104, 104, 104);
+                                        font-size: 13px;
+                                        font-weight: 300;
+                                        border: 1px solid rgb(201, 201, 201);
+                                        transition: all .1s;
+                                    }
+                                }
+                                a:last-child li {
+                                    background-color: rgb(209, 0, 0);
+                                    color: white;
+                                }
+                                a:hover li {
+                                    background-color: rgb(209, 0, 0);
+                                    color: white;
+                                }
+                                a:last-child:hover li {
+                                    background-color: rgb(43, 43, 43);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
