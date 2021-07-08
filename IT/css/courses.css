@@ -297,8 +297,9 @@ body #main .left-part .subtitulo-curso h2 {
 body #main .left-part .subtitulo-curso .iconos {
   display: flex;
   flex-flow: row nowrap;
-  background-color: #242424;
+  background-color: #ca2424;
   padding: 10px 0px;
+  border-radius: 3px;
 }
 body #main .left-part .subtitulo-curso .iconos p {
   font-size: 13px;
@@ -676,6 +677,10 @@ body #main .left-part .container-cursos-recomendados .card-curso .precio p {
   font-weight: 500;
   margin: 0px;
 }
+body #main .left-part .container-cursos-recomendados .card-curso .precio p span {
+  border: 1px solid green;
+  color: green;
+}
 body #main .left-part .container-cursos-recomendados .card-curso .comprar-guardar {
   width: 10%;
   height: 100%;
@@ -689,10 +694,10 @@ body #main .left-part .container-cursos-recomendados .card-curso .comprar-guarda
   margin: 0px;
 }
 body #main .left-part .container-cursos-recomendados .card-curso .comprar-guardar p img {
-  border-radius: 90px;
+  border-radius: 5px;
   padding: 4px;
   text-align: center;
-  width: 35px;
+  width: 30px;
   margin: 5px 0px;
 }
 body #main .right-part {
@@ -707,6 +712,8 @@ body #main .right-part .container-form {
   height: 600px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.397);
+  margin-left: 40px;
+  margin-top: -30px;
 }
 body #main .right-part .container-form .imagen-curso {
   width: 100%;
@@ -796,6 +803,54 @@ body #main .right-part .container-form .informacion-extra p img {
 }
 body #main .right-part .container-form .informacion-extra p:last-child {
   margin-bottom: 0px;
+}
+body #main .right-part .contact-form {
+  position: fixed;
+  background-color: rgba(241, 241, 241, 0);
+  width: 360px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.397);
+  margin-left: 40px;
+  margin-top: -20px;
+  padding: 10px 15px 20px 15px;
+}
+body #main .right-part .contact-form h1 {
+  margin-bottom: 0px;
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #c7c7c7;
+}
+body #main .right-part .contact-form form .parrafo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body #main .right-part .contact-form form .parrafo label {
+  font-weight: 300;
+  line-height: 28px;
+  font-size: 13.5px;
+}
+body #main .right-part .contact-form form .parrafo input {
+  border: 1px solid silver;
+  border-radius: 3px;
+  height: 30px;
+  padding: 0px 5px;
+  font-weight: 300;
+  transition: all 0.2s;
+}
+body #main .right-part .contact-form form .parrafo input:focus {
+  border: 1px solid #ffa0a0 !important;
+  box-shadow: 0px 0px 10px #ffc3c3;
+  outline: none;
+}
+body #main .right-part .contact-form form .btn-enviar {
+  width: 100%;
+  margin-top: 10px;
+}
+body #main .right-part .contact-form form .footer-card {
+  font-size: 10px;
+  color: #6b6b6b;
 }
 body #footer {
   width: 100% !important;

@@ -44,7 +44,7 @@ function Registrarse(e) {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            swal({
+            Swal.fire({
                 title: "¡Usuario creado con éxito!",
                 icon: "success",
                 timer: 2000
