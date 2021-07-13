@@ -15,5 +15,5 @@ Pendiente de hacer:
 }
 - Agregar comentarios en el footer y hacer pagina de comentarios
 - Hacer que al hacer click en algun comentario, vaya  la pagina de comentarios
-- Hacer el formulario en pagina de curso para venta por formulario <H1 /> (contectar con CRM)
+- Hacer el formulario en pagina de curso para venta por formulario <Okey /> (contectar con CRM)
 - Hacer pagina de terminos de uso, faq y proteccion de datos personales

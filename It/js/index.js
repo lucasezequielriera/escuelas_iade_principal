@@ -277,8 +277,11 @@ function mostrar8() {
     </div> `
 }
 
-// Apareciendo el footer "Comprar" //
+/////----- / Navbar -----/////
 
+/////----- Footer Comprar (mobile) -----/////
+
+// Apareciendo el footer "Comprar" al ser pantalla más chica //
 window.onscroll = () => {
     const y = window.scrollY;
     const responsiveFooter = document.querySelector("#responsive-footer");
@@ -293,3 +296,42 @@ window.onscroll = () => {
 
     }
 }
+
+/////----- / Footer Comprar (mobile) -----/////
+
+/////----- Formulario de Contacto -----/////
+
+// Consts //
+const formulario = document.querySelector("#contact-form");
+const inputSpam = document.querySelector("#escondido");
+const inputNombre = document.querySelector("#nombre");
+const inputEmail = document.querySelector("#email");
+const inputProvincia = document.querySelector("#provincia");
+const inputTelefono = document.querySelector("#telefono");
+const inputDiasContacto = document.querySelector("#dias-contacto");
+const inputHorarioContacto = document.querySelector("#horario-contacto");
+const inputCursoInteres = document.querySelector("#curso-interes");
+
+// Listeners //
+formulario.addEventListener("submit", validarSpam);
+
+// Functions //
+function validarSpam(event) {
+    if (inputSpam.value.length >= 1) {
+        return vaciarInputs(event);
+    } else {
+        console.log("formulario sin spam")
+    }
+}
+function vaciarInputs(event) {
+    event.preventDefault()
+    inputNombre.value = '';
+    inputEmail.value = '';
+    inputProvincia.value = '';
+    inputTelefono.value = '';
+    inputDiasContacto.value = '';
+    inputHorarioContacto.value = '';
+    inputCursoInteres.value = '';
+}
+
+/////----- / Formulario de Contacto -----/////

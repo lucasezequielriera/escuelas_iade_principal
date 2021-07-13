@@ -606,34 +606,38 @@
             <div class="container-form contact-form">
                 <h1>Contactate con nosotros y comenzá a estudiar!</h1>
                 <hr>
-                <form action="#" method="post">
+                <form id="contact-form" action="#" method="post">
+                    <p class="parrafo">
+                        <label for="stopspam" class="campo-escondido">Si ves esto no rellenes el campo</label>
+                        <input name="stopspam" id="escondido" class="campo-escondido" />
+                    </p>
                     <p class="parrafo">
                         <label for="nombre">Nombre Completo</label>
-                        <input type="text" required>
+                        <input id="nombre" type="text" required>
                     </p>
                     <p class="parrafo">
                         <label for="email">Email</label>
-                        <input type="text" required>
+                        <input id="email" type="text" required>
                     </p>
                     <p class="parrafo">
                         <label for="provincia">Provincia</label>
-                        <input type="text" required>
+                        <input id="provincia" type="text" required>
                     </p>
                     <p class="parrafo">
                         <label for="telefono">Teléfono</label>
-                        <input type="number" required>
+                        <input id="telefono" type="number" required>
                     </p>
                     <p class="parrafo">
                         <label for="dia-contacto">Día/s de contacto</label>
-                        <input type="text" required>
+                        <input id="dias-contacto" type="text" required>
                     </p>
                     <p class="parrafo">
                         <label for="horario-contacto">Horario/s de contacto</label>
-                        <input type="text" required>
+                        <input id="horario-contacto" type="text" required>
                     </p>
                     <p class="parrafo">
                         <label for="curso">Curso/s de interés</label>
-                        <input type="text" required>
+                        <input id="curso-interes" type="text" required>
                     </p>
                     <input class="btn-enviar btn btn-success fw-light" type="submit" value="Quiero más información *">
                     <p class="footer-card mt-3 mb-0">* Este formulario es una solicitud de información, no de inscripción.</p>
