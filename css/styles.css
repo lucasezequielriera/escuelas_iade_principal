@@ -328,6 +328,90 @@ body #main .slider-iconos .card .icono {
 body #main .slider-iconos .card .icono img {
   width: 50px;
 }
+body #mainInstitucional {
+  width: 100%;
+  height: calc(100vh - 56.66px - 50px);
+  margin: auto;
+}
+body #mainInstitucional .imagen-fondo {
+  padding: 120px;
+  background-image: url("../images/fondo-pantalla4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+body #mainInstitucional .imagen-fondo .titulo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+body #mainInstitucional .imagen-fondo .subtitulo {
+  margin: 30px 0;
+}
+body #mainInstitucional .imagen-fondo .subtitulo h1 {
+  font-size: 80px;
+  color: #f75252;
+  text-shadow: 0px 0px 10px black;
+}
+body #mainInstitucional .imagen-fondo .bisubtitulo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+body #mainInstitucional .imagen-fondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.404);
+}
+body #mainInstitucional .informationSection {
+  margin-top: 50px;
+}
+body #mainInstitucional .informationSection .iconos {
+  justify-content: space-evenly;
+}
+body #mainInstitucional .informationSection .iconos a {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0px;
+}
+body #mainInstitucional .informationSection .iconos a .svgimg {
+  margin: 10px 0;
+  width: 60px;
+  height: 60px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+body #mainInstitucional .informationSection .iconos a:hover .svgimg {
+  transform: translateY(-10px);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.541));
+}
+body #mainInstitucional .informationSection .modal .modal-dialog {
+  min-width: 100% !important;
+}
+body #mainInstitucional .informationSection .modal .modal-dialog .modal-content {
+  margin: 0 30px;
+}
+body #mainInstitucional .informationSection .texto-flotante {
+  animation: flotando infinite 1s alternate;
+  color: #858585;
+}
 body #escuelas {
   width: 100%;
   height: 100%;
@@ -784,6 +868,14 @@ body #footer .right-part p span {
   }
   to {
     transform: translateX(-1000px);
+  }
+}
+@keyframes flotando {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
   }
 }
 
