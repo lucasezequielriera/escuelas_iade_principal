@@ -85,7 +85,9 @@ if (user) {
     const user = firebase.auth().currentUser;
     if(user != null) {
         const email_id = user.email;
+        const uid = user.uid
         console.log(user)
+        console.log(uid)
         document.querySelector('#nombre-de-usuario').textContent = email_id;
     }
 

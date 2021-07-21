@@ -263,7 +263,6 @@ body #main {
   max-width: 1200px;
   margin: 0 auto;
   height: calc(100% - 56.66px);
-  z-index: 0;
   margin-top: 30px;
   margin-bottom: 30px;
   position: relative;
@@ -476,7 +475,7 @@ body #main .left-part .container-certificaciones h3 {
   font-weight: 600;
 }
 body #main .left-part .container-certificaciones .card-certificaciones {
-  margin-top: 15px;
+  margin-top: 0;
 }
 body #main .left-part .container-certificaciones .card-certificaciones img {
   width: 80px;
@@ -484,6 +483,31 @@ body #main .left-part .container-certificaciones .card-certificaciones img {
 }
 body #main .left-part .container-certificaciones .card-certificaciones img:last-child {
   margin-right: 0px;
+}
+body #main .left-part .container-conocenos {
+  margin-top: 50px;
+  width: 100%;
+}
+body #main .left-part .container-conocenos h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+body #main .left-part .container-conocenos .botones {
+  margin-top: 15px;
+}
+body #main .left-part .container-conocenos .botones a {
+  margin: 0 10px 0 0;
+  padding: 10px 20px 10px 20px;
+  font-size: 17px;
+  font-weight: 300;
+  min-width: 150px !important;
+}
+body #main .left-part .container-conocenos .modal .modal-dialog {
+  min-width: 100% !important;
+}
+body #main .left-part .container-conocenos .modal .modal-dialog .modal-content {
+  margin: 0 30px;
+  z-index: 1;
 }
 body #main .left-part .container-ranking {
   margin-top: 50px;

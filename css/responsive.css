@@ -1,13 +1,12 @@
 @media screen and (max-width: 1202px) {
   #footer {
     flex-direction: column !important;
-    margin-bottom: 5px !important;
     justify-content: center !important;
   }
   #footer .left-part {
     width: 100% !important;
     font-size: 13px !important;
-    white-space: nowrap;
+    white-space: nowrap !important;
   }
   #footer .right-part {
     width: 100% !important;
@@ -26,6 +25,7 @@
   }
   #institucional .bottom-part {
     width: 100% !important;
+    height: 100%;
     justify-content: center;
   }
   #institucional .bottom-part .left-content {
@@ -55,6 +55,19 @@
     right: 0px;
     bottom: 0;
   }
+
+  #mainInstitucional {
+    height: 100% !important;
+  }
+  #mainInstitucional .imagen-fondo .titulo h1 {
+    font-size: 25px;
+  }
+  #mainInstitucional .imagen-fondo .subtitulo h1 {
+    font-size: 70px !important;
+  }
+  #mainInstitucional .imagen-fondo .bisubtitulo h1 {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 799px) {
   #informacion .container-informacion {
@@ -70,6 +83,22 @@
   }
   #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown {
     width: 500px !important;
+  }
+
+  #mainInstitucional .imagen-fondo .titulo h1 {
+    font-size: 25px;
+  }
+  #mainInstitucional .imagen-fondo .titulo h1:last-child {
+    text-align: right;
+  }
+  #mainInstitucional .imagen-fondo .subtitulo h1 {
+    font-size: 70px !important;
+  }
+  #mainInstitucional .imagen-fondo .bisubtitulo h1 {
+    font-size: 25px;
+  }
+  #mainInstitucional .imagen-fondo .bisubtitulo h1:last-child {
+    text-align: right;
   }
 }
 @media screen and (max-width: 639px) {
@@ -96,8 +125,30 @@
   #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown .right-part-dropdown {
     display: none !important;
   }
+
+  #mainInstitucional .imagen-fondo {
+    padding: 120px 20px !important;
+  }
+  #mainInstitucional .imagen-fondo .titulo {
+    display: none !important;
+  }
+  #mainInstitucional .imagen-fondo .subtitulo h1 {
+    font-size: 60px !important;
+  }
+  #mainInstitucional .imagen-fondo .bisubtitulo {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 525px) {
+  #mainInstitucional .informationSection .iconos {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  #mainInstitucional .informationSection .iconos a {
+    width: 100% !important;
+    margin: 0 0 10px 0;
+  }
+
   #footer .left-part {
     display: none !important;
   }

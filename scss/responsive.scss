@@ -2,12 +2,11 @@
 @media screen and (max-width: 1202px) {
     #footer {
         flex-direction: column !important;
-        margin-bottom: 5px !important;
         justify-content: center !important;
         .left-part {
             width: 100% !important;
             font-size: 13px !important;
-            white-space: nowrap;
+            white-space: nowrap !important;
         }
         .right-part {
             width: 100% !important;
@@ -29,6 +28,7 @@
         }
         .bottom-part {
             width: 100% !important;
+            height: 100%;
             justify-content: center;
             .left-content {
                 width: 100% !important;
@@ -66,6 +66,26 @@
             }
         }
     }
+    #mainInstitucional {
+        height: 100% !important;
+        .imagen-fondo {
+            .titulo {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+            .subtitulo {
+                h1 {
+                    font-size: 70px !important;
+                }
+            }
+            .bisubtitulo {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 799px) {
@@ -94,6 +114,31 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    #mainInstitucional {
+        .imagen-fondo {
+            .titulo {
+                h1 {
+                    font-size: 25px;
+                }
+                h1:last-child {
+                    text-align: right;
+                }
+            }
+            .subtitulo {
+                h1 {
+                    font-size: 70px !important;
+                }
+            }
+            .bisubtitulo {
+                h1 {
+                    font-size: 25px;
+                }
+                h1:last-child {
+                    text-align: right;
                 }
             }
         }
@@ -145,9 +190,37 @@
             }
         }
     }
+    #mainInstitucional {
+        .imagen-fondo {
+            padding: 120px 20px !important;
+            .titulo {
+                display: none !important;
+            }
+            .subtitulo {
+                h1 {
+                    font-size: 60px !important;
+                }
+            }
+            .bisubtitulo {
+                display: none !important;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 525px) {
+    #mainInstitucional {
+        .informationSection {
+            .iconos {
+                display: flex;
+                flex-flow: column nowrap;
+                a {
+                    width: 100% !important;
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+    }
     #footer {
         .left-part {
             display: none !important;

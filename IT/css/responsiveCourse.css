@@ -55,6 +55,10 @@
     width: 95% !important;
     margin: 0 auto;
   }
+  #main .left-part .container-conocenos {
+    width: 95% !important;
+    margin: 0 auto;
+  }
   #main .left-part .container-ranking {
     width: 95% !important;
     margin: 0 auto;
@@ -91,17 +95,13 @@
   #footer .right-part {
     width: 100% !important;
   }
-
-  .container-certificaciones .card-certificaciones {
-    text-align: center !important;
-  }
 }
 @media screen and (max-width: 991px) {
   #header .navbar .container-fluid .navbar-collapse form {
     display: flex !important;
     width: 93% !important;
   }
-  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+  #header .navbar .container-fluid .navbar-collapse .btn-cart, #header .navbar .container-fluid .navbar-collapse .btn-login {
     position: absolute;
     bottom: 1px;
     right: 0px;
@@ -153,6 +153,14 @@
   #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu .container-dropdown {
     width: 500px !important;
   }
+
+  .container-certificaciones .card-certificaciones {
+    text-align: center !important;
+  }
+
+  .container-conocenos .botones {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 698px) {
   #main .left-part .subtitulo-curso .iconos p {
@@ -167,7 +175,7 @@
     display: flex !important;
     width: 89% !important;
   }
-  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+  #header .navbar .container-fluid .navbar-collapse .btn-cart, #header .navbar .container-fluid .navbar-collapse .btn-login {
     position: absolute;
     bottom: 1px;
     right: 0px;
@@ -182,6 +190,10 @@
   }
   #main .left-part .container-cursos-recomendados .card-curso .precio {
     display: none !important;
+  }
+  #main .left-part .container-conocenos .botones a {
+    width: 100%;
+    margin: 0 0 5px 0 !important;
   }
 }
 @media screen and (max-width: 550px) {
@@ -238,7 +250,7 @@
     display: flex !important;
     width: 85% !important;
   }
-  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+  #header .navbar .container-fluid .navbar-collapse .btn-cart, #header .navbar .container-fluid .navbar-collapse .btn-login {
     position: absolute;
     bottom: 1px;
     right: 0px;

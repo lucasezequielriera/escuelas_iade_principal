@@ -355,7 +355,7 @@ body #main .slider-iconos .card .icono img {
 }
 body #mainInstitucional {
   width: 100%;
-  height: calc(100vh - 56.66px - 50px);
+  height: 100%;
   margin: auto;
 }
 body #mainInstitucional .imagen-fondo {
@@ -433,7 +433,11 @@ body #mainInstitucional .informationSection .modal .modal-dialog {
 body #mainInstitucional .informationSection .modal .modal-dialog .modal-content {
   margin: 0 30px;
 }
-body #mainInstitucional .informationSection .texto-flotante {
+body #mainInstitucional .informationSection .container-texto-flotante {
+  width: 100%;
+  height: 100px;
+}
+body #mainInstitucional .informationSection .container-texto-flotante .texto-flotante {
   animation: flotando infinite 1s alternate;
   color: #858585;
 }
@@ -737,7 +741,7 @@ body #institucional .nuestra-informacion .bottom-part .right-content img {
 body #slider-valoraciones {
   width: 100%;
   height: 250px;
-  margin: 80px 0px;
+  margin: 80px 0 0 0;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -795,14 +799,15 @@ body #slider-valoraciones .card-valoracion .right-part .texto p {
 }
 body #footer {
   width: 100%;
-  height: 50px;
+  margin-bottom: 0;
   background-color: whitesmoke;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 body #footer .left-part {
-  width: 48%;
+  width: 50%;
   height: 100%;
   border-radius: 5px;
   display: flex;
@@ -828,7 +833,7 @@ body #footer .left-part p a:hover {
   border: 1px solid #d30000;
 }
 body #footer .right-part {
-  width: 48%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
