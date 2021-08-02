@@ -355,8 +355,9 @@ body #main .slider-iconos .card .icono img {
 }
 body #mainInstitucional {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 32px - 56.64px);
   margin: auto;
+  position: relative;
 }
 body #mainInstitucional .imagen-fondo {
   padding: 120px;
@@ -756,8 +757,8 @@ body #slider-valoraciones .card-valoracion {
   border-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
-  box-shadow: 0px 0px 20px #bbbbbb;
-  background: #e4e4e4;
+  box-shadow: 0px 0px 20px #f0f0f0;
+  background: rgba(0, 0, 0, 0.055);
   animation: sliderReputation 50s infinite linear;
 }
 body #slider-valoraciones .card-valoracion .left-part {
@@ -782,6 +783,7 @@ body #slider-valoraciones .card-valoracion .right-part {
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo h3 {
   color: #3b3b3b;
+  font-weight: 300;
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo p {
   font-weight: 600;

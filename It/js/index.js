@@ -313,7 +313,7 @@ const inputHorarioContacto = document.querySelector("#horario-contacto");
 const inputCursoInteres = document.querySelector("#curso-interes");
 
 // Listeners //
-formulario.addEventListener("submit", validarSpam);
+formulario.addEventListener("submit", validarSpam)
 
 // Functions //
 function validarSpam(event) {
