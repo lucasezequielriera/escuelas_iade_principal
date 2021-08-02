@@ -94,6 +94,7 @@ if (user) {
 } else {
     document.querySelector('#usuario-desconectado').style.display = 'initial';
     document.querySelector('#usuario-conectado').style.display = 'none';
+    console.log(user)
 }});
 
 function Login(e) {

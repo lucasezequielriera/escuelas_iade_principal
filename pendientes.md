@@ -50,7 +50,8 @@ HECHO:
 - Arreglar SPAM de formularios con datos vacíos
 
 - 01/08/21: Arreglo de archivos JS
-- 01/09/21: Validaciones de buttons en página de curso
+- 01/08/21: Validaciones de buttons en página de curso
+- 02/08/21: Terminado validaciones para sesiones (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente)
 
 POR HACER:
 
