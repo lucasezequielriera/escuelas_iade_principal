@@ -71,7 +71,7 @@ const navbar = `
                     <a href="#" class="border"><p class="border">Mi perfil</p></a>
                     <a href="#" class="border"><p class="border">Mi aprendizaje</p></a>
                     <a href="#" class="border"><p class="border">Cursos comprados</p></a>
-                    <a href="#" class="border"><p class="border">Mi carrito</p></a>
+                    <a href="../carrito.html" class="border"><p class="border">Mi carrito</p></a>
                     <a href="#" class="border" onclick=logOut()><p class="border">Cerrar sesión</p></a>
                 </div>
             </div>

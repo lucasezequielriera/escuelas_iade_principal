@@ -217,8 +217,10 @@ body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .moda
   color: red !important;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #botonVentanaRegistrarse {
-  color: black;
-  text-decoration: none;
+  padding: 5.64px 40px;
+}
+body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #botonVentanaIngresar {
+  padding: 5.64px 53.3px;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #ventanaRegistrarse {
   display: none;

@@ -3,6 +3,7 @@
 // Validación de sesión //
 const estadoSesion = localStorage.getItem('sesion')
 
+// Obteniendo "user" en true o en false //
 firebase.auth().onAuthStateChanged( user => {
   if (user) {
       user = user.R
@@ -18,9 +19,10 @@ const buttonCartCourse = document.querySelectorAll('.addCarrito');
 // Function de action al hacer click en buttons //
 const hacerClick = (e) => {
     // Son 2 comprobaciones por cada button //
-    const searchedWordInArray =  Array.from(e.path[1].classList).indexOf('compraDirecta') // IMPORTANTE // Si no es el uno es el otro ARRAY
-    const searchedWordInClassName = (e.target.className).includes('compraDirecta') // IMPORTANTE // Si no es el uno es el otro WORDS
-    // Si las comprobaciones de obtención de button y la sesión está iniciada, compra o add al carrito //
+    const searchedWordInArray =  Array.from(e.path[1].classList).indexOf('compraDirecta')
+    const searchedWordInClassName = (e.target.className).includes('compraDirecta')
+
+    // Haciendo las validaciones dependiendo la sesión //
     if (estadoSesion !== 'null') {
         if (searchedWordInArray.length >= 1 || searchedWordInClassName >= 1) {
             console.log("Estas queriendo comprar")

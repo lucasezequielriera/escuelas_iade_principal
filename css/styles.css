@@ -219,8 +219,10 @@ body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .moda
   color: red !important;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #botonVentanaRegistrarse {
-  color: black;
-  text-decoration: none;
+  padding: 5.64px 40px;
+}
+body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #botonVentanaIngresar {
+  padding: 5.64px 53.3px;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #ventanaRegistrarse {
   display: none;
@@ -355,7 +357,7 @@ body #main .slider-iconos .card .icono img {
 }
 body #mainInstitucional {
   width: 100%;
-  height: calc(100vh - 32px - 56.64px);
+  height: calc(100% - 32px - 56.64px);
   margin: auto;
   position: relative;
 }

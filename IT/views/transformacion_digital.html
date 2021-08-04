@@ -61,7 +61,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../institucional.html">Institucional</a>
+                            <a class="nav-link" href="../../institucional.html">Conocenos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../../certificaciones.html">Certificaciones</a>
@@ -85,43 +85,44 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body text-center">
-                                    <h5 class="text-center mb-1 fw-light">Inicia sesión en tu cuenta</h5>
-                                    <p id="datos-ingreso">
-                                        <label for="user" class="form-label"></label>
-                                        <input type="email" class="form-control ingresar-usuario" id="user" placeholder="Ingresa tu email">
-                                        <label for="password" class="form-label"></label>
-                                        <input type="password" class="form-control ingresar-password" id="password" placeholder="Ingresa tu contraseña">
-                                    </p>
-                                    <input id="botonVentanaRegistrarse" class="btn btn-dark px-5 mt-2 text-white fw-light" type="button" value="Registrarme">
-                                    <input id="ingresar" class="btn btn-danger px-5 rounded mt-2 fw-light" type="submit" value="Ingresar">
+                                        <h5 class="text-center mb-1 fw-light">Inicia sesión en tu cuenta</h5>
+                                        <p id="datos-ingreso">
+                                            <label for="user" class="form-label"></label>
+                                            <input type="email" class="form-control ingresar-usuario" id="user" placeholder="Ingresa tu email" onkeypress="if (event.keyCode===13) Login()">
+                                            <label for="password" class="form-label"></label>
+                                            <input type="password" class="form-control ingresar-password" id="password" placeholder="Ingresa tu contraseña" onkeypress="if (event.keyCode===13) Login()">
+                                        </p>
+                                        <input class="btn btn-success mt-2 text-white fw-light" id="botonVentanaRegistrarse" type="button" value="Registrarme">
+                                        <input class="btn btn-danger rounded mt-2 fw-light" id="botonVentanaIngresar" type="submit" value="Ingresar">
                                 </div>
                                 <div id="ventanaRegistrarse" class="modal-body text-center bg-light mt-1">
+                                    <hr class="mt-0">
                                     <h5 class="text-center mb-4 fw-light">Registrate en Escuelas iade</h5>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="nombres" class="form-label">Nombres</label>
-                                        <input type="text" class="form-control registrar-nombres" id="nombres" placeholder="Ej: Martin Ezequiel" style="width: 300px;">
+                                        <input type="text" class="form-control registrar-nombres" id="nombres" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="apellidos" class="form-label">Apellidos</label>
-                                        <input type="text" class="form-control registrar-apellidos" id="user" placeholder="Ej: Rojas Ríos" style="width: 300px;">
+                                        <input type="text" class="form-control registrar-apellidos" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="ubicacion" class="form-label">Ubicación</label>
-                                        <input type="text" class="form-control registrar-ubicacion" id="ubicacion" placeholder="Ej: Buenos Aires, Argentina" style="width: 300px;">
+                                        <input type="text" class="form-control registrar-ubicacion" id="ubicacion" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="telefono" class="form-label">Teléfono</label>
-                                        <input type="number" class="form-control registrar-telefono" id="user" placeholder="Ej: +54 011 3578 9876" style="width: 300px;">
+                                        <input type="number" class="form-control registrar-telefono" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="user" class="form-label">Ingresa tu email</label>
-                                        <input type="email" class="form-control registrar-usuario" id="user" placeholder="xxx@gmail.com" style="width: 300px;">
+                                        <input type="email" class="form-control registrar-usuario" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
                                     </p>
                                     <p class="parrafo-form d-flex justify-content-between">
                                         <label for="password" class="form-label">Elige tu contraseña</label>
-                                        <input type="password" class="form-control registrar-password" id="password" placeholder="xxxxxx (6 caracteres mínimo)" style="width: 300px;">
+                                        <input type="password" class="form-control registrar-password" id="password" placeholder="(6 caracteres mínimo)" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
                                     </p>
-                                    <input id="registrarse" class="btn btn-danger px-2 rounded" type="button" value="Registrarme" style="width: 250px;">
+                                    <input id="registrarse" class="btn btn-success px-2 rounded mt-2" type="button" value="Registrarme" style="width: 250px;">
                                 </div>
                             </div>
                         </div>

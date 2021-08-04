@@ -230,8 +230,10 @@ body {
                                 color: red !important;
                             }
                             #botonVentanaRegistrarse {
-                                color: black;
-                                text-decoration: none;
+                                padding: 5.64px 40px;
+                            }
+                            #botonVentanaIngresar {
+                                padding: 5.64px 53.3px;
                             }
                             #ventanaRegistrarse {
                                 display: none;
@@ -281,168 +283,6 @@ body {
                 }
             }
         }
-        // Navbar Login //
-        // .navbar {
-        //     box-shadow: 0px 0px 10px rgb(129, 129, 129);
-        //     padding: 3px;
-        //     .container-fluid {
-        //         .navbar-brand {
-        //             img {
-        //                 width: 80px;
-        //             }
-        //         }
-        //         .navbar-collapse {
-        //             .navbar-nav {
-        //                 .nav-item {
-        //                     margin: 0px 5px;
-        //                     align-self: center;
-        //                     .dropdown-menu {
-        //                         width: 700px;
-        //                         height: 400px;
-        //                         padding: 0px;
-        //                         top: 50px;
-        //                         box-shadow: 0px 0px 30px rgb(135, 135, 135);
-        //                         .container-dropdown {
-        //                             width: 700px;
-        //                             height: 400px;
-        //                             display: flex;
-        //                             flex-flow: row nowrap;
-        //                             .left-part-dropdown {
-        //                                 width: 200px;
-        //                                 height: 399px;
-        //                                 border-right: 1px solid grey;
-        //                                 overflow-x: hidden;
-        //                                 .container-scroll {
-        //                                     overflow-x: scroll;
-        //                                     width: 100%;
-        //                                     height: 396px;
-        //                                     li {
-        //                                         text-transform: uppercase;
-        //                                         font-size: 13px;
-        //                                         .dropdown-item {
-        //                                             width: 98%;
-        //                                             height: 50px;
-        //                                             background-color: whitesmoke;
-        //                                             margin: 0 auto;
-        //                                             margin-top: 2px;
-        //                                             padding: 6px 5px;
-        //                                             transition: all .2s;
-        //                                             font-weight: 600;
-        //                                             span {
-        //                                                 font-size: 10px;
-        //                                                 font-weight: 300;
-        //                                             }
-        //                                         }
-        //                                         .dropdown-item:hover {
-        //                                             background-color: rgb(192, 0, 0);
-        //                                             color: white;
-        //                                             transform: translateX(10px)
-        //                                         }
-        //                                     }
-        //                                 }
-        //                             }
-        //                             .right-part-dropdown {
-        //                                 width: calc(700px - 200px);
-        //                                 height: 400px;
-        //                                 display: flex;
-        //                                 flex-flow: column nowrap;
-        //                                 justify-content: space-evenly;
-        //                                 .container-information-top {
-        //                                     display: flex;
-        //                                     flex-flow: row nowrap;
-        //                                     width: 98%;
-        //                                     height: 79%;
-        //                                     border: 1px solid rgb(213, 213, 213);
-        //                                     margin: 0 auto;
-        //                                     border-radius: 5px;
-        //                                     padding: 30px;
-        //                                     text-align: center;
-        //                                     justify-content: space-evenly;
-        //                                     position: relative;
-        //                                     ul {
-        //                                         list-style: none;
-        //                                         padding: 0px;
-        //                                         display: flex;
-        //                                         flex-flow: column nowrap;
-        //                                         align-items: flex-start;
-        //                                         h6 {
-        //                                             font-weight: 700;
-        //                                             text-decoration: underline;
-        //                                         }
-        //                                         a {
-        //                                             color: black;
-        //                                             text-decoration: none;
-        //                                             border-radius: 5px;
-        //                                             margin: 0px 1px;
-        //                                             font-weight: 300;
-        //                                             li {
-        //                                                 border: 1px solid transparent;
-        //                                                 margin: 0px 0px;
-        //                                                 padding: 0px;
-        //                                                 border-radius: 5px;
-        //                                                 transition: all .2s;
-        //                                             }
-        //                                             li:hover {
-        //                                                 color: rgb(182, 0, 0);
-        //                                             }
-        //                                         }
-        //                                     }
-        //                                     .button-verCursos {
-        //                                         position: absolute;
-        //                                         bottom: 0;
-        //                                         left: 0;
-        //                                         right: 0;
-        //                                         button {
-        //                                             width: 100%;
-        //                                         }
-        //                                     }
-                                            
-        //                                 }
-        //                                 .container-information-bottom {
-        //                                     width: 98%;
-        //                                     height: 18%;
-        //                                     background-color: rgb(192, 0, 0);
-        //                                     margin: 0 auto;
-        //                                     border-radius: 5px;
-        //                                     overflow: hidden;
-        //                                     .container-images {
-        //                                         display: flex;
-        //                                         flex-flow: row nowrap;
-        //                                         animation: miniSlider 30s infinite alternate linear;
-        //                                         img {
-        //                                             width: 30px;
-        //                                             height: 30px;
-        //                                             margin: 20px 10px;
-        //                                         }
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
-        //                     }
-        //                 }
-        //                 .nav-item:first-child {
-        //                     a {
-        //                         padding-left: 0px;
-        //                     }
-        //                 }
-        //                 .nav-item:last-child {
-        //                     a {
-        //                         padding: 7.5px 15px;
-        //                         text-decoration: bold;
-        //                         margin-left: 7.5px;
-        //                     }
-        //                 }
-        //             }
-        //             form {
-        //                 white-space: nowrap;
-        //                 transition: all .5s;
-        //             }
-        //             .btn-cart {
-        //                 margin-left: 5px;
-        //             }
-        //         }
-        //     }
-        // }
     }
     #main {
         width: 100%;
@@ -540,7 +380,7 @@ body {
     }
     #mainInstitucional {
         width: 100%;
-        height: calc(100vh - 32px - 56.64px);
+        height: calc(100% - 32px - 56.64px);
         margin: auto;
         position: relative;
         .imagen-fondo {

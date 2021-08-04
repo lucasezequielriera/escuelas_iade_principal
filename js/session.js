@@ -10,17 +10,14 @@ const registrarUbicacion = document.querySelector('.registrar-ubicacion');
 const registrarTelefono = document.querySelector('.registrar-telefono');
 const registrarUsuario = document.querySelector('.registrar-usuario');
 const registrarPassword = document.querySelector('.registrar-password');
-const btnLogin = document.querySelector('#ingresar');
 const ingresarUsuario = document.querySelector('.ingresar-usuario');
 const ingresarPassword = document.querySelector('.ingresar-password');
 
 // Listeners //
 btnRegistrar.addEventListener("click", Registrarse);
-btnLogin.addEventListener("click", Login);
 
 // Funciones //
 function Registrarse(e) {
-    e.preventDefault();
     if (registrarNombres.value && registrarApellidos.value && registrarUbicacion.value && registrarTelefono.value && registrarUsuario.value && registrarPassword.value) {
         const nuevoUsuario = [{
             id: Math.floor(Math.random() * 1000000),
@@ -45,7 +42,7 @@ function Registrarse(e) {
             // Signed in
             const user = userCredential.user;
             Swal.fire({
-                title: "¡Usuario creado con éxito!",
+                text: "¡Usuario creado con éxito!",
                 icon: "success",
                 timer: 2000
             });
@@ -64,7 +61,12 @@ function Registrarse(e) {
         .catch((error) => {
             console.log(error)
             const errorMessage = error.message;
-            // ..
+            Swal.fire({
+                text: "¡Algunos datos son incorrectos!",
+                icon: "error",
+                timer: 2000,
+                showConfirmButton: false
+            });
         });
         firebase.database().ref('usuarios/' + usuario_id).set(usuario);
         // firebase.database().ref('usuarios/' + usuario_id).once('value').then(
@@ -97,8 +99,7 @@ if (user) {
     console.log(user)
 }});
 
-function Login(e) {
-    e.preventDefault();
+function Login() {
     if (ingresarUsuario.value && ingresarPassword.value) {
         firebase.auth().signInWithEmailAndPassword(ingresarUsuario.value, ingresarPassword.value)
         .then((userCredential) => {
@@ -106,7 +107,7 @@ function Login(e) {
             const user = userCredential.user;
             localStorage.setItem('uidKey', user)
             Swal.fire({
-                title: "Bienvenido/a a Escuelas iade!",
+                text: "Bienvenido/a a Escuelas iade!",
                 icon: "success",
                 showCancelButton: false,
                 showConfirmButton: false,
@@ -141,7 +142,7 @@ function Login(e) {
 function logOut() {
     firebase.auth().signOut().then(() => {
         Swal.fire({
-            title: 'Estás seguro/a de cerrar sesión?',
+            text: 'Estás seguro/a de cerrar sesión?',
             icon: 'warning',
             showDenyButton: true,
             showCancelButton: true,

@@ -53,8 +53,6 @@ function getData(data) {
     // Datos JSON //
     const datos = data
 
-    console.log(data.map((dato) => dato.categoria))
-
     // Array (categories) //
     const categories = data;
 
@@ -117,7 +115,7 @@ function getData(data) {
         } else ""
     });
 
-        // Consts //
+    // Consts //
     const categoria0 = document.querySelector('.categoria0');
     const categoria1 = document.querySelector('.categoria1');
     const categoria2 = document.querySelector('.categoria2');
