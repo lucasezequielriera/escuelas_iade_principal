@@ -286,11 +286,14 @@ body {
     }
     #mainCarrito {
         width: 90%;
-        height: calc(100vh - 32px - 56.64px);
+        height: 100%;
         margin: auto;
         h1 {
             font-weight: 200;
             letter-spacing: -1px;
+            font-size: 40px;
+            color: #ce0202;
+            text-shadow: 0 0 10px rgb(212, 212, 212);
         }
         .table {
             thead, tbody {
@@ -304,6 +307,7 @@ body {
     }
     #footer {
         width: 100%;
+        margin-top: 49vh;
         margin-bottom: 0;
         background-color: whitesmoke;
         display: flex;
