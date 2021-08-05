@@ -50,8 +50,8 @@ HECHO:
 - Arreglar SPAM de formularios con datos vacíos
 
 - 01/08/21: Arreglo de archivos JS
-- 01/08/21: Validaciones de buttons en página de curso
-- 02/08/21: Terminado validaciones para sesiones (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente)
+- 01/08/21: Validaciones de buttons en página de curso <1/2>
+- 02/08/21: Terminado validaciones para sesiones (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente) <2/2>
 - 03/09/21: Formularios en submit con "Enter" y arreglos de validaciones para registrarse e ingresar.
 - 03/09/21: Arreglos de estilos en todas las vistas
 - 04/09/21: Vista de carrito con su estructura
