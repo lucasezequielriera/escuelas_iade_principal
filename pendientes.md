@@ -55,6 +55,9 @@ HECHO:
 - 03/09/21: Formularios en submit con "Enter" y arreglos de validaciones para registrarse e ingresar.
 - 03/09/21: Arreglos de estilos en todas las vistas
 - 04/09/21: Vista de carrito con su estructura
+- 05/09/21: Terminado de vista de carrito
+- 05/09/21: Agregar ventana modal al ingreso de perfil del campus
+- 06/09/21: Funcionalidad carrito
 
 POR HACER:
 
@@ -71,4 +74,3 @@ POR HACER:
 - Diferenciar país de donde se entra a la página (cuando tenga la db contectada)
 - Agregar funcionalidades al menú del alumno en la página
 - Hacer funcional el carrito
-- Agregar ventana modal al ingreso de perfil del campus
