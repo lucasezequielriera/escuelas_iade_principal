@@ -58,7 +58,8 @@ HECHO:
 - 05/09/21: Terminado de vista de carrito
 - 05/09/21: Agregar ventana modal al ingreso de perfil del campus
 - 06/09/21: Arreglar fixes de página por js obsoleto
-- 06/09/21: Funcionalidad carrito
+- 06/09/21: Funcionalidad carrito <1/2>
+- 06/09/21: Vista principal index
 
 POR HACER:
 
