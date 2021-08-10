@@ -17,19 +17,6 @@
             }
         }
     }
-    #footer {
-        .left-part {
-            p {
-                font-size: 13px !important;
-                white-space: nowrap;
-            }
-        }
-        .right-part {
-            p {
-                font-size: 13px !important;
-            }
-        }
-    }
 }
 
 @media screen and (max-width:1161px) {
@@ -61,14 +48,22 @@
             margin: 10px;
         }
     }
+}
+
+@media screen and (max-width: 1000px) {
     #footer {
-        justify-content: center !important;
+        flex-flow: column nowrap !important;
         .left-part {
             display: none !important;
         }
+        .center-part {
+            margin-top: 20px !important;
+        }
         .right-part {
-            width: 100% !important;
-            text-align: center !important;
+            flex-flow: row nowrap !important;
+            a {
+                white-space: nowrap;
+            }
         }
     }
 }
@@ -104,6 +99,14 @@
                     white-space: nowrap;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        #main {
+            height: 100%;
         }
     }
 }
@@ -149,6 +152,18 @@
     }
 }
 
+@media screen and (max-width:578px) {
+    #footer {
+        justify-content: center !important;
+        .right-part {
+            display: none !important;
+        }
+        .center-part {
+            margin: 0 !important;
+        }
+    }
+}
+
 @media screen and (max-width:550px) {
     #header {
         .navbar {
@@ -181,7 +196,6 @@
         .left-part {
             h1 {
                 font-size: 60px !important;
-                }
                 .it {
                     font-size: 120px !important;
                 }
@@ -192,6 +206,22 @@
             }
         }
     }
+}
+
+@media screen and (max-width:460px) {
+    #footer {
+        justify-content: center !important;
+        .right-part {
+            display: none !important;
+        }
+        .center-part {
+            margin: 0 !important;
+            p {
+                display: none;
+            }
+        }
+    }
+}
     
 @media screen and (max-width:413px) {
     #header {

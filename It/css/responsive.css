@@ -9,14 +9,6 @@
   .middle-part .card .informacion h5 {
     font-size: 14px !important;
   }
-
-  #footer .left-part p {
-    font-size: 13px !important;
-    white-space: nowrap;
-  }
-  #footer .right-part p {
-    font-size: 13px !important;
-  }
 }
 @media screen and (max-width: 1161px) {
   .top-part {
@@ -43,16 +35,22 @@
   .bottom-part a {
     margin: 10px;
   }
-
+}
+@media screen and (max-width: 1000px) {
   #footer {
-    justify-content: center !important;
+    flex-flow: column nowrap !important;
   }
   #footer .left-part {
     display: none !important;
   }
+  #footer .center-part {
+    margin-top: 20px !important;
+  }
   #footer .right-part {
-    width: 100% !important;
-    text-align: center !important;
+    flex-flow: row nowrap !important;
+  }
+  #footer .right-part a {
+    white-space: nowrap;
   }
 }
 @media screen and (max-width: 991px) {
@@ -76,6 +74,11 @@
     white-space: nowrap;
   }
 }
+@media screen and (max-width: 840px) {
+  body #main {
+    height: 100%;
+  }
+}
 @media screen and (max-width: 738px) {
   #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
     width: 500px !important;
@@ -93,6 +96,17 @@
     position: absolute;
     bottom: 1px;
     right: 0px;
+  }
+}
+@media screen and (max-width: 578px) {
+  #footer {
+    justify-content: center !important;
+  }
+  #footer .right-part {
+    display: none !important;
+  }
+  #footer .center-part {
+    margin: 0 !important;
   }
 }
 @media screen and (max-width: 550px) {
@@ -113,12 +127,26 @@
   .top-part .left-part h1 {
     font-size: 60px !important;
   }
-  .top-part .left-part .it {
+  .top-part .left-part h1 .it {
     font-size: 120px !important;
   }
-  .top-part p {
+  .top-part .left-part p {
     font-size: 20px !important;
     margin: 0px !important;
+  }
+}
+@media screen and (max-width: 460px) {
+  #footer {
+    justify-content: center !important;
+  }
+  #footer .right-part {
+    display: none !important;
+  }
+  #footer .center-part {
+    margin: 0 !important;
+  }
+  #footer .center-part p {
+    display: none;
   }
 }
 @media screen and (max-width: 413px) {

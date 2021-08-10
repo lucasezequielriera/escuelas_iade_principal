@@ -1,4 +1,53 @@
 // Responsive Media Queries //
+@media screen and (max-width:1842px) {
+    #main .portada .right-part img {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width:1436px) {
+    #main .portada .right-part img {
+        width: 500px;
+        text-align: end;
+    }
+}
+
+@media screen and (max-width:1418px) {
+    #main .portada .left-part h1 {
+        font-size: 80px !important;
+    }
+}
+
+@media screen and (max-width:1122px) {
+    .main-parts {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    #main .portada {
+        width: 100% !important;
+        height: 100% !important;
+        .left-part {
+            width: 100%;
+            text-align: center;
+            h1 {
+                text-align: center;
+                font-size: 100px !important;
+                margin-top: 10px;
+            }
+            p {
+                text-align: left;
+            }
+        }
+        .right-part {
+            width: 100%;
+            text-align: center;
+            img {
+                width: 700px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:1109px) {
     #institucional {
         .top-part {
@@ -148,6 +197,17 @@
     }
 }
 
+@media screen and (max-width:700px) {
+    #main .portada .left-part h1 {
+        font-size: 80px !important;
+        margin-top: 20px;
+    }
+    #main .portada .right-part img {
+        width: 500px;
+        text-align: end;
+    }
+}
+
 @media screen and (max-width:639px) {
     #header {
         .navbar {
@@ -235,6 +295,22 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:500px) {
+    #main .portada .left-part {
+        h1 {
+            font-size: 80px !important;
+            margin-top: 20px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    #main .portada .right-part img {
+        width: 300px;
+        text-align: end;
     }
 }
 

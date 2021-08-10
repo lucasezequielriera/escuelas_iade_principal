@@ -56,10 +56,12 @@ HECHO:
 - 03/09/21: Arreglos de estilos en todas las vistas
 - 04/09/21: Vista de carrito con su estructura
 - 05/09/21: Terminado de vista de carrito
-- 05/09/21: Agregar ventana modal al ingreso de perfil del campus
 - 06/09/21: Arreglar fixes de página por js obsoleto
 - 06/09/21: Funcionalidad carrito <1/2>
 - 06/09/21: Vista principal index
+- 09/09/21: Arreglar footer en diferentes vistas
+- 10/09/21: Responsive nueva vista IADE en index
+- 10/09/21: Responsive nuevo footer en todas las vistas
 
 POR HACER:
 
@@ -67,7 +69,6 @@ POR HACER:
 - Agregar logos de certificaciones e instituciones (cuando los tenga)
 - Cambiar db de firebase a MySQL
 - Arreglar errores en menú de navbar
-- Arreglar footer en diferentes páginas
 - Agregar información en pestaña “certificaciones”
 - Una vez tenga la db de MySQL, agregar funcionalidad de buscar cursos por buscador
 - Hacer página de reputación
