@@ -1,3 +1,7 @@
+<?php
+require "./templates/header.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
