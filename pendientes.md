@@ -50,8 +50,8 @@ HECHO:
 - Arreglar SPAM de formularios con datos vacíos
 
 - 01/08/21: Arreglo de archivos JS
-- 01/08/21: Validaciones de buttons en página de curso <1/2>
-- 02/08/21: Terminado validaciones para sesiones (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente) <2/2>
+- 01/08/21: Validaciones de buttons en página de curso (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente) <1/2>
+- 02/08/21: Validaciones de buttons en página de curso (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente) <2/2>
 - 03/09/21: Formularios en submit con "Enter" y arreglos de validaciones para registrarse e ingresar.
 - 03/09/21: Arreglos de estilos en todas las vistas
 - 04/09/21: Vista de carrito con su estructura
@@ -60,15 +60,17 @@ HECHO:
 - 06/09/21: Funcionalidad carrito <1/2>
 - 06/09/21: Vista principal index
 - 09/09/21: Arreglar footer en diferentes vistas
+- 10/09/21: Arreglar errores en menú de navbar
 - 10/09/21: Responsive nueva vista IADE en index
 - 10/09/21: Responsive nuevo footer en todas las vistas
+- 11/09/21: Vinculando MySQL db <1/3>
+- 11/09/21: Dividiendo sections por templates con PHP <1/3>
 
 POR HACER:
 
 - Diseño de vista principal como la pagina que me mandó fede
 - Agregar logos de certificaciones e instituciones (cuando los tenga)
 - Cambiar db de firebase a MySQL
-- Arreglar errores en menú de navbar
 - Agregar información en pestaña “certificaciones”
 - Una vez tenga la db de MySQL, agregar funcionalidad de buscar cursos por buscador
 - Hacer página de reputación
