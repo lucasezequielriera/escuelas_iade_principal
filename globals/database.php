@@ -13,7 +13,7 @@ class Database {
     }
 
     private function connect() {
-        $this->cn = mysqli_connect("localhost", "c1461570_campus", "wiPEgudi36", "c1461570_campus");
+        $this->cn = mysqli_connect("localhost", "root", "", "c1461570_crm");
     }
 
     public function query($q) {
@@ -120,7 +120,7 @@ class Database {
     public function getSiteSchools($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
-        $this->query("SELECT '$item' FROM site_schools");
+        $this->query("SELECT $item FROM site_schools");
         $resultset = $this->fetchAll();
         return $resultset;
     }

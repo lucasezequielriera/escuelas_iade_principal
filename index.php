@@ -1,6 +1,16 @@
 <?php
-require "./templates/header.php";
+require "./globals/database.php";
+
+$db = Database::getInstance();
+
+// Obteniendo todos los cursos//
+$cursos = $db->getCourses();
+// Obteniendo todas las escuelas //
+$escuelas = $db->getSiteSchools('all');
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +37,7 @@ require "./templates/header.php";
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img src="./images/logo.png" alt="logo_iade"></a>
+                <a class="navbar-brand" href="./index.php"><img src="./images/logo.png" alt="logo_iade"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +46,7 @@ require "./templates/header.php";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="./index.php">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -45,7 +55,11 @@ require "./templates/header.php";
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <div class="container-dropdown">
                                     <div class="left-part-dropdown">
-                                        <div class="container-scroll"></div>
+                                        <div class="container-scroll">
+                                            <?php
+                                                require('./templates/navbar-menu.php')
+                                            ?>
+                                        </div>
                                         <!-- <li><hr class="dropdown-divider"></li>
                                         <li>
                                             <a class="dropdown-item" href="#">Próximamente</a>
@@ -68,10 +82,10 @@ require "./templates/header.php";
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./institucional.html">Conocenos</a>
+                            <a class="nav-link" href="./institucional.php">Conocenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./certificaciones.html">Certificaciones</a>
+                            <a class="nav-link" href="./certificaciones.php">Certificaciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger text-white"
@@ -174,7 +188,7 @@ require "./templates/header.php";
                                 <a href="#">
                                     <li class="list-group-item">Cursos comprados</li>
                                 </a>
-                                <a href="./carrito.html">
+                                <a href="./carrito.php">
                                     <li class="list-group-item">Mi carrito</li>
                                 </a>
                                 <a href="#" onclick=logOut()>
@@ -329,7 +343,17 @@ require "./templates/header.php";
             <h1>Conocé nuestras escuelas y estudiá lo que te gusta</h1>
         </div>
         <div class="part">
-            <div class="container-escuelas"></div>
+            <div class="container-escuelas">
+            <?php
+            foreach ($escuelas as $escuela) { ?>
+                <a href="<?= $escuela["link"] ?>">
+                    <div class="escuela">
+                        <p><?= $escuela["name"] ?></p>
+                    </div>
+                </a>
+            <?php }
+            ?>
+            </div>
         </div>
     </section>
 

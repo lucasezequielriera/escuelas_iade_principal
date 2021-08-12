@@ -38,82 +38,83 @@ function hideModal() {
 
 /////----- Navbar -----/////
 
-fetch('./js/datos.js')
-.then( resp => resp.json() )
-.then( data => {
-    localStorage.setItem('data', JSON.stringify(data))
-    getData(data);
-})
+// fetch('./js/datos.js')
+// .then( resp => resp.json() )
+// .then( data => {
+//     localStorage.setItem('data', JSON.stringify(data))
+//     getData(data);
+// })
 
-function getData(data) {
+// function getData(data) {
 
     // Principal DOM //
     const containerScroll = document.querySelector('.container-scroll');
     
-    // Datos JSON //
-    const datos = data
+    // // Datos JSON //
+    // const datos = data
 
-    // Array (categories) //
-    const categories = data;
+    // // Array (categories) //
+    // const categories = data;
 
-    // Map para extraer "categorías" del json //
-    const categorias = datos?.map( item => item.categoria )
+    // // Map para extraer "categorías" del json //
+    // const categorias = datos?.map( item => item.categoria )
 
-    // Map para extraer "url" del json //
-    const urls = categories?.map( item => item.url )
+    // // Map para extraer "url" del json //
+    // const urls = categories?.map( item => item.url )
+    // console.log(urls)
 
-    // Categories Iteration //
-    categorias?.map(function(item, index) {
-        // li //
-        const li = document.createElement("li");
-        // imagen //
-        const img = document.createElement("img");
-        img.setAttribute('src', '../images/arrowright.svg');
-        img.setAttribute('alt', 'arrow');
-        img.style = 'position: absolute; right: 10px; top: 13px';
-        // a //
-        const a = document.createElement("a");
-        a.classList.add("dropdown-item");
-        a.classList.add(`categoria${index}`)
-        a.setAttribute("href", urls[index]);
-        a.textContent = `${item}`;
-        a.style = 'position: relative';
-        // br //
-        const br = document.createElement("br");
-        // span //
-        const span = document.createElement("span");
-        span.textContent = `cursos online`;
-        // Insertar y vincular todo //
-        a.appendChild(img);
-        a.appendChild(br);
-        a.appendChild(span);
-        li.appendChild(a);
-        containerScroll.appendChild(li);
+    // // Categories Iteration //
+    // categorias?.map(function(item, index) {
+    //     // li //
+    //     const li = document.createElement("li");
+    //     // imagen //
+    //     const img = document.createElement("img");
+    //     img.setAttribute('src', './images/arrowright.svg');
+    //     img.setAttribute('alt', 'arrow');
+    //     img.style = 'position: absolute; right: 10px; top: 13px';
+    //     // a //
+    //     const a = document.createElement("a");
+    //     a.classList.add("dropdown-item");
+    //     a.classList.add(`categoria${index}`)
+    //     a.setAttribute("href", urls[index]);
+    //     a.textContent = `${item}`;
+    //     a.style = 'position: relative';
+    //     // br //
+    //     const br = document.createElement("br");
+    //     // span //
+    //     const span = document.createElement("span");
+    //     span.textContent = `cursos online`;
+    //     // Insertar y vincular todo //
+    //     a.appendChild(img);
+    //     a.appendChild(br);
+    //     a.appendChild(span);
+    //     li.appendChild(a);
+    //     containerScroll.appendChild(li);
 
         // `<li>
         //     <a class="dropdown-item" href="#">${index}${item} <br />
         //     <span>3 cursos</span></a>
         // </li>`
-    });
+    // });
 
-    // ESCUELAS (EN MAIN) //
-    categorias.forEach((item, index) => {
-        // DOM Principal //
-        const containerEscuelas = document.querySelector(".container-escuelas");
-        // Creando Instancias //
-        const a = document.createElement("a");
-        a.setAttribute("href", urls[index]);
-        const escuela = document.createElement("div");
-        escuela.classList.add("escuela");
-        const p = document.createElement("p");
-        p.textContent = item;
-        // Vincular DOM //
-        escuela.appendChild(p);
-        a.appendChild(escuela);
-        if (containerEscuelas) {
-            containerEscuelas.appendChild(a);
-        } else ""
-    });
+    // // ESCUELAS (EN MAIN) //
+    // DOM Principal //
+    const containerEscuelas = document.querySelector(".container-escuelas");
+    // categorias.forEach((item, index) => {
+    //     // Creando Instancias //
+    //     const a = document.createElement("a");
+    //     a.setAttribute("href", urls[index]);
+    //     const escuela = document.createElement("div");
+    //     escuela.classList.add("escuela");
+    //     const p = document.createElement("p");
+    //     p.textContent = item;
+    //     // Vincular DOM //
+    //     escuela.appendChild(p);
+    //     a.appendChild(escuela);
+    //     if (containerEscuelas) {
+    //         containerEscuelas.appendChild(a);
+    //     } else ""
+    // });
 
     // Consts //
     const categoria0 = document.querySelector('.categoria0');
@@ -157,7 +158,7 @@ function getData(data) {
         topSection.innerHTML = `
         <ul>
             <h6>Publicidad y Marketing</h6>
-            <a href="./IT/views/transformacion_digital.html"><li>Transformación Digital</li></a>
+            <a href="./IT/views/transformacion_digital.php"><li>Transformación Digital</li></a>
             <a href="."><li>Facebook Ads</li></a>
             <a href="."><li>Google Ads</li></a>
             <a href="."><li>Microsoft Office</li></a>
@@ -315,7 +316,7 @@ function getData(data) {
             <button class='btn btn-dark'>Ver todos los cursos</button>
         </div> `
     }
-}
+// }
 
 /////----- / Navbar -----/////
 
