@@ -49,7 +49,7 @@ const navbar = `
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-danger text-white"
-                        href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
+                        href="http://www.escuelasiade.com/iade_campus_exp/login.html" tabindex="-1"
                         aria-disabled="true">CAMPUS</a>
                 </li>
             </ul>

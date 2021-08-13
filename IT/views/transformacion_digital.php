@@ -20,7 +20,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.php"><img src="../images/logo.png" alt="logo_iade"></a>
+                <a class="navbar-brand" href="../../index.html"><img src="../images/logo.png" alt="logo_iade"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../index.php">Inicio</a>
+                            <a class="nav-link" href="../../index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -61,14 +61,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../institucional.php">Conocenos</a>
+                            <a class="nav-link" href="../../institucional.html">Conocenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../certificaciones.php">Certificaciones</a>
+                            <a class="nav-link" href="../../certificaciones.html">Certificaciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger text-white"
-                                href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
+                                href="http://www.escuelasiade.com/iade_campus_exp/login.html" tabindex="-1"
                                 aria-disabled="true">CAMPUS</a>
                         </li>
                     </ul>
@@ -156,7 +156,7 @@
         <div class="left-part">
             <nav class="nav-curso" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.php">Escuelas iade IT</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html">Escuelas iade IT</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Transformación Digital</li>
                 </ol>
             </nav>

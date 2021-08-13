@@ -20,7 +20,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.php"><img src="./images/logo.png" alt="logo_iade"></a>
+                <a class="navbar-brand" href="./index.html"><img src="./images/logo.png" alt="logo_iade"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.php">Inicio</a>
+                            <a class="nav-link" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -61,14 +61,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./institucional.php">Conocenos</a>
+                            <a class="nav-link" href="./institucional.html">Conocenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./certificaciones.php">Certificaciones</a>
+                            <a class="nav-link" href="./certificaciones.html">Certificaciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger text-white"
-                                href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
+                                href="http://www.escuelasiade.com/iade_campus_exp/login.html" tabindex="-1"
                                 aria-disabled="true">CAMPUS</a>
                         </li>
                     </ul>
@@ -141,7 +141,7 @@
                                 <a href="#"><li class="list-group-item">Mi perfil</li></a>
                                 <a href="#"><li class="list-group-item">Mi aprendizaje</li></a>
                                 <a href="#"><li class="list-group-item">Cursos comprados</li></a>
-                                <a href="./carrito.php"><li class="list-group-item">Mi carrito</li></a>
+                                <a href="./carrito.html"><li class="list-group-item">Mi carrito</li></a>
                                 <a href="#" onclick=logOut()><li class="list-group-item">Cerrar sesión</li></a>
                             </ul>
                         </div>

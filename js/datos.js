@@ -1,7 +1,7 @@
 [
     {
         "categoria": "IT",
-        "url": "./IT/index.php",
+        "url": "./IT/index.html",
         "cursos": [
             {
                 "nombre": "Transformación Digital",
