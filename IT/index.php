@@ -1,3 +1,8 @@
+<?php
+require "../globals/database.php";
+require "../data.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +18,14 @@
     <link rel="shortcut icon" href="./favicon.png"/>
 </head>
 
-<body>
+<body class="view">
     <!-- Modal Window -->
     <div id="modal" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: transparent; z-index: -1; transition: all .5s;"></div>
 
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><img src="./images/logo.png" alt="logo_iade"></a>
+                <a class="navbar-brand" href="../index.php"><img src="./images/logo.png" alt="logo_iade"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -29,16 +34,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Inicio</a>
+                            <a class="nav-link" href="../index.php">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"> Cursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <div class="container-dropdown">
                                     <div class="left-part-dropdown">
-                                        <div class="container-scroll"></div>
+                                        <div class="container-scroll">
+                                            <?php
+                                                require('../templates/navbar-menu.php')
+                                            ?>
+                                        </div>
                                         <!-- <li><hr class="dropdown-divider"></li>
                                         <li>
                                             <a class="dropdown-item" href="#">Próximamente</a>
@@ -61,14 +70,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../institucional.html">Conocenos</a>
+                            <a class="nav-link" href="../institucional.php">Conocenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../certificaciones.html">Certificaciones</a>
+                            <a class="nav-link" href="../certificaciones.php">Certificaciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger text-white"
-                                href="http://www.escuelasiade.com/iade_campus_exp/login.html" tabindex="-1"
+                                href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
                                 aria-disabled="true">CAMPUS</a>
                         </li>
                     </ul>
@@ -206,7 +215,7 @@
         <div class="bottom-part">
             <div class="right-part part">
                 <div class="container-courses">
-                    <a href="./views/transformacion_digital.html">
+                    <a href="./views/transformacion_digital.php">
                         <div class="course">
                             <span class="badge bg-success">Nuevo curso</span>
                             <span class="badge bg-primary text-white">Certificación Internacional</span>
@@ -246,23 +255,9 @@
         
     </main>
 
-    <footer id="footer">
-        <div class="left-part text-left px-5 py-3">
-            <h4>Conocenos un poco más</h4>
-            <p>Escuelas IADE es una escuela fundada hace más de 50 años para todo el público que desée incorporarse a cualquier sector de cualquier empresa, porque sabemos que el saber no ocupa espacio, y es la puerta hacia un futuro exitoso.</p>
-        </div>
-        <div class="center-part text-center">
-            <img src="./images/logo.png" alt="logo" width="170px">
-            <p class="mt-1 fw-light">All Right Reserved 2021 | Designed & Engineered by <span>Agrowd</span></p>
-        </div>
-        <div class="right-part text-end px-5 py-3">
-            <p><a href="#">Noticias</a></p>
-            <p><a href="#">Servicios</a></p>
-            <p><a href="#">Nosotros</a></p>
-            <p><a href="#">Legalidades</a></p>
-            <p><a href="#">Preguntas Frecuentes</a></p>
-        </div>
-    </footer>
+    <?php
+    require '../templates/footer.php'
+    ?>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
@@ -289,13 +284,13 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <!-- JQuery -->
-    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Session File -->
     <script src="../js/session.js"></script>
     <!-- JS Styles -->
-    <script src="./js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

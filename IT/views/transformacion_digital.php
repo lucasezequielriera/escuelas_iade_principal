@@ -1,3 +1,8 @@
+<?php
+require "../../globals/database.php";
+require "../../data.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,14 +18,14 @@
     <link rel="shortcut icon" href="../favicon.png"/>
 </head>
 
-<body>
+<body class="view">
     <!-- Modal Window -->
     <div id="modal" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: transparent; z-index: -1; transition: all .5s;"></div>
 
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.html"><img src="../images/logo.png" alt="logo_iade"></a>
+                <a class="navbar-brand" href="../../index.php"><img src="../images/logo.png" alt="logo_iade"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../index.html">Inicio</a>
+                            <a class="nav-link" href="../../index.php">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -38,7 +43,11 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <div class="container-dropdown">
                                     <div class="left-part-dropdown">
-                                        <div class="container-scroll"></div>
+                                        <div class="container-scroll">
+                                            <?php
+                                                require('../../templates/navbar-menu.php')
+                                            ?>
+                                        </div>
                                         <!-- <li><hr class="dropdown-divider"></li>
                                         <li>
                                             <a class="dropdown-item" href="#">Próximamente</a>
@@ -61,14 +70,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../institucional.html">Conocenos</a>
+                            <a class="nav-link" href="../../institucional.php">Conocenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../certificaciones.html">Certificaciones</a>
+                            <a class="nav-link" href="../../certificaciones.php">Certificaciones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger text-white"
-                                href="http://www.escuelasiade.com/iade_campus_exp/login.html" tabindex="-1"
+                                href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
                                 aria-disabled="true">CAMPUS</a>
                         </li>
                     </ul>
@@ -156,7 +165,7 @@
         <div class="left-part">
             <nav class="nav-curso" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">Escuelas iade IT</a></li>
+                    <li class="breadcrumb-item"><a href="../index.php">Escuelas iade IT</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Transformación Digital</li>
                 </ol>
             </nav>
@@ -726,23 +735,9 @@
         </div> -->
     </main>
 
-    <footer id="footer">
-        <div class="left-part text-left px-5 py-3">
-            <h4>Conocenos un poco más</h4>
-            <p>Escuelas IADE es una escuela fundada hace más de 50 años para todo el público que desée incorporarse a cualquier sector de cualquier empresa, porque sabemos que el saber no ocupa espacio, y es la puerta hacia un futuro exitoso.</p>
-        </div>
-        <div class="center-part text-center">
-            <img src="../images/logo.png" alt="logo" width="170px">
-            <p class="mt-1 fw-light">All Right Reserved 2021 | Designed & Engineered by <span>Agrowd</span></p>
-        </div>
-        <div class="right-part text-end px-5 py-3">
-            <p><a href="#">Noticias</a></p>
-            <p><a href="#">Servicios</a></p>
-            <p><a href="#">Nosotros</a></p>
-            <p><a href="#">Legalidades</a></p>
-            <p><a href="#">Preguntas Frecuentes</a></p>
-        </div>
-    </footer>
+    <?php
+    require '../../templates/footer.php'
+    ?>
 
     <section id="responsive-footer" class="animate__animated">
         <div class="contenido">
@@ -785,15 +780,32 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <!-- JQuery -->
-    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Session File -->
     <script src="../../js/session.js"></script>
     <!-- JS Styles -->
-    <script src="../js/index.js"></script>
+    <script src="../../js/index.js"></script>
+    <!-- Apareciendo el footer "Comprar" al ser pantalla más chica -->
+    <script>
+        window.onscroll = () => {
+            const y = window.scrollY;
+            const responsiveFooter = document.querySelector("#responsive-footer");
+            if(y > 750 & screen.width < 1230) {
+                responsiveFooter.style.display = 'block';
+                responsiveFooter.classList.remove('animate__fadeOutDown');
+                responsiveFooter.classList.add('animate__fadeInUp');
+
+            } else {
+                responsiveFooter.classList.remove('animate__fadeInUp');
+                responsiveFooter.classList.add('animate__fadeOutDown');
+
+            }
+        }
+    </script>
     <!-- Validations File -->
-    <script src="../js/validations.js"></script>
+    <script src="../../js/validations.js"></script>
     <!-- Cart Section -->
 </body>
 

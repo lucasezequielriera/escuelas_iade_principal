@@ -88,7 +88,7 @@ class Database {
     public function getSiteContent($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
-        $this->query("SELECT '$item' FROM site_componentes");
+        $this->query("SELECT $item FROM site_componentes");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -96,7 +96,7 @@ class Database {
     public function getSiteFooter($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
-        $this->query("SELECT '$item' FROM site_footer");
+        $this->query("SELECT $item FROM site_footer");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -104,7 +104,7 @@ class Database {
     public function getSiteMain($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
-        $this->query("SELECT '$item' FROM site_main");
+        $this->query("SELECT $item FROM site_main");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -112,7 +112,7 @@ class Database {
     public function getSiteReviews($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
-        $this->query("SELECT '$item' FROM site_reviews");
+        $this->query("SELECT $item FROM site_reviews");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -121,6 +121,14 @@ class Database {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
         $this->query("SELECT $item FROM site_schools");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
+    public function getSiteNavbar($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM site_navbar");
         $resultset = $this->fetchAll();
         return $resultset;
     }

@@ -442,6 +442,7 @@ body {
             height: 100%;
             z-index: -1;
             overflow: hidden;
+
             li {
                 position: absolute;
                 list-style: none;
@@ -458,7 +459,7 @@ body {
             li:nth-child(1) {
                 left: 10%;
             }
-            
+
             li:nth-child(2) {
                 left: 20%;
                 -webkit-animation-delay: 2s;
@@ -467,11 +468,11 @@ body {
                 animation-duration: 17s;
                 border-radius: 200px;
             }
-            
+
             li:nth-child(3) {
                 left: 25%;
             }
-            
+
             li:nth-child(4) {
                 left: 40%;
                 -webkit-animation-duration: 22s;
@@ -479,11 +480,11 @@ body {
                 background: rgb(255, 255, 255);
                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.8337710084033614) 0%, rgba(255, 255, 255, 0.3519782913165266) 100%);
             }
-            
+
             li:nth-child(5) {
                 left: 70%;
             }
-            
+
             li:nth-child(6) {
                 left: 80%;
                 -webkit-animation-delay: 3s;
@@ -492,11 +493,11 @@ body {
                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.8337710084033614) 0%, rgba(255, 255, 255, 0.3519782913165266) 100%);
                 border: 200px;
             }
-            
+
             li:nth-child(7) {
                 left: 32%;
             }
-            
+
             li:nth-child(8) {
                 left: 55%;
                 -webkit-animation-delay: 15s;
@@ -504,7 +505,7 @@ body {
                 -webkit-animation-duration: 40s;
                 animation-duration: 40s;
             }
-            
+
             li:nth-child(9) {
                 left: 25%;
                 -webkit-animation-delay: 2s;
@@ -514,7 +515,7 @@ body {
                 background: rgb(255, 255, 255);
                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.8337710084033614) 0%, rgba(255, 255, 255, 0.3519782913165266) 100%);
             }
-            
+
             li:nth-child(10) {
                 left: 90%;
                 -webkit-animation-delay: 11s;
@@ -524,36 +525,43 @@ body {
 
         .portada {
             width: 80%;
-            height: 80vh;
+            height: 100%;
             margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
             position: relative;
             z-index: 1;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
+            align-items: center;
 
-            .left-part {
-                padding: 0 40px;
-                align-self: center;
+            .main-parts {
+                width: 100%;
 
-                h1 {
-                    font-size: 100px;
-                    margin-bottom: 40px;
-                    letter-spacing: -7px;
+                .left-part {
+                    padding: 0 40px;
+                    align-self: center;
+
+                    h1 {
+                        font-size: 100px;
+                        margin-bottom: 40px;
+                        letter-spacing: -7px;
+                    }
+
+                    p {
+                        letter-spacing: -1px;
+                        color: grey;
+                        font-size: 17px;
+                    }
+
+                    input {
+                        margin-top: 10px;
+                    }
                 }
 
-                p {
-                    letter-spacing: -1px;
-                    color: grey;
-                    font-size: 17px;
-                }
-
-                input {
-                    margin-top: 10px;
-                }
+                .right-part {}
             }
-
-            .right-part {}
         }
 
         // .portada::after {
@@ -570,7 +578,7 @@ body {
         // }
         .slider-iconos {
             width: 100%;
-            min-height: calc(20vh - 56.66px);
+            height: 150px;
             background: rgb(142, 0, 0);
             background: linear-gradient(0deg, rgba(142, 0, 0, 1) 0%, rgba(176, 2, 2, 1) 30%, rgba(170, 0, 2, 1) 71%, rgba(144, 0, 0, 1) 100%);
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.555);

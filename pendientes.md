@@ -63,8 +63,13 @@ HECHO:
 - 10/09/21: Arreglar errores en menú de navbar
 - 10/09/21: Responsive nueva vista IADE en index
 - 10/09/21: Responsive nuevo footer en todas las vistas
-- 11/09/21: Vinculando MySQL db <1/3>
+- 11/09/21: Vinculando MySQL db <1/4>
 - 11/09/21: Dividiendo sections por templates con PHP <1/3>
+- 12/09/21: Arreglando problemas de compatibilidad con MySQL <1/3>
+- 12/09/21: Vinculando MySQL db (Navbar casi completo, index casi completo, footer completo)<2/4>
+- 13/09/21: Vinculando MySQL db (Navbar completo, index casi completo, responsive completo) <3/4>
+- 13/09/21: Arreglando problemas de compatibilidad con MySQL <2/3>
+- 13/09/21: Creando componentes con PHP
 
 POR HACER:
 
@@ -79,3 +84,4 @@ POR HACER:
 - Diferenciar país de donde se entra a la página (cuando tenga la db contectada)
 - Agregar funcionalidades al menú del alumno en la página
 - Hacer funcional el carrito
+- Agregar contador de alumnos y lo otro que habia pedido Sandra en el index

@@ -418,34 +418,40 @@ body #main .bg-bubbles li:nth-child(10) {
 }
 body #main .portada {
   width: 80%;
-  height: 80vh;
+  height: 100%;
   margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   position: relative;
   z-index: 1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 }
-body #main .portada .left-part {
+body #main .portada .main-parts {
+  width: 100%;
+}
+body #main .portada .main-parts .left-part {
   padding: 0 40px;
   align-self: center;
 }
-body #main .portada .left-part h1 {
+body #main .portada .main-parts .left-part h1 {
   font-size: 100px;
   margin-bottom: 40px;
   letter-spacing: -7px;
 }
-body #main .portada .left-part p {
+body #main .portada .main-parts .left-part p {
   letter-spacing: -1px;
   color: grey;
   font-size: 17px;
 }
-body #main .portada .left-part input {
+body #main .portada .main-parts .left-part input {
   margin-top: 10px;
 }
 body #main .slider-iconos {
   width: 100%;
-  min-height: calc(20vh - 56.66px);
+  height: 150px;
   background: #8e0000;
   background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.555);
