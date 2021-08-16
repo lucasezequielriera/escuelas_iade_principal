@@ -69,7 +69,8 @@ HECHO:
 - 12/09/21: Vinculando MySQL db (Navbar casi completo, index casi completo, footer completo)<2/4>
 - 13/09/21: Vinculando MySQL db (Navbar completo, index casi completo, responsive completo) <3/4>
 - 13/09/21: Arreglando problemas de compatibilidad con MySQL <2/3>
-- 13/09/21: Creando componentes con PHP
+- 13/09/21: Creando componentes con PHP (templates)
+- 15/09/21: 
 
 POR HACER:
 

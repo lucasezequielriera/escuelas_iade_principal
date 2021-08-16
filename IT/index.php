@@ -176,79 +176,43 @@ require "../data.php";
         </div>
 
         <div class="middle-part">
-            <div class="card">
-                <div class="icono">
-                    <img class="animate__animated animate__fadeInRight animate__delay-1s" src="./images/diploma.png" alt="diploma">
-                </div>
-                <div class="informacion">
-                    <h5 class="animate__animated animate__fadeInLeft">Certificacion Nacional e Internacional
-                        <!-- <a href="#">Hola</a> -->
-                    </h5>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img class="animate__animated animate__fadeInRight animate__delay-1s" src="./images/university.png" alt="diploma">
-                </div>
-                <div class="informacion">
-                    <h5 class="animate__animated animate__fadeInLeft">Avalados por España y Estados Unidos</h5>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img class="animate__animated animate__fadeInRight animate__delay-1s" src="./images/campus.png" alt="diploma">
-                </div>
-                <div class="informacion">
-                    <h5 class="animate__animated animate__fadeInLeft">Campus virtual para tu enseñanza</h5>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img class="animate__animated animate__fadeInRight animate__delay-1s" src="./images/horario.png" alt="diploma">
-                </div>
-                <div class="informacion">
-                    <h5 class="animate__animated animate__fadeInLeft">Horarios flexibles a tu ritmo</h5>
-                </div>
-            </div>
+            <?php
+                require '../templates/banner_caracteristicas.php'
+            ?>
         </div>
 
         <div class="bottom-part">
             <div class="right-part part">
                 <div class="container-courses">
-                    <a href="./views/transformacion_digital.php">
-                        <div class="course">
+                <?php
+
+                $cursosFiltrados = array();
+
+                foreach ($cursos as $curso) {
+                    if (strtolower($curso["category"]) === "it") {
+                        array_push($cursosFiltrados, $curso);
+                    } else {
+                        continue;
+                    }
+                }?>
+                <?php
+
+                foreach ($cursosFiltrados as $cursoBuscado) { ?>
+
+                <a href="<?= $cursoBuscado["url_doc"] ?>">
+                    <div class="course">
+                        <?php if($cursoBuscado["nuevoCurso"] == true) : ?>
                             <span class="badge bg-success">Nuevo curso</span>
+                        <?php endif; ?>
+                        <?php if($cursoBuscado["certificacionInternacional"] == true) : ?>
                             <span class="badge bg-primary text-white">Certificación Internacional</span>
-                            <p>Transformación Digital</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course">
-                            <span class="badge bg-warning text-dark">Promoción especial</span>
-                            <p>HTML</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course">
-                            <p>Facebook Ads</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course">
-                            <span class="badge bg-success">Nuevo curso</span>
-                            <p>Criptomonedas</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course">
-                            <p>Google Ads</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="course">
-                            <p>Microsoft Office</p>
-                        </div>
-                    </a>
+                        <?php endif; ?>
+                        <p><?= $cursoBuscado["name"] ?></p>
+                    </div>
+                </a>
+
+                <?php } ?>
+
                 </div>
             </div>
         </div>

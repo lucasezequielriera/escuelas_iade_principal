@@ -16,5 +16,7 @@ $cursoPorId = $db->getCourseById('all');
 $usuarios = $db->getUsers('all');
 // Obteniendo todos los datos del navbar //
 $navbar = $db->getSiteNavbar('all');
+// Obteniendo todos los datos del banner "características" //
+$bannerCaracteristicas = $db->getSiteBannerCharacteristics('all');
 
 ?>

@@ -16,8 +16,8 @@
 }
 @media screen and (max-width: 1122px) {
   .main-parts {
-    display: flex;
     flex-flow: column nowrap;
+    display: grid;
   }
 
   #main .portada {
@@ -27,11 +27,13 @@
   #main .portada .left-part {
     width: 100%;
     text-align: center;
+    order: 2;
   }
   #main .portada .left-part h1 {
     text-align: center;
     font-size: 100px !important;
     margin-top: 10px;
+    display: none;
   }
   #main .portada .left-part p {
     text-align: left;
@@ -39,6 +41,7 @@
   #main .portada .right-part {
     width: 100%;
     text-align: center;
+    order: 1;
   }
   #main .portada .right-part img {
     width: 700px;

@@ -265,6 +265,7 @@ body #main {
   width: 100%;
   height: calc(100% - 56.66px);
   position: relative;
+  overflow: auto;
 }
 body #main .forma {
   display: inline-block;
@@ -888,6 +889,7 @@ body #slider-valoraciones .card-valoracion {
   box-shadow: 0px 0px 20px #f0f0f0;
   background: rgba(0, 0, 0, 0.055);
   animation: sliderReputation 50s infinite linear;
+  position: relative;
 }
 body #slider-valoraciones .card-valoracion .left-part {
   width: 30%;
@@ -899,8 +901,8 @@ body #slider-valoraciones .card-valoracion .left-part {
   padding: 0px 10px;
 }
 body #slider-valoraciones .card-valoracion .left-part img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 100px;
 }
 body #slider-valoraciones .card-valoracion .right-part {
@@ -919,9 +921,15 @@ body #slider-valoraciones .card-valoracion .right-part .titulo p {
   font-size: 13px;
   margin-top: 5px;
   color: #cc0000;
+  min-height: 43px;
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo p img {
   margin-right: 5px;
+}
+body #slider-valoraciones .card-valoracion .right-part .texto {
+  height: 90px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 body #slider-valoraciones .card-valoracion .right-part .texto p {
   font-weight: 500;

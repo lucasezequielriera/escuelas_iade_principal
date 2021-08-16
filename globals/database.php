@@ -73,7 +73,7 @@ class Database {
 
     //Site builder
     public function getCourses() {
-        $this->query("SELECT category, description, image, name, title, content FROM courses");
+        $this->query("SELECT category, description, image, name, title, content, url_doc, nuevoCurso, certificacionInternacional FROM courses");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -129,6 +129,22 @@ class Database {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
         $this->query("SELECT $item FROM site_navbar");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
+    public function getSiteReputation($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM card_reputation");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
+    public function getSiteBannerCharacteristics($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM banner_caracteristicas");
         $resultset = $this->fetchAll();
         return $resultset;
     }

@@ -261,52 +261,52 @@ function mostrar8() {
 
 // Información //
 // Creando array con datos de iconos e información //
-const informacionPieDePortada = [
-    {
-        imagen: "./images/diploma.png",
-        informacion: "Certificacion Nacional e Internacional"
-    },
-    {
-        imagen: "./images/university.png",
-        informacion: "Avalados por España y Estados Unidos"
-    },
-    {
-        imagen: "./images/campus.png",
-        informacion: "Campus virtual para tu enseñanza"
-    },
-    {
-        imagen: "./images/horario.png",
-        informacion: "Horarios flexibles a tu ritmo"
-    }
-];
+// const informacionPieDePortada = [
+//     {
+//         imagen: "./images/diploma.png",
+//         informacion: "Certificacion Nacional e Internacional"
+//     },
+//     {
+//         imagen: "./images/university.png",
+//         informacion: "Avalados por España y Estados Unidos"
+//     },
+//     {
+//         imagen: "./images/campus.png",
+//         informacion: "Campus virtual para tu enseñanza"
+//     },
+//     {
+//         imagen: "./images/horario.png",
+//         informacion: "Horarios flexibles a tu ritmo"
+//     }
+// ];
 
-// Buscando datos para imprimir por pantalla mediante DOM //
-informacionPieDePortada.map((item) => {
-    // Cambiar link de imágenes dependiendo la url //
-    const urlImagen = (location.pathname.search("IT") != -1) ? `.${item.imagen}` : item.imagen;
-    // DOM Principal //
-    const pieDePortada = document.querySelector(".container-informacion");
-    // Creando Instancias //
-    const card = document.createElement("div");
-    card.classList.add("card");
-    const icono = document.createElement("div");
-    icono.classList.add("icono");
-    const img = document.createElement("img");
-    img.setAttribute("src", urlImagen);
-    img.setAttribute("alt", "imagen_icono");
-    const informacion = document.createElement("div");
-    informacion.classList.add("informacion");
-    const h5 = document.createElement("h5");
-    h5.textContent = item.informacion;
-    // Vincular DOM //
-    informacion.appendChild(h5);
-    icono.appendChild(img);
-    card.appendChild(icono);
-    card.appendChild(informacion);
-    if (pieDePortada) {
-        pieDePortada.appendChild(card);
-    } else ""
-});
+// // Buscando datos para imprimir por pantalla mediante DOM //
+// informacionPieDePortada.map((item) => {
+//     // Cambiar link de imágenes dependiendo la url //
+//     const urlImagen = (location.pathname.search("IT") != -1) ? `.${item.imagen}` : item.imagen;
+//     // DOM Principal //
+//     const pieDePortada = document.querySelector(".container-informacion");
+//     // Creando Instancias //
+//     const card = document.createElement("div");
+//     card.classList.add("card");
+//     const icono = document.createElement("div");
+//     icono.classList.add("icono");
+//     const img = document.createElement("img");
+//     img.setAttribute("src", urlImagen);
+//     img.setAttribute("alt", "imagen_icono");
+//     const informacion = document.createElement("div");
+//     informacion.classList.add("informacion");
+//     const h5 = document.createElement("h5");
+//     h5.textContent = item.informacion;
+//     // Vincular DOM //
+//     informacion.appendChild(h5);
+//     icono.appendChild(img);
+//     card.appendChild(icono);
+//     card.appendChild(informacion);
+//     if (pieDePortada) {
+//         pieDePortada.appendChild(card);
+//     } else ""
+// });
 
 /////----- / Banner -----/////
 

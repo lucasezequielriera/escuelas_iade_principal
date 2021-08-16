@@ -44,6 +44,7 @@ require "./data.php";
             <li id="triangulo" class="forma"></li>
         </ul>
         <!-- / Fondo animado -->
+
         <?php foreach ($informacionMain as $datosMain) { ?>
 
             <div class="portada">
@@ -53,7 +54,7 @@ require "./data.php";
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information1'] ?></p>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information2'] ?></p>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information3'] ?></p>
-                        <input class="btn btn-danger px-5 fw-light" type="button" value="<?= $datosMain['main_button1'] ?>">
+                        <a class="btn btn-danger px-5 fw-light" href="<?= $datosMain['main_button1_link'] ?>"><?= $datosMain['main_button1'] ?></a>
                     </div>
                     <div class="col-6 text-left right-part">
                         <img src="<?= $datosMain['image'] ?>" alt="imagen_principal_iade" width="900px">
@@ -170,14 +171,9 @@ require "./data.php";
 
     <section id="informacion">
         <div class="container-informacion">
-            <!-- <div class="card">
-                <div class="icono">
-                    <img src="" alt="imagen_icono">
-                </div>
-                <div class="informacion">
-                    <h5>dfds</h5>
-                </div>
-            </div> -->
+            <?php
+                require './templates/banner_caracteristicas.php'
+            ?>
         </div>
     </section>
 
@@ -221,118 +217,9 @@ require "./data.php";
     </section>
 
     <section id="slider-valoraciones">
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
-        <div class="card-valoracion">
-            <div class="left-part">
-                <img src="./images/persona.jpeg" alt="persona">
-            </div>
-            <div class="right-part">
-                <div class="titulo">
-                    <h3>Lucas Ezequiel Riera</h3>
-                    <p><img src="./images/arrowright.svg" alt="imagen"> Programación web</p>
-                </div>
-                <div class="texto">
-                    <p>"Si, me gusto mucho el curso, una genialidad el curso de programacion web con html"</p>
-                </div>
-            </div>
-        </div>
+        <?php
+            require './templates/comentarios_alumnos.php'
+        ?>
     </section>
 
     <?php

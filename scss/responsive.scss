@@ -20,8 +20,8 @@
 
 @media screen and (max-width:1122px) {
     .main-parts {
-        display: flex;
         flex-flow: column nowrap;
+        display: grid;
     }
     #main .portada {
         width: 100% !important;
@@ -29,10 +29,12 @@
         .left-part {
             width: 100%;
             text-align: center;
+            order: 2;
             h1 {
                 text-align: center;
                 font-size: 100px !important;
                 margin-top: 10px;
+                display: none;
             }
             p {
                 text-align: left;
@@ -41,6 +43,7 @@
         .right-part {
             width: 100%;
             text-align: center;
+            order: 1;
             img {
                 width: 700px;
             }
