@@ -22,5 +22,7 @@ $bannerCaracteristicas = $db->getSiteBannerCharacteristics('all');
 $institucional = $db->getSiteInstitutional('all');
 // Obteniendo todos los datos de los componentes de "institucional" //
 $componentes_institucional = $db->getSiteContent('all');
+// Obteniendo todas las certificaciones //
+$certificaciones = $db->getCertifications('all');
 
 ?>

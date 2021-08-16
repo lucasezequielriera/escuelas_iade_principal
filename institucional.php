@@ -56,7 +56,7 @@ require "./data.php";
                 <?php
                 foreach ($componentes_institucional as $key => $componente) { ?>
 
-                <!-- Modal Historia -->
+                <!-- Modal -->
                 <div class="modal fade" id="modal-historia<?= $key ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">

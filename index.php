@@ -63,88 +63,16 @@ require "./data.php";
         </div>
 
         <div class="slider-iconos">
-            <!-- Temporal hasta agregar logos e iconos verdaderos -->
+            <?php foreach ($certificaciones as $certificacion)
+            if ($certificacion["nombre"] != "ISO 9000" & $certificacion["nombre"] != "ISO 9002") {?>
+
             <div class="card">
                 <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
+                    <img class="mx-5" src="./images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>">
                 </div>
             </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <div class="card">
-                <div class="icono">
-                    <img src="./images/brand.png" alt="diploma">
-                </div>
-            </div>
-            <!-- / Temporal -->
+
+            <?php } ?>
         </div>
     </main>
 

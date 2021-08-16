@@ -461,7 +461,7 @@ body #main .slider-iconos {
   overflow: hidden;
 }
 body #main .slider-iconos .card {
-  min-width: 90px;
+  min-width: 250px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -471,8 +471,7 @@ body #main .slider-iconos .card {
   margin-right: 20px;
 }
 body #main .slider-iconos .card .icono {
-  width: 50px;
-  height: 50px;
+  width: 100%;
   text-align: center;
   padding-top: 0px;
   margin-right: 2px;
@@ -480,7 +479,7 @@ body #main .slider-iconos .card .icono {
   margin: 0px 10px;
 }
 body #main .slider-iconos .card .icono img {
-  width: 50px;
+  width: 180px;
 }
 body #mainInstitucional {
   width: 100%;

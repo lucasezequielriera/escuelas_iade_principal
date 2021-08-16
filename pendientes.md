@@ -14,7 +14,7 @@ Pendiente de hacer:
     confirmar contraseña
 }
 - Agregar comentarios en el footer y hacer pagina de comentarios<Okay/>
-- Hacer que al hacer click en algun comentario, vaya  la pagina de comentarios
+- Hacer que al hacer click en algun comentario, vaya a la pagina de comentarios
 - Hacer el formulario en pagina de curso para venta por formulario <Okey/> (contectar con CRM) <Hablar con Nico/>
 - Hacer pagina de terminos de uso, faq y proteccion de datos personales
 - Cambiar colores de curso.<Okay/>
@@ -48,7 +48,6 @@ HECHO:
 - Agregar botones en sesión de (“mi perfil”, “mi aprendizaje”, “cursos comprados”, “mi carrito”, “cerrar sesión”)
 - Diploma para alumnos en el campus
 - Arreglar SPAM de formularios con datos vacíos
-
 - 01/08/21: Arreglo de archivos JS
 - 01/08/21: Validaciones de buttons en página de curso (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente) <1/2>
 - 02/08/21: Validaciones de buttons en página de curso (si está desconectado, pide iniciar, sino agrega al carrito o compra directamente) <2/2>
@@ -63,14 +62,18 @@ HECHO:
 - 10/09/21: Arreglar errores en menú de navbar
 - 10/09/21: Responsive nueva vista IADE en index
 - 10/09/21: Responsive nuevo footer en todas las vistas
-- 11/09/21: Vinculando MySQL db <1/4>
+- 11/09/21: Vinculando MySQL db <1/5>
 - 11/09/21: Dividiendo sections por templates con PHP <1/3>
 - 12/09/21: Arreglando problemas de compatibilidad con MySQL <1/3>
-- 12/09/21: Vinculando MySQL db (Navbar casi completo, index casi completo, footer completo)<2/4>
-- 13/09/21: Vinculando MySQL db (Navbar completo, index casi completo, responsive completo) <3/4>
+- 12/09/21: Vinculando MySQL db (Navbar casi completo, index casi completo, footer completo)<2/5>
+- 13/09/21: Vinculando MySQL db (Navbar completo, index casi completo, responsive completo) <3/5>
 - 13/09/21: Arreglando problemas de compatibilidad con MySQL <2/3>
-- 13/09/21: Creando componentes con PHP (templates)
-- 15/09/21: 
+- 13/09/21: Dividiendo sections por templates con PHP <2/3>
+- 15/09/21: Vinculando MySQL db (Index completo, conocenos completo, index IT completo, curso incompleto) <4/5>
+- 15/09/21: Dividiendo sections por templates con PHP <3/3>
+- 15/09/21: Arreglando problemas de compatibilidad con MySQL <3/3>
+- 15/09/21: Arreglo de cards de reputación y vinculación con db
+- 16/09/21: Vinculando MySQL db (Curso completo c/responsive faltante) <5/5>
 
 POR HACER:
 

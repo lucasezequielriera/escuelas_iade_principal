@@ -166,19 +166,19 @@ require "../../data.php";
             <nav class="nav-curso" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.php">Escuelas iade IT</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Transformación Digital</li>
+                    <li class="breadcrumb-item active" aria-current="page"><?= $cursos[1]["name"] ?></li>
                 </ol>
             </nav>
             <div class="titulo-curso">
-                <h1 class="animate__animated animate__fadeIn">Curso online de Transformación Digital</h1>
+                <h1 class="animate__animated animate__fadeIn"><?= $cursos[1]["title"] ?></h1>
             </div>
             <div class="subtitulo-curso">
-                <h2>Transforma tu negocio a la nueva generación de mercado online mediante nuestro curso de Transformación digital, tu negocio en la web, con mayor rentabilidad, de la mano de Escuelas iade</h2>
+                <h2><?= $cursos[1]["content"] ?></h2>
                 <div class="iconos">
                     <p class="animate__animated animate__fadeInLeft"><img src="../images/check.png" alt="check"> Más vendido</p>
                     <p class="animate__animated animate__fadeInLeft animate__delay-1s"><img src="../images/grow.png" alt="grow"> Alta demanda laboral</p>
                     <p class="animate__animated animate__fadeInLeft animate__delay-2s"><img src="../images/student.png" alt="student"> 7642 alumnos nuevos</p>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-3s"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-incompleta.png" alt="star"> 4.5</p>
+                    <p class="animate__animated animate__fadeInLeft animate__delay-3s"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-incompleta.png" alt="star"> <?= $cursos[1]["valoracion"] ?></p>
                     <p class="animate__animated animate__fadeInLeft animate__delay-4s"><img src="../images/cv.png" alt="cv"> Hacé crecer tu CV</p>
                 </div>
             </div>
@@ -217,7 +217,7 @@ require "../../data.php";
             <div class="container-descripcion">
                 <h3>Descripción del curso</h3>
                 <ul>
-                    <li>En este curso vamos a estar viendo las diferentes monedas que existen en el mundo de las criptomonedas, su utilidad, sus operaciones y demás.</li>
+                    <li><?= $cursos[1]["description"] ?></li>
                 </ul>
             </div>
             <div class="container-modalidad">
@@ -322,96 +322,45 @@ require "../../data.php";
             <div class="container-certificaciones">
                 <h3>Estas son nuestras certificaciones</h3>
                 <div class="card-certificaciones">
-                    <img src="../images/brand.png" alt="certificacion">
-                    <img src="../images/brand.png" alt="certificacion">
-                    <img src="../images/brand.png" alt="certificacion">
-                    <img src="../images/brand.png" alt="certificacion">
-                    <img src="../images/brand.png" alt="certificacion">
-                    <img src="../images/brand.png" alt="certificacion">
-                    <img src="../images/brand.png" alt="certificacion">
+                    <?php foreach ($certificaciones as $certificacion) {?>
+
+                    <img class="my-4" src="../../images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>">
+                    
+                    <?php }?>
                 </div>
             </div>
             <div class="container-conocenos">
                 <h3>Conocenos un poco más</h3>
                 <div class="botones">
-                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia"><img class="svgimg mx-2" src="../images/campus.png" alt="campus" width="20px">Historia</a>
-                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-metodologias"><img class="svgimg mx-2" src="../../images/metodologia.png" alt="metodologia" width="20px">Metodologías</a>
-                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-certificaciones"><img class="svgimg mx-2" src="../../images/certificaciones.png" alt="certificacion" width="20px">Certificaciones</a>
-                    <!-- Modal Historia -->
-                    <div class="modal fade" id="modal-historia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <?php
+                    foreach ($componentes_institucional as $key => $componente) { ?>
+
+                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg mx-2" src="../../images/<?= $componente["icon"] ?>" alt="<?= $componente["title"] ?>" width="20px"><?= $componente["title"] ?></a>
+                
+                    <?php } ?>
+                    <?php
+                    foreach ($componentes_institucional as $key => $componente) { ?>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-historia<?= $key ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Historia de iade</h5>
+                                <h5 class="modal-title" id="exampleModalLabel"><?= $componente["subtitle"] ?></h5>
                                 </div>
-                                <div class="modal-body">
-                                    En la década de 1950 con el crecimiento demográfico de la Ciudad de Buenos Aires, Córdoba, Rosario y el incremento de la actividad industrial, comercial y bancaria; se hizo necesario capacitar rápidamente a la población joven y de mediana edad para cubrir la demanda laboral especializada. Con este móvil económico, nacen pioneros en la enseñanza en áreas como administración, secretariados, carreras técnicas y de oficios.<br><br>
-                                    De este modo, Escuelas IADE fue fundada por iniciativa privada en 1959, con el propósito de satisfacer dichas necesidades educativas en la zona oeste del Gran Buenos Aires; proyecto educativo que con el crecimiento del país superó rápidamente expectativas de éxito comercial y profesional.<br>
-                                    Se abrieron año tras año sucursales en el Gran Buenos Aires y pronto en la Capital Federal. Se siguió hacia el interior del país, en las distintas provincias de la Argentina para luego trasladar esa misma educación a países como Uruguay, Chile, Paraguay, Brasil.
-                                    Atendiendo a la responsabilidad social, la dirección siempre planificó contenidos, proyectó y concretó cursos para llegar a sectores poblacionales de menores recursos económicos, haciendo que nuestro único requisito sea saber leer y escribir.<br><br>
-                                    Hacia 1963, se sumaron cursos técnicos y  comenzaron poco a poco los cursos a distancia, por correo; llegando a los rincones más humildes de la Argentina, donde la educación técnica era imposible. Esto fue el principio de la educación que hoy brindamos online.
-                                    Dada la filosofía fundacional de planeamiento educativo y contenidos prácticos con fundamentos científicos, se contrató a docentes especializados para siempre agregar valor académico y constante atención a las necesidades de cada alumno.<br>
-                                    En el 2010 se incorpora un  nuevo sector en la escuela: TEMPO IADE,  el laboratorio de proyectos, pensando no sólo en el tiempo presente sino en el futuro próximo.  Se reúne staff académico, se analizan necesidades de empresas e industrias, planificando así contenidos para nuevos cursos.
-                                    Desde su inicio, Escuelas Iade sostiene que el saber no ocupa lugar y hoy,  gracias al pleno uso de internet, nuestros cursos llegan a todos los rincones del país, incluso  sin necesidad de conexión .<br><br>
-                                    Durante estos sesenta años, Escuelas IADE adaptó y planificó cursos propios en áreas técnicas, empresarial, jurídico/comercial, salud, bienestar, belleza, moda, hotelería y muchas más. Hoy en día nuestros cursos están homologados por Standard Lift bajo las normas ISO 9000 e ISO 9002, además de contar con el respaldo de la Cámara Argentina de Refrigeración.<br><br>
-                                    En la actualidad, buscamos ofrecer incluso una mayor accesibilidad ampliando nuestro abanico de cursos disponibles en las áreas de Salud, estética, finanzas y nuevas tecnologías y adaptando los costos a la necesidad y posibilidad de cada sector. Con ya cuatro millones (4.000.000) de graduados, Escuelas IADE siempre va por más y a vencer nuevos desafíos.
-                                    
-                                </div>
+                                <div class="modal-body"><?= $componente["content"] ?></div>
                             </div>
                         </div>
                     </div>
-                    <!-- Modal Metodologías -->
-                    <div class="modal fade" id="modal-metodologias" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Metodología de estudio</h5>
-                                </div>
-                                <div class="modal-body">
-                                    Nuestros cursos son completamente a distancia, no hay clases ni prácticas presenciales.<br><br>
-                                    Al inscribirse cada persona tiene ingreso a un campus en el cual podrá acceder al material correspondiente al curso adquirido; este consta de clases audiovisuales pre grabadas y manuales de lectura en formato PDF.<br>
-                                    El material puede ser descargado y las clases son asincrónicas por lo que cada alumno regula sus tiempos de estudio según sus necesidades; es decir, cada alumno estudia cuando y donde quiere independientemente de tener o no conexión a internet. Además, se cuenta con la asistencia personalizada de un profesor para resolver cualquier tipo de consulta.<br><br>
-                                    Una vez finaliza de estudiar el material brindado y despeja cualquier duda con el profesor, cada alumno debe rendir un examen final, el cual puede ver en el campus desde el momento en que tiene acceso a todo el material. Con la aprobación de este examen se da por finalizado el curso y se confecciona el certificado de Iade; el cual acredita la aprobación del curso y permite (opcionalmente) obtener los profesionales.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal Certificaciones -->
-                    <div class="modal fade" id="modal-certificaciones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Certificaciones homologadas</h5>
-                                </div>
-                                <div class="modal-body">
-                                    Durante estos sesenta y tres años, Escuelas IADE adaptó y planificó cursos propios en áreas técnicas, empresarial, jurídico/comercial, salud, bienestar, belleza, moda, hotelería y muchas más. Hoy en día nuestros cursos están homologados por Standard Lift bajo las normas ISO 9000 e ISO 9002.<br><br>
-                                    Standard lift:<br>
-                                    Ofrecemos a nuestros alumnos la posibilidad de certificarse nacional e internacionalmente por medio de nuestro convenio con Standard Lift, de manera que al finalizar nuestro curso puedan ejercer su profesión de forma legal en Argentina o bien dentro del Mercosur, ya que es una matrícula privada que otorga un lugar en el padrón donde se confirma la certificación dentro de Standard Lift.<br><br>
-                                    BENEFICIOS DE OBTENER CERTIFICACIÓN O MATRÍCULA DE STANDARD LIFT.<br>
-                                    • Podrán desempeñar su empleo de forma PROFESIONAL dentro de un marco legal, en cumplimiento de normativas nacionales e internacionales reconocidas por el Estado y las diferentes aseguradoras.<br>
-                                    • Realizamos un proceso de evaluación y validación de los conocimientos de un trabajador en cualquier rol profesional, lo cual promueve su inserción y promoción, otorgándole ventajas competitivas. Aseguramos que dispone de la competencia mínima, con el aval de una entidad independiente a través de un proceso de certificación adecuado e imparcial. De esta manera mejora las oportunidades de empleo, incentiva el desarrollo de habilidades adquiridas y otorga un reconocimiento público de la experiencia laboral.<br>
-                                    • Contribuye a su desarrollo personal y profesional, lo que le da la seguridad de poseer las pautas adecuadas para llevar a cabo su trabajo. En síntesis, mejora su empleabilidad.<br>
-                                    • Trazabilidad, quienes contraten al alumno/a podrán buscar en nuestro portal quienes están certificados (siempre que acepten ser visualizados).
-                                    (Texto brindado por Standard Lift thttp://www.standardlift.com.ar/ )<br><br>
-                                    Matrícula de refrigeración:<br>
-                                    En cuanto a matrículas oficiales, nos complace ofrecer la matriculación en refrigeración contando con el respaldo de la Cámara Argentina de Refrigeración.<br>
-                                    Esta sirve para poder reparar e instalar equipos de Aire Acondicionado y heladeras con garantía sin quitar la misma (que quede cubierto el arreglo); y lo más importante, ejercer la profesión<br><br>
-                                    Certificado IRCU:<br>
-                                    Por otro lado, brindamos la opción de revalidación de nuestro certificado de Iade por “INTERNATIONAL REDEEMED CHRISTIAN UNIVERSITY”, que acredita el curso como tecnicatura y permite ejercer el oficio en Estados Unidos y Centroamérica.<br><br>
-                                    Explicación breve de como hacerlos:<br>
-                                    En todos los casos el alumno solo debe dirigirse al asesor correspondiente y este hará el trámite, garantizando un fácil y efectivo acceso a cada certificación.<br>
-                                    Desde nuestro lugar brindamos la capacitación hasta la certificación, ofreciendo a cada alumno la posibilidad del crecimiento y desarrollo en el ámbito laboral, adaptándonos a cada necesidad y obstáculo que se presente para garantizar la igualdad de oportunidades para cada persona.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    <?php } ?>
                 </div>
             </div>
             <div class="container-ranking">
                 <h3>Valoraciones del curso</h3>
                 <div class="card-puntaje">
                     <div class="puntaje">
-                        <h1>4.5</h1>
+                        <h1><?= $cursos[1]["valoracion"] ?></h1>
                         <p>
                             <img src="../images/estrella-completa.png" alt="star">
                             <img src="../images/estrella-completa.png" alt="star">
@@ -558,27 +507,31 @@ require "../../data.php";
             <div class="container-cursos-recomendados">
                 <h3>Cursos recomendados por nuestros estudiantes</h3>
                 <hr>
-                <div class="card-curso">
-                    <div class="imagen">
-                        <img src="../images/criptomonedas.jpeg" alt="curso">
+                <?php
+                    foreach ($cursos as $key => $curso)
+                    if ($curso["category"] === "IT" && $curso["name"] != "Transformación Digital") { ?>
+                    <div class="card-curso">
+                        <div class="imagen">
+                            <img src="../../images/cursos/<?= $curso["image"] ?>" alt="<?= $curso["name"] ?>">
+                        </div>
+                        <div class="titulo">
+                            <p><span><?= $curso["name"] ?></span>:<br><?= $curso["content"] ?></p>
+                            <p><?= $curso["duracion"] ?> horas de duración total</p>
+                        </div>
+                        <div class="valoracion">
+                            <p><?= $curso["valoracion"] ?> <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
+                        </div>
+                        <div class="precio">
+                            <p><span class="badge">$<?= $curso["precio"] ?></span></p>
+                        </div>
+                        <div class="comprar-guardar">
+                            <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
+                            <p><input type="button" class="btn btn-danger addCarrito"><img src="../../images/add-cart.png" alt="agregar-al-carrito"></p>
+                        </div>
                     </div>
-                    <div class="titulo">
-                        <p><span>Criptomonedas</span>:<br>Aprende a utilizar las monedas virtuales más famosas del momento.</p>
-                        <p>14,5 horas de duración total</p>
-                    </div>
-                    <div class="valoracion">
-                        <p>4,6 <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
-                    </div>
-                    <div class="precio">
-                        <p><span class="badge">$12000</span></p>
-                    </div>
-                    <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../images/buy.png" alt="comprar"></p>
-                        <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="card-curso">
+                    <hr>
+                <?php } ?>
+                <!-- <div class="card-curso">
                     <div class="imagen">
                         <img src="../images/facebook-ads.png" alt="curso">
                     </div>
@@ -593,7 +546,7 @@ require "../../data.php";
                         <p><span class="badge">$11000</span></p>
                     </div>
                     <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../images/buy.png" alt="comprar"></p>
+                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
                         <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
                     </div>
                 </div>
@@ -613,7 +566,7 @@ require "../../data.php";
                         <p><span class="badge">$13000</span></p>
                     </div>
                     <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../images/buy.png" alt="comprar"></p>
+                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
                         <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
                     </div>
                 </div>
@@ -633,7 +586,7 @@ require "../../data.php";
                         <p><span class="badge">$15000</span></p>
                     </div>
                     <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../images/buy.png" alt="comprar"></p>
+                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
                         <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
                     </div>
                 </div>
@@ -653,15 +606,15 @@ require "../../data.php";
                         <p><span class="badge">$10000</span></p>
                     </div>
                     <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../images/buy.png" alt="comprar"></p>
+                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
                         <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
                     </div>
                 </div>
-                <hr>
+                <hr> -->
             </div>
         </div>
         <!-- Compra Directa -->
-        <div class="right-part animate__animated animate__fadeIn">
+        <!-- <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form">
                 <div class="imagen-curso"><img src="../images/transformacion-digital.jpeg" alt="transformacion-digital"></div>
                 <div class="precio">
@@ -683,14 +636,14 @@ require "../../data.php";
                     <p><img src="../images/icono1.svg" alt="campus"> Campus virtual las 24hs</p>
                     <p><img src="../images/icono2.svg" alt="diploma"> Certificado nacional e internacional</p>
                     <p><img src="../images/icono3.svg" alt=""> Profesor particular para ayudarte</p>
-                    <!-- <p><img src="../images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo) -->
+                    <p><img src="../images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo)
                     <p><img src="../images/icono5.svg" alt="contenido-descargable"> Contenido descargable</p>
                     <p><img src="../images/icono6.svg" alt="acceso-de-por-vida"> Acceso de por vida</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Formulario -->
-        <!-- <div class="right-part animate__animated animate__fadeIn">
+        <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form contact-form">
                 <h1>Contactate con nosotros y comenzá a estudiar!</h1>
                 <hr>
@@ -732,7 +685,7 @@ require "../../data.php";
                     <p class="footer-card mt-1">* Asegúrese de ingresar bien sus datos, uno de nuestros ascesores se comunicará a la brevedad.</p>
                 </form>
             </div>
-        </div> -->
+        </div>
     </main>
 
     <?php
