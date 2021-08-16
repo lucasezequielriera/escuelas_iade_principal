@@ -45,24 +45,22 @@ require "./data.php";
         </ul>
         <!-- / Fondo animado -->
 
-        <?php foreach ($informacionMain as $datosMain) { ?>
-
-            <div class="portada">
-                <div class="main-parts row">
-                    <div class="col-6 text-right left-part">
+        <div class="portada">
+            <div class="main-parts row">
+                <div class="col-6 text-right left-part">
+                    <?php foreach ($informacionMain as $datosMain) { ?>
                         <h1 class="animate__animated animate__fadeIn"><?= $datosMain['main_title'] ?></h1>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information1'] ?></p>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information2'] ?></p>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information3'] ?></p>
                         <a class="btn btn-danger px-5 fw-light" href="<?= $datosMain['main_button1_link'] ?>"><?= $datosMain['main_button1'] ?></a>
-                    </div>
-                    <div class="col-6 text-left right-part">
-                        <img src="<?= $datosMain['image'] ?>" alt="imagen_principal_iade" width="900px">
-                    </div>
+                    <?php } ?>
+                </div>
+                <div class="col-6 text-left right-part">
+                    <img src="<?= $datosMain['image'] ?>" alt="imagen_principal_iade" width="900px">
                 </div>
             </div>
-
-        <?php } ?>
+        </div>
 
         <div class="slider-iconos">
             <!-- Temporal hasta agregar logos e iconos verdaderos -->

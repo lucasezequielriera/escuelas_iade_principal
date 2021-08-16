@@ -88,7 +88,7 @@ class Database {
     public function getSiteContent($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
-        $this->query("SELECT $item FROM site_componentes");
+        $this->query("SELECT $item FROM site_components");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -145,6 +145,14 @@ class Database {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
         $this->query("SELECT $item FROM banner_caracteristicas");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
+    public function getSiteInstitutional($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM site_institutional");
         $resultset = $this->fetchAll();
         return $resultset;
     }

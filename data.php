@@ -18,5 +18,9 @@ $usuarios = $db->getUsers('all');
 $navbar = $db->getSiteNavbar('all');
 // Obteniendo todos los datos del banner "características" //
 $bannerCaracteristicas = $db->getSiteBannerCharacteristics('all');
+// Obteniendo todos los datos del main "institucional" //
+$institucional = $db->getSiteInstitutional('all');
+// Obteniendo todos los datos de los componentes de "institucional" //
+$componentes_institucional = $db->getSiteContent('all');
 
 ?>
