@@ -74,6 +74,8 @@ HECHO:
 - 15/09/21: Arreglando problemas de compatibilidad con MySQL <3/3>
 - 15/09/21: Arreglo de cards de reputación y vinculación con db
 - 16/09/21: Vinculando MySQL db (Curso completo c/responsive faltante) <5/5>
+- 17/09/21: Vinculando tablas en MySQL
+- 17/09/21: Lógica de página con PHP
 
 POR HACER:
 

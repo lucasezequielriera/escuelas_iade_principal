@@ -47,7 +47,7 @@ require "./data.php";
                 <?php
                 foreach ($componentes_institucional as $key => $componente) { ?>
 
-                <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg" src="<?= $componente["icon"] ?>" alt=""><?= $componente["title"] ?></a>
+                <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg" src="./images/<?= $componente["icon"] ?>" alt=""><?= $componente["title"] ?></a>
                 <!-- <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-metodologias"><img class="svgimg" src="./images/metodologia.png" alt="">Metodologías</a>
                 <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-certificaciones"><img class="svgimg" src="images/certificaciones.png" alt="">Certificaciones</a> -->
             
