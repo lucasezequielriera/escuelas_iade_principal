@@ -76,7 +76,7 @@ require "./data.php";
         </div>
     </main>
 
-    <section id="escuelas">
+    <section id="escuelas" class="mt-2">
         <div class="titulo">
             <h1>Conocé nuestras escuelas y estudiá lo que te gusta</h1>
         </div>
@@ -95,7 +95,7 @@ require "./data.php";
         </div>
     </section>
 
-    <section id="informacion">
+    <section id="informacion" class="mt-4">
         <div class="container-informacion">
             <?php
                 require './templates/banner_caracteristicas.php'
@@ -103,41 +103,60 @@ require "./data.php";
         </div>
     </section>
 
-    <section id="institucional">
+    <section id="institucional" class="mt-3 mb-4 pb-3">
         <div class="titulo">
             <h1>Nuestra institución, tu lugar de aprendizaje</h1>
         </div>
-        <div class="nuestra-informacion">
-            <div class="top-part">
-                <div class="left-content">
-                    <img src="./images/fondo.jpg" alt="imagen">
-                    <div></div>
-                </div>
-                <div class="right-content">
-                    <div class="titulo">
-                        <h2>Nuestra historia desde los comienzos</h2>
-                    </div>
-                    <div class="texto">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, cupiditate accusamus. Et
-                            cupiditate officiis accusamus minima. Velit aperiam tempore, quaerat repellendus quis qui
-                            ducimus obcaecati minus delectus magnam nemo doloremque.</p>
-                    </div>
-                </div>
+        <div class="text-center mb-5 pb-5">
+            <iframe class="rounded shadow" width="560" height="315" src="https://www.youtube.com/embed/iFMJmHBVVYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="card row d-flex flex-row w-100 m-0 p-0 mt-5 bg-transparent" style="border-color: transparent; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)">
+            <?php
+            $paisesFiltrados = array();
+            $categoriasFiltradas = array();
+                
+            foreach ($alumnos as $key => $alumno) { array_push($paisesFiltrados, $alumno["pais"]); }
+            foreach ($cursos as $key => $curso) { array_push($categoriasFiltradas, $curso["category"]); }?>
+
+            <div class="col-sm-3 text-center d-flex flex-column my-5 align-items-center">
+            <img class="rounded-circle mb-2 bg-transparent" src="./images/add_student.png" width="55px" style="border-color: transparent">
+                <h1><?= sizeof($alumnos) ?></h1>
+                <p class="m-0 fw-light">alumnos nuevos</p>
             </div>
-            <div class="bottom-part">
-                <div class="left-content">
-                    <div class="titulo">
-                        <h2>Nuestros alumnos cuentan la historia por nosotros</h2>
-                    </div>
-                    <div class="texto">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae iste, veniam
-                            eum, nisi illum sed totam tempore id exercitationem consequuntur aperiam necessitatibus
-                            aliquid explicabo excepturi quibusdam, culpa quod modi!</p>
-                    </div>
-                </div>
-                <div class="right-content">
-                    <img src="./images/fondo.jpg" alt="imagen">
-                </div>
+            <div class="col-sm-3 text-center d-flex flex-column my-5 align-items-center">
+            <img class="rounded-circle mb-2 bg-transparent" src="./images/world.png" width="55px" style="border-color: transparent">
+                <h1><?= sizeof(array_unique($paisesFiltrados)) ?></h1>
+                <p class="m-0 fw-light">paises que enseñamos</p>
+            </div>
+            <div class="col-sm-3 text-center d-flex flex-column my-5 align-items-center">
+            <img class="rounded-circle mb-2 bg-transparent" src="./images/available_check.png" width="55px" style="border-color: transparent">
+                <h1><?= sizeof($cursos) ?></h1>
+                <p class="m-0 fw-light">cursos disponibles</p>
+            </div>
+            <div class="col-sm-3 text-center d-flex flex-column my-5 align-items-center">
+            <img class="rounded-circle mb-2 bg-transparent" src="./images/school.png" width="55px" style="border-color: transparent">
+                <h1><?= sizeof(array_unique($categoriasFiltradas)) ?></h1>
+                <p class="m-0 fw-light">escuelas para que estudies</p>
+            </div>
+            
+        </div>
+        <div class="nuestra-informacion">
+            <div class="left-part">
+                <span>Desde hace 30 años</span>
+                <h1>Nuestro inicio, tu mejor futuro</h1>
+                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quod blanditiis totam delectus quia recusandae alias ad ab mollitia quis magni unde minus enim quas, earum cumque officiis pariatur quae.<br><br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus cupiditate saepe culpa, dolorum praesentium corporis. Itaque cumque tempore nesciunt quibusdam soluta ut fugiat enim quasi voluptate, quae recusandae tempora modi.
+                </p>
+            </div>
+            <div class="right-part">
+                <p>
+                    <img class="mx-4 my-0 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
+                    <img class="mx-2 mt-5 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
+                </p>
+                <p>
+                    <img class="mx-4 my-0 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
+                    <img class="mx-2 mt-5 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
+                </p>
             </div>
         </div>
     </section>
@@ -146,6 +165,51 @@ require "./data.php";
         <?php
             require './templates/comentarios_alumnos.php'
         ?>
+    </section>
+
+    <section id="formulario-contacto">
+        <div class="titulo">
+            <h1>Contactanos</h1>
+        </div>
+        <div class="formulario">
+            <form action="">
+                <div class="d-flex columna">
+                    <p class="d-flex flex-column">
+                        <label for="">Nombre</label>
+                        <input type="text">
+                    </p>
+                    <p class="d-flex flex-column">
+                        <label for="">Apellido</label>
+                        <input type="text">
+                    </p>
+                </div>
+                <div class="d-flex columna">
+                    <p class="d-flex flex-column">
+                        <label for="">Ciudad</label>
+                        <input type="text">
+                    </p>
+                    <p class="d-flex flex-column">
+                        <label for="">Email</label>
+                        <input type="text">
+                    </p>
+                </div>
+                <div class="d-flex columna">
+                    <p class="d-flex flex-column">
+                        <label for="">Teléfono</label>
+                        <input type="text">
+                    </p>
+                    <p class="d-flex flex-column">
+                        <label for="">Asunto</label>
+                        <input type="text">
+                    </p>
+                </div>
+                <div class="d-flex flex-column columna">
+                    <label for="">Mensaje</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button class="btn btn-outline-danger text-end btn-enviar-form" type="submit">Enviar mensaje</button>
+            </form>
+        </div>
     </section>
 
     <?php

@@ -647,38 +647,38 @@ require "../../data.php";
             <div class="container-form contact-form">
                 <h1>Contactate con nosotros y comenzá a estudiar!</h1>
                 <hr>
-                <form id="contact-form" method="post">
+                <form action="../../crm/functions/addNewLead.php" id="contact-form" method="get">
                     <p class="parrafo">
                         <label for="stopspam" class="campo-escondido">Si ves esto no rellenes el campo</label>
                         <input name="stopspam" id="escondido" class="campo-escondido" />
                     </p>
                     <p class="parrafo">
                         <label for="nombre">Nombre Completo</label>
-                        <input id="nombre" type="text" required>
+                        <input id="nombre" type="text" name="name" required>
                     </p>
                     <p class="parrafo">
                         <label for="email">Email</label>
-                        <input id="email" type="text" required>
+                        <input id="email" type="text" name="email" required>
                     </p>
                     <p class="parrafo">
                         <label for="provincia">Provincia</label>
-                        <input id="provincia" type="text" required>
+                        <input id="provincia" type="text" name="city" required>
                     </p>
                     <p class="parrafo">
                         <label for="telefono">Teléfono</label>
-                        <input id="telefono" type="number" required>
+                        <input id="telefono" type="number" name="phone" required>
                     </p>
                     <p class="parrafo">
                         <label for="dia-contacto">Día/s de contacto</label>
-                        <input id="dias-contacto" type="text" required>
+                        <input id="dias-contacto" type="text" name="detail" required>
                     </p>
-                    <p class="parrafo">
+                    <!-- <p class="parrafo">
                         <label for="horario-contacto">Horario/s de contacto</label>
-                        <input id="horario-contacto" type="text" required>
-                    </p>
+                        <input id="horario-contacto" type="text" name="contactTime" required>
+                    </p> -->
                     <p class="parrafo">
                         <label for="curso">Curso/s de interés</label>
-                        <input id="curso-interes" type="text" required>
+                        <input id="curso-interes" type="text" name="course" required>
                     </p>
                     <input class="btn-enviar btn btn-success fw-light" type="submit" value="Quiero más información *">
                     <p class="footer-card mt-3 mb-0">* Este formulario es una solicitud de información, no de inscripción.</p>

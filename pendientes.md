@@ -74,13 +74,14 @@ HECHO:
 - 15/09/21: Arreglando problemas de compatibilidad con MySQL <3/3>
 - 15/09/21: Arreglo de cards de reputación y vinculación con db
 - 16/09/21: Vinculando MySQL db (Curso completo c/responsive faltante) <5/5>
+- 16/09/21: Agregar logos de certificaciones e instituciones
 - 17/09/21: Vinculando tablas en MySQL
 - 17/09/21: Lógica de página con PHP
+- 19/09/21: Arreglar tamaño diploma iade en campus
 
 POR HACER:
 
 - Diseño de vista principal como la pagina que me mandó fede
-- Agregar logos de certificaciones e instituciones (cuando los tenga)
 - Cambiar db de firebase a MySQL
 - Agregar información en pestaña “certificaciones”
 - Una vez tenga la db de MySQL, agregar funcionalidad de buscar cursos por buscador

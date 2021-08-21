@@ -69,7 +69,7 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
   font-weight: 300;
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll li .dropdown-item:hover {
-  background-color: #c00000;
+  background-color: #da0012;
   color: white;
   transform: translateX(10px);
 }
@@ -119,7 +119,7 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
   transition: all 0.2s;
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul a li:hover {
-  color: #b60000;
+  color: #da0012;
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top .button-verCursos {
   position: absolute;
@@ -133,7 +133,7 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-bottom {
   width: 98%;
   height: 18%;
-  background-color: #c00000;
+  background-color: #da0012;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
@@ -169,7 +169,7 @@ body #header .navbar .container-fluid .navbar-collapse .btn-login {
   margin-left: 8px;
   border-radius: 90px;
   padding: 5px;
-  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.637);
+  box-shadow: 0px 0px 15px #da0012;
   transition: all 0.3s;
 }
 body #header .navbar .container-fluid .navbar-collapse .btn-login .imagen-login {
@@ -190,13 +190,13 @@ body #header .navbar .container-fluid .navbar-collapse .btn-cart {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid transparent;
   border-radius: 90px;
-  box-shadow: 0px 0px 15px red;
+  box-shadow: 0px 0px 15px #da0012;
   transition: all 0.3s;
 }
 body #header .navbar .container-fluid .navbar-collapse .btn-cart .imagen-perfil {
   width: 32px;
   height: 32px;
-  background-color: red;
+  background-color: #da0012;
   border-radius: 90px;
   background-image: url("../IT/images/persona.jpeg");
   background-position: center;
@@ -216,7 +216,7 @@ body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .moda
   box-shadow: 0px 0px 30px black;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #datos-ingreso::placeholder {
-  color: red !important;
+  color: #da0012 !important;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #botonVentanaRegistrarse {
   padding: 5.64px 40px;
@@ -248,18 +248,18 @@ body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-
   transition: all 0.1s;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:last-child li {
-  background-color: #d10000;
+  background-color: #da0012;
   color: white;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:hover li {
-  background-color: #d10000;
+  background-color: #da0012;
   color: white;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:last-child:hover li {
   background-color: #2b2b2b;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .buttonCancelSweetAlert {
-  background-color: red;
+  background-color: #da0012;
 }
 body #main {
   width: 100%;
@@ -444,7 +444,6 @@ body #main .portada .main-parts .left-part h1 {
 }
 body #main .portada .main-parts .left-part p {
   letter-spacing: -1px;
-  color: grey;
   font-size: 17px;
 }
 body #main .portada .main-parts .left-part input {
@@ -452,10 +451,9 @@ body #main .portada .main-parts .left-part input {
 }
 body #main .slider-iconos {
   width: 100%;
-  height: 150px;
-  background: #8e0000;
-  background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.555);
+  height: 170px;
+  background-color: rgba(0, 0, 0, 0.212);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.192);
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
@@ -507,7 +505,7 @@ body #mainInstitucional .imagen-fondo .subtitulo {
 }
 body #mainInstitucional .imagen-fondo .subtitulo h1 {
   font-size: 80px;
-  color: #f75252;
+  color: #da0012;
   text-shadow: 0px 0px 10px black;
 }
 body #mainInstitucional .imagen-fondo .bisubtitulo {
@@ -588,7 +586,7 @@ body #escuelas .titulo h1 {
   width: auto;
   border-radius: 5px;
   letter-spacing: -2px;
-  color: #ce0202;
+  color: #da0012;
   font-size: 40px;
   text-shadow: 0px 0px 20px #d4d4d4;
 }
@@ -703,10 +701,9 @@ body #informacion {
 }
 body #informacion .container-informacion {
   width: 100%;
-  height: 150px;
-  background: #8e0000;
-  background: linear-gradient(0deg, #8e0000 0%, #b00202 30%, #aa0002 71%, #900000 100%);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.322);
+  min-height: 170px;
+  background-color: #da0012;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.247);
   margin: 50px 0px;
   display: flex;
   flex-flow: row wrap;
@@ -764,113 +761,55 @@ body #institucional .titulo h1 {
   width: auto;
   border-radius: 5px;
   letter-spacing: -2px;
-  color: #ce0202;
+  color: #da0012;
   font-size: 40px;
   text-shadow: 0px 0px 20px #d4d4d4;
 }
 body #institucional .nuestra-informacion {
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  margin-bottom: 50px;
-}
-body #institucional .nuestra-informacion .top-part {
   width: 100%;
-  height: 100%;
+  height: 500px;
+  margin: auto;
+  margin-top: 90px !important;
+  margin-bottom: 50px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
+  justify-content: center;
+}
+body #institucional .nuestra-informacion .left-part {
+  width: 30%;
+  height: 100%;
   border-radius: 5px;
   margin-bottom: 40px;
+  padding-top: 20px;
+  display: flex;
+  flex-flow: column wrap;
 }
-body #institucional .nuestra-informacion .top-part .left-content {
-  width: 35%;
-  height: 100%;
-  margin: 0px 5px;
+body #institucional .nuestra-informacion .left-part span {
+  font-weight: 500;
+  font-size: 14px;
 }
-body #institucional .nuestra-informacion .top-part .left-content img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.068);
+body #institucional .nuestra-informacion .left-part h1 {
+  letter-spacing: -2px;
 }
-body #institucional .nuestra-informacion .top-part .right-content {
-  width: 63%;
+body #institucional .nuestra-informacion .left-part p {
+  letter-spacing: -1px;
+  font-size: 16px;
+}
+body #institucional .nuestra-informacion .right-part {
+  width: 50%;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  margin: 0px 5px;
-}
-body #institucional .nuestra-informacion .top-part .right-content .titulo {
-  margin: 0px 0px 20px 0px;
   border-radius: 5px;
-  align-self: flex-start;
+  white-space: nowrap;
 }
-body #institucional .nuestra-informacion .top-part .right-content .titulo h2 {
-  margin: 0px;
-  padding: 10px 10px;
-  font-weight: 400;
-  letter-spacing: -2px;
-  color: black;
-  text-align: left;
-}
-body #institucional .nuestra-informacion .top-part .right-content .texto {
-  height: 100%;
-  padding: 10px;
-}
-body #institucional .nuestra-informacion .top-part .right-content .texto p {
-  font-weight: 500;
-  font-size: 15px;
-}
-body #institucional .nuestra-informacion .bottom-part {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  border-radius: 5px;
-}
-body #institucional .nuestra-informacion .bottom-part .left-content {
-  width: 63%;
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 0px 5px;
-}
-body #institucional .nuestra-informacion .bottom-part .left-content .titulo {
-  margin: 0px 0px 20px 0px;
-  border-radius: 5px;
-  align-self: flex-end;
-}
-body #institucional .nuestra-informacion .bottom-part .left-content .titulo h2 {
-  margin: 0px;
-  padding: 10px 10px;
-  font-weight: 400;
-  letter-spacing: -2px;
-  color: black;
-}
-body #institucional .nuestra-informacion .bottom-part .left-content .texto {
-  height: 100%;
-  padding: 10px;
-  text-align: right;
-}
-body #institucional .nuestra-informacion .bottom-part .left-content .texto p {
-  font-weight: 500;
-  font-size: 15px;
-}
-body #institucional .nuestra-informacion .bottom-part .right-content {
-  width: 35%;
-  height: 100%;
-  margin: 0px 5px;
-}
-body #institucional .nuestra-informacion .bottom-part .right-content img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.068);
+body #institucional .nuestra-informacion .right-part p img {
+  vertical-align: text-top;
 }
 body #slider-valoraciones {
   width: 100%;
   height: 250px;
-  margin: 80px 0 0 0;
+  margin: 0 0 0 0;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -885,8 +824,8 @@ body #slider-valoraciones .card-valoracion {
   border-radius: 5px;
   display: flex;
   flex-flow: row nowrap;
-  box-shadow: 0px 0px 20px #f0f0f0;
-  background: rgba(0, 0, 0, 0.055);
+  box-shadow: 0px 0px 20px #cfcfcf;
+  background: rgba(255, 255, 255, 0);
   animation: sliderReputation 50s infinite linear;
   position: relative;
 }
@@ -919,7 +858,7 @@ body #slider-valoraciones .card-valoracion .right-part .titulo p {
   text-transform: uppercase;
   font-size: 13px;
   margin-top: 5px;
-  color: #cc0000;
+  color: #da0012;
   min-height: 43px;
 }
 body #slider-valoraciones .card-valoracion .right-part .titulo p img {
@@ -934,10 +873,79 @@ body #slider-valoraciones .card-valoracion .right-part .texto p {
   font-weight: 500;
   color: #353535;
 }
+body #formulario-contacto {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: auto;
+}
+body #formulario-contacto .titulo {
+  margin: 50px 0 40px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+body #formulario-contacto .titulo h1 {
+  font-weight: 200;
+  padding: 5px 20px 5px 20px;
+  width: auto;
+  border-radius: 5px;
+  letter-spacing: -2px;
+  color: #da0012;
+  font-size: 40px;
+  text-shadow: 0px 0px 20px #d4d4d4;
+}
+body #formulario-contacto .formulario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+body #formulario-contacto .formulario .columna label {
+  font-weight: 500;
+  font-size: 13px;
+}
+body #formulario-contacto .formulario .columna input {
+  width: 350px;
+  min-height: 33px;
+  border: 1px solid rgba(255, 0, 0, 0.349);
+  border-radius: 3px;
+  margin: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+}
+body #formulario-contacto .formulario .columna input:focus {
+  outline: none;
+}
+body #formulario-contacto .formulario .columna textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 0, 0, 0.349);
+  border-radius: 3px;
+  margin: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  font-size: 14px;
+}
+body #formulario-contacto .formulario .columna textarea:focus {
+  outline: none;
+}
+body #formulario-contacto .formulario .btn-enviar-form {
+  width: 100%;
+  text-align-last: center;
+  margin-top: 1px;
+  font-size: 13px;
+}
 body #footer {
   width: 100%;
   min-height: 200px;
-  background-color: #a00101;
+  background-color: #da0012;
   margin-bottom: 0;
   display: flex;
   flex-flow: row nowrap;
@@ -999,7 +1007,6 @@ body #footer .right-part p a {
 body #footer .right-part p a:hover {
   padding: 3px 25px;
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.199);
-  color: red;
 }
 
 @keyframes miniSlider {

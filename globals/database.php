@@ -164,5 +164,21 @@ class Database {
         $resultset = $this->fetchAll();
         return $resultset;
     }
+
+    public function getAlumnos($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM alumnos");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
+    public function getLocalizacion($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM certificaciones");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
 }
 ?>

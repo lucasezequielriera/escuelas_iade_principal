@@ -24,5 +24,7 @@ $institucional = $db->getSiteInstitutional('all');
 $componentes_institucional = $db->getSiteContent('all');
 // Obteniendo todas las certificaciones //
 $certificaciones = $db->getCertifications('all');
+// Obteniendo todos los alumnos //
+$alumnos = $db->getAlumnos('all');
 
 ?>
