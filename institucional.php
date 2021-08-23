@@ -16,6 +16,7 @@ require "./data.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./favicon.png" />
 </head>
 
 <body>

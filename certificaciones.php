@@ -1,3 +1,8 @@
+<?php
+    require "./globals/database.php";
+    require "./data.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +13,10 @@
     <title>Certificaciones IADE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="shortcut icon" href="./favicon.png" />
 </head>
 
 <body>
@@ -16,159 +24,30 @@
     <div id="modal" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: transparent; z-index: -1; transition: all .5s;"></div>
 
     <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.php"><img src="./images/logo.png" alt="logo_iade"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.php">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false"> Cursos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="container-dropdown">
-                                    <div class="left-part-dropdown">
-                                        <div class="container-scroll"></div>
-                                        <!-- <li><hr class="dropdown-divider"></li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">Próximamente</a>
-                                        </li> -->
-                                    </div>
-                                    <div class="right-part-dropdown">
-                                        <div class="container-information-top"></div>
-                                        <div class="container-information-bottom">
-                                            <div class="container-images">
-                                                <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./institucional.php">Conocenos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./certificaciones.php">Certificaciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-danger text-white"
-                                href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
-                                aria-disabled="true">CAMPUS</a>
-                        </li>
-                    </ul>
-                    <form id="formSearch" class="d-flex">
-                        <input id="search" class="form-control me-2" type="search" placeholder="Buscar por curso"
-                            aria-label="Search">
-                        <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
-                    </form>
-                    <!-- Iniciar sesión o Registrarse -->
-                    <button id="usuario-desconectado" class="btn btn-danger btn-login" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <div class="imagen-login"></div>
-                    </button>
-                    <div class="modal fade ventanaModalSesion" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body text-center">
-                                        <h5 class="text-center mb-1 fw-light">Inicia sesión en tu cuenta</h5>
-                                        <p id="datos-ingreso">
-                                            <label for="user" class="form-label"></label>
-                                            <input type="email" class="form-control ingresar-usuario" id="user" placeholder="Ingresa tu email" onkeypress="if (event.keyCode===13) Login()">
-                                            <label for="password" class="form-label"></label>
-                                            <input type="password" class="form-control ingresar-password" id="password" placeholder="Ingresa tu contraseña" onkeypress="if (event.keyCode===13) Login()">
-                                        </p>
-                                        <input class="btn btn-success mt-2 text-white fw-light" id="botonVentanaRegistrarse" type="button" value="Registrarme">
-                                        <input class="btn btn-danger rounded mt-2 fw-light" id="botonVentanaIngresar" type="submit" value="Ingresar">
-                                </div>
-                                <div id="ventanaRegistrarse" class="modal-body text-center bg-light mt-1">
-                                    <hr class="mt-0">
-                                    <h5 class="text-center mb-4 fw-light">Registrate en Escuelas iade</h5>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="nombres" class="form-label">Nombres</label>
-                                        <input type="text" class="form-control registrar-nombres" id="nombres" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="apellidos" class="form-label">Apellidos</label>
-                                        <input type="text" class="form-control registrar-apellidos" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="ubicacion" class="form-label">Ubicación</label>
-                                        <input type="text" class="form-control registrar-ubicacion" id="ubicacion" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="telefono" class="form-label">Teléfono</label>
-                                        <input type="number" class="form-control registrar-telefono" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="user" class="form-label">Ingresa tu email</label>
-                                        <input type="email" class="form-control registrar-usuario" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="password" class="form-label">Elige tu contraseña</label>
-                                        <input type="password" class="form-control registrar-password" id="password" placeholder="(6 caracteres mínimo)" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <input id="registrarse" class="btn btn-success px-2 rounded mt-2" type="button" value="Registrarme" style="width: 250px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / Iniciar sesión o Registrarse -->
-                    <!-- User -->
-                    <button id="usuario-conectado" class="btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="imagen-perfil"></div>
-                    </button>
-                    <div class="offcanvas offcanvas-end menu-usuario" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Hola <span id="nombre-de-usuario">!</span></h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body small">
-                            <ul class="list-group">
-                                <a href="#"><li class="list-group-item">Mi perfil</li></a>
-                                <a href="#"><li class="list-group-item">Mi aprendizaje</li></a>
-                                <a href="#"><li class="list-group-item">Cursos comprados</li></a>
-                                <a href="#"><li class="list-group-item">Mi carrito</li></a>
-                                <a href="#" onclick=logOut()><li class="list-group-item">Cerrar sesión</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- / User -->
-                </div>
-            </div>
-        </nav>
+        <?php
+            require './templates/navbar.php'
+        ?>
     </header>
 
-    <main id="main" class="main"></main>
+    <main id="main" class="main">
+        <h1 class="title-certificaciones animate__animated animate__fadeIn">Nuestras certificaciones</h1>
+        <?php foreach ($certificaciones as $key => $certificacion) {?>
+            <div class="certificaciones-explicadas">
+                <div class="left-part animate__animated animate__fadeInLeft">
+                    <p><?= $certificacion["descripción"] ?></p>
+                </div>
+                <div class="right-part animate__animated animate__fadeInRight">
+                    <img src="./images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 100;} else {echo 200;} ?>">
+                </div>
+            </div>
+            <hr class="separacion-certificaciones">
 
-    <footer id="footer">
-        <div class="left-part text-left px-5 py-3">
-            <h4>Conocenos un poco más</h4>
-            <p>Escuelas IADE es una escuela fundada hace más de 50 años para todo el público que desée incorporarse a cualquier sector de cualquier empresa, porque sabemos que el saber no ocupa espacio, y es la puerta hacia un futuro exitoso.</p>
-        </div>
-        <div class="center-part text-center">
-            <img src="./images/logo.png" alt="logo" width="170px">
-            <p class="mt-1 fw-light">All Right Reserved 2021 | Designed & Engineered by <span>Agrowd</span></p>
-        </div>
-        <div class="right-part text-end px-5 py-3">
-            <p><a href="#">Noticias</a></p>
-            <p><a href="#">Servicios</a></p>
-            <p><a href="#">Nosotros</a></p>
-            <p><a href="#">Legalidades</a></p>
-            <p><a href="#">Preguntas Frecuentes</a></p>
-        </div>
-    </footer>
+        <?php }?>
+    </main>
+
+    <?php
+        require './templates/footer.php'
+    ?>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>

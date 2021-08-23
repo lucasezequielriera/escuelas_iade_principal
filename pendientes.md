@@ -78,6 +78,14 @@ HECHO:
 - 17/09/21: Vinculando tablas en MySQL
 - 17/09/21: Lógica de página con PHP
 - 19/09/21: Arreglar tamaño diploma iade en campus
+- 22/09/21: Arreglo de index
+- 22/09/21: Agregado de contador de alumnos, cursos, paises y escuelas
+- 22/09/21: Arreglo de colores en la página
+- 22/09/21: Vista de certificaciones hecha
+- 22/09/21: Agregado de información y vinculada con db
+- 22/09/21: Agregado de section de video institucional
+- 22/09/21: Información de nosotros en vista "main" vinculada con db
+- 22/09/21: Arreglo de form en "course" con responsive y con styles
 
 POR HACER:
 

@@ -142,11 +142,11 @@ require "./data.php";
         </div>
         <div class="nuestra-informacion">
             <div class="left-part">
-                <span>Desde hace 30 años</span>
-                <h1>Nuestro inicio, tu mejor futuro</h1>
-                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quod blanditiis totam delectus quia recusandae alias ad ab mollitia quis magni unde minus enim quas, earum cumque officiis pariatur quae.<br><br>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus cupiditate saepe culpa, dolorum praesentium corporis. Itaque cumque tempore nesciunt quibusdam soluta ut fugiat enim quasi voluptate, quae recusandae tempora modi.
-                </p>
+                <?php foreach ($informacionMain as $datosMain) { ?>
+                    <span><?= $datosMain["mini_title"] ?></span>
+                    <h1><?= $datosMain["title_description"] ?></h1>
+                    <p class="mt-3"><?= $datosMain["main_information2"] ?></p>
+                <?php } ?>
             </div>
             <div class="right-part">
                 <p>
@@ -213,7 +213,7 @@ require "./data.php";
     </section>
 
     <?php
-    require './templates/footer.php'
+        require './templates/footer.php'
     ?>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->

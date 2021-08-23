@@ -8,6 +8,10 @@ html {
   font-family: "system-ui";
 }
 
+.btn-danger {
+  background-color: #da0012;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -72,7 +76,7 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
   font-weight: 300;
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .left-part-dropdown .container-scroll li .dropdown-item:hover {
-  background-color: #c00000;
+  background-color: #da0012;
   color: white;
   transform: translateX(10px);
 }
@@ -122,7 +126,7 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
   transition: all 0.2s;
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top ul a li:hover {
-  color: #b60000;
+  color: #da0012;
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top .button-verCursos {
   position: absolute;
@@ -136,7 +140,7 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-bottom {
   width: 98%;
   height: 18%;
-  background-color: #c00000;
+  background-color: #da0012;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
@@ -167,7 +171,7 @@ body #header .navbar .container-fluid .navbar-collapse .btn-login {
   margin-left: 8px;
   border-radius: 90px;
   padding: 5px;
-  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.637);
+  box-shadow: 0px 0px 15px #da0012;
   transition: all 0.3s;
 }
 body #header .navbar .container-fluid .navbar-collapse .btn-login .imagen-login {
@@ -188,13 +192,13 @@ body #header .navbar .container-fluid .navbar-collapse .btn-cart {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid transparent;
   border-radius: 90px;
-  box-shadow: 0px 0px 15px red;
+  box-shadow: 0px 0px 15px #da0012;
   transition: all 0.3s;
 }
 body #header .navbar .container-fluid .navbar-collapse .btn-cart .imagen-perfil {
   width: 32px;
   height: 32px;
-  background-color: red;
+  background-color: #da0012;
   border-radius: 90px;
   background-image: url("../images/persona.jpeg");
   background-position: center;
@@ -214,7 +218,7 @@ body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .moda
   box-shadow: 0px 0px 30px black;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #datos-ingreso::placeholder {
-  color: red !important;
+  color: #da0012 !important;
 }
 body #header .navbar .container-fluid .navbar-collapse .ventanaModalSesion .modal-content #botonVentanaRegistrarse {
   padding: 5.64px 40px;
@@ -246,18 +250,18 @@ body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-
   transition: all 0.1s;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:last-child li {
-  background-color: #d10000;
+  background-color: #da0012;
   color: white;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:hover li {
-  background-color: #d10000;
+  background-color: #da0012;
   color: white;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .offcanvas-body .list-group a:last-child:hover li {
   background-color: #2b2b2b;
 }
 body #header .navbar .container-fluid .navbar-collapse .menu-usuario .buttonCancelSweetAlert {
-  background-color: red;
+  background-color: #da0012;
 }
 body #main {
   display: flex;
@@ -281,7 +285,7 @@ body #main .left-part .nav-curso .breadcrumb .breadcrumb-item {
 }
 body #main .left-part .nav-curso .breadcrumb .breadcrumb-item a {
   text-decoration: none;
-  color: #e90000;
+  color: #da0012;
   transition: all 0.2s;
 }
 body #main .left-part .nav-curso .breadcrumb .breadcrumb-item a:hover {
@@ -298,7 +302,7 @@ body #main .left-part .subtitulo-curso h2 {
 body #main .left-part .subtitulo-curso .iconos {
   display: flex;
   flex-flow: row nowrap;
-  background-color: #ca2424;
+  background-color: #da0012;
   padding: 10px 0px;
   border-radius: 3px;
 }
@@ -355,7 +359,7 @@ body #main .left-part .container-imagen-curso .container-buttons-curso .box-prec
   text-decoration: line-through;
 }
 body #main .left-part .container-imagen-curso .container-buttons-curso .box-precio .anterior p:last-child {
-  color: red;
+  color: #da0012;
 }
 body #main .left-part .container-imagen-curso .container-buttons-curso .box-buttons {
   width: 100%;
@@ -480,7 +484,6 @@ body #main .left-part .container-certificaciones .card-certificaciones {
   margin-top: 0;
 }
 body #main .left-part .container-certificaciones .card-certificaciones img {
-  width: 80px;
   margin-right: 20px;
 }
 body #main .left-part .container-certificaciones .card-certificaciones img:last-child {
@@ -805,7 +808,7 @@ body #main .right-part .container-form .precio .anterior p span {
   text-decoration: line-through;
 }
 body #main .right-part .container-form .precio .anterior p:last-child {
-  color: red;
+  color: #da0012;
   font-weight: 400;
 }
 body #main .right-part .container-form .botones {
@@ -863,7 +866,7 @@ body #main .right-part .container-form .informacion-extra p:last-child {
 }
 body #main .right-part .contact-form {
   position: fixed;
-  background-color: rgba(148, 1, 1, 0);
+  background-color: whitesmoke;
   width: 360px;
   height: 620px;
   border-radius: 10px;
@@ -917,7 +920,7 @@ body #main .right-part .contact-form form .footer-card {
 body #footer {
   width: 100%;
   min-height: 200px;
-  background-color: #a00101;
+  background-color: #da0012;
   margin-bottom: 0;
   display: flex;
   flex-flow: row nowrap;
@@ -979,7 +982,6 @@ body #footer .right-part p a {
 body #footer .right-part p a:hover {
   padding: 3px 25px;
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.199);
-  color: red;
 }
 body #responsive-footer {
   width: 100%;

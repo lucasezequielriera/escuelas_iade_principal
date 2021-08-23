@@ -324,7 +324,7 @@ require "../../data.php";
                 <div class="card-certificaciones">
                     <?php foreach ($certificaciones as $certificacion) {?>
 
-                    <img class="my-4" src="../../images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>">
+                    <img class="my-4" src="../../images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 70;} else {echo 150;} ?>">
                     
                     <?php }?>
                 </div>

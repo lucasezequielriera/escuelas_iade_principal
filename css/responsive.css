@@ -176,6 +176,20 @@
   }
 }
 @media screen and (max-width: 578px) {
+  #main .title-certificaciones {
+    font-size: 35px !important;
+  }
+  #main .certificaciones-explicadas {
+    flex-flow: column-reverse !important;
+  }
+  #main .certificaciones-explicadas .right-part {
+    margin-bottom: 20px;
+  }
+  #main .certificaciones-explicadas .left-part {
+    text-align: center;
+    padding-right: 0 !important;
+  }
+
   #footer {
     justify-content: center !important;
   }
