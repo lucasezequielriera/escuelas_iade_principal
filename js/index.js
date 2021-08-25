@@ -56,30 +56,18 @@ const containerScroll = document.querySelector('.container-scroll');
 const containerEscuelas = document.querySelector(".container-escuelas");
 
 // Consts //
-const categoria0 = document.querySelector('.categoria0');
-const categoria1 = document.querySelector('.categoria1');
-const categoria2 = document.querySelector('.categoria2');
-const categoria3 = document.querySelector('.categoria3');
-const categoria4 = document.querySelector('.categoria4');
-const categoria5 = document.querySelector('.categoria5');
-const categoria6 = document.querySelector('.categoria6');
-const categoria7 = document.querySelector('.categoria7');
-const categoria8 = document.querySelector('.categoria8');
+const categoria = document.getElementsByClassName('categoria');
 const botonCursos = document.querySelector('.dropdown-toggle');
 const topSection = document.querySelector('.container-information-top');
 const bottomSection = document.querySelector('.container-information-bottom');
+const informacionEscuela = document.querySelector('.info-escuela').innerHTML;
 
 
 // Listeners //
-categoria0.addEventListener("mouseover", mostrar0);
-categoria1.addEventListener("mouseover", mostrar1);
-categoria2.addEventListener("mouseover", mostrar2);
-categoria3.addEventListener("mouseover", mostrar3);
-categoria4.addEventListener("mouseover", mostrar4);
-categoria5.addEventListener("mouseover", mostrar5);
-categoria6.addEventListener("mouseover", mostrar6);
-categoria7.addEventListener("mouseover", mostrar7);
-categoria8.addEventListener("mouseover", mostrar8);
+categoria.map((num) => {
+    console.log(num)
+    categoria[num].addEventListener("mouseover", mostrar)
+});
 
 // Add slideDown animation to Bootstrap dropdown when expanding.
 $('.dropdown').on('show.bs.dropdown', function() {
@@ -92,231 +80,18 @@ $('.dropdown').on('hide.bs.dropdown', function() {
 });
 
 // Functions //
-function mostrar0() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Publicidad y Marketing</h6>
-        <a href="./IT/views/transformacion_digital.php"><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <h6>Desarrollo Web</h6>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar1() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Oficios</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar2() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Electrónica</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar3() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Salud</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar4() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Estética</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar5() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Electricidad</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar6() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Mecánica</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar7() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Economía</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
-}
-function mostrar8() {
-    topSection.innerHTML = `
-    <ul>
-        <h6>Cursos Rápidos y Certificados</h6>
-        <a href="."><li>Transformación Digital</li></a>
-        <a href="."><li>Facebook Ads</li></a>
-        <a href="."><li>Google Ads</li></a>
-        <a href="."><li>Microsoft Office</li></a>
-    </ul>
-    <ul>
-        <a><li> </li></a><br>
-        <a href="."><li>Programación en HTML</li></a>
-        <a href="."><li>Criptomonedas</li></a>
-    </ul>
-    <div class="button-verCursos">
-        <button class='btn btn-dark'>Ver todos los cursos</button>
-    </div> `
+function mostrar() {
+    if (num.path[0].id === "IT") {
+        alert("Esto es IT")
+    } else {
+        alert("Esto no es IT")
+    }
+    topSection.innerHTML = informacionEscuela;
 }
 
 /////----- / Navbar -----/////
 
-/////----- Banner -----/////
-
-// Información //
-// Creando array con datos de iconos e información //
-// const informacionPieDePortada = [
-//     {
-//         imagen: "./images/diploma.png",
-//         informacion: "Certificacion Nacional e Internacional"
-//     },
-//     {
-//         imagen: "./images/university.png",
-//         informacion: "Avalados por España y Estados Unidos"
-//     },
-//     {
-//         imagen: "./images/campus.png",
-//         informacion: "Campus virtual para tu enseñanza"
-//     },
-//     {
-//         imagen: "./images/horario.png",
-//         informacion: "Horarios flexibles a tu ritmo"
-//     }
-// ];
-
-// // Buscando datos para imprimir por pantalla mediante DOM //
-// informacionPieDePortada.map((item) => {
-//     // Cambiar link de imágenes dependiendo la url //
-//     const urlImagen = (location.pathname.search("IT") != -1) ? `.${item.imagen}` : item.imagen;
-//     // DOM Principal //
-//     const pieDePortada = document.querySelector(".container-informacion");
-//     // Creando Instancias //
-//     const card = document.createElement("div");
-//     card.classList.add("card");
-//     const icono = document.createElement("div");
-//     icono.classList.add("icono");
-//     const img = document.createElement("img");
-//     img.setAttribute("src", urlImagen);
-//     img.setAttribute("alt", "imagen_icono");
-//     const informacion = document.createElement("div");
-//     informacion.classList.add("informacion");
-//     const h5 = document.createElement("h5");
-//     h5.textContent = item.informacion;
-//     // Vincular DOM //
-//     informacion.appendChild(h5);
-//     icono.appendChild(img);
-//     card.appendChild(icono);
-//     card.appendChild(informacion);
-//     if (pieDePortada) {
-//         pieDePortada.appendChild(card);
-//     } else ""
-// });
-
-/////----- / Banner -----/////
-
-/////----- Footer Comprar (mobile) -----/////
-
-
-
-/////----- / Footer Comprar (mobile) -----/////
-
-/////----- Formulario de Contacto -----/////
+/////----- Formulario de Contacto para Comprar -----/////
 
 // Consts //
 const formulario = document.querySelector("#contact-form");

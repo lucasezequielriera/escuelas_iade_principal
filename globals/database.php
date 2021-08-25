@@ -101,6 +101,14 @@ class Database {
         return $resultset;
     }
 
+    public function getSiteFooterButtons($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM site_footer_buttons");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
     public function getSiteMain($item) {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';

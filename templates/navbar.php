@@ -1,5 +1,4 @@
 <?php
-
 foreach ($navbar as $navbar_item) { ?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,25 +22,32 @@ foreach ($navbar as $navbar_item) { ?>
                             <div class="container-dropdown">
                                 <div class="left-part-dropdown">
                                     <div class="container-scroll">
-                                        <?php
-                                            require('./templates/navbar-menu.php')
-                                        ?>
+                                    <?php
+                                    foreach ($escuelas as $key => $escuela) { ?>
+
+                                        <li>
+                                            <a id="<?= $escuela['name']?>" style="position: relative" href="<?= $escuela['link']?>" class="dropdown-item categoria">
+                                                <?=$escuela["name"]?>
+                                                <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src='./images/arrowright.svg'>
+                                                <br>
+                                                <span>Cursos Online</span>
+                                            </a>
+                                        </li>
+
+                                    <?php } ?>
                                     </div>
-                                    <!-- <li><hr class="dropdown-divider"></li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Próximamente</a>
-                                    </li> -->
                                 </div>
                                 <div class="right-part-dropdown">
-                                    <div class="container-information-top"></div>
-                                    <div class="container-information-bottom">
-                                        <div class="container-images">
-                                            <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                            <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                            <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                            <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                            <img src="./images/horario.png" alt="image" width="30px" height="30px">
-                                            <img src="./images/horario.png" alt="image" width="30px" height="30px">
+                                    <div class="container-information-top">
+                                        <ul class="info-escuela">
+                                            <h6>Publicidad y Marketing</h6>
+                                            <a href="./IT/views/transformacion_digital.php"><li>Transformación Digital</li></a>
+                                            <a href="."><li>Facebook Ads</li></a>
+                                            <a href="."><li>Google Ads</li></a>
+                                            <a href="."><li>Microsoft Office</li></a>
+                                        </ul>
+                                        <div class="button-verCursos">
+                                            <button class='btn btn-dark'>Ver todos los cursos</button>
                                         </div>
                                     </div>
                                 </div>
@@ -169,5 +175,4 @@ foreach ($navbar as $navbar_item) { ?>
         </div>
     </nav>
     
-    <?php }
-?>
+<?php } ?>

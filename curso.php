@@ -1,6 +1,17 @@
 <?php
-require "../../globals/database.php";
-require "../../data.php";
+require "./globals/database.php";
+$db = Database::getInstance();
+// Obteniendo todos los datos del navbar //
+$navbar = $db->getSiteNavbar('all');
+// Obteniendo datos del footer //
+$footer = $db->getSiteFooter('all');
+$footerButtons = $db->getSiteFooterButtons('all');
+// Obteniendo todas las certificaciones //
+$certificaciones = $db->getCertifications('all');
+// Obteniendo todos los datos de los componentes de "institucional" //
+$componentes_institucional = $db->getSiteContent('all');
+// Obteniendo todos los cursos//
+$cursos = $db->getCourses();
 ?>
 
 <!DOCTYPE html>
@@ -13,9 +24,9 @@ require "../../data.php";
     <title>Transformación Digital</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="../css/courses.css">
-    <link rel="stylesheet" href="../css/responsiveCourse.css">
-    <link rel="shortcut icon" href="../favicon.png"/>
+    <link rel="stylesheet" href="./IT/css/courses.css">
+    <link rel="stylesheet" href="./IT/css/responsiveCourse.css">
+    <link rel="shortcut icon" href="./favicon.png"/>
 </head>
 
 <body class="view">
@@ -23,142 +34,9 @@ require "../../data.php";
     <div id="modal" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background-color: transparent; z-index: -1; transition: all .5s;"></div>
 
     <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.php"><img src="../images/logo.png" alt="logo_iade"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../index.php">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false"> Cursos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="container-dropdown">
-                                    <div class="left-part-dropdown">
-                                        <div class="container-scroll">
-                                            <?php
-                                                require('../../templates/navbar-menu.php')
-                                            ?>
-                                        </div>
-                                        <!-- <li><hr class="dropdown-divider"></li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">Próximamente</a>
-                                        </li> -->
-                                    </div>
-                                    <div class="right-part-dropdown">
-                                        <div class="container-information-top"></div>
-                                        <div class="container-information-bottom">
-                                            <div class="container-images">
-                                                <img src="../images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="../images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="../images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="../images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="../images/horario.png" alt="image" width="30px" height="30px">
-                                                <img src="../images/horario.png" alt="image" width="30px" height="30px">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../institucional.php">Conocenos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../certificaciones.php">Certificaciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-danger text-white"
-                                href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
-                                aria-disabled="true">CAMPUS</a>
-                        </li>
-                    </ul>
-                    <form id="formSearch" class="d-flex">
-                        <input id="search" class="form-control me-2" type="search" placeholder="Buscar por curso"
-                            aria-label="Search">
-                        <button id="submit-button" class="btn btn-outline-danger" type="submit">Buscar curso</button>
-                    </form>
-                    <!-- Iniciar sesión o Registrarse -->
-                    <button id="usuario-desconectado" class="btn btn-danger btn-login" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <div class="imagen-login"></div>
-                    </button>
-                    <div class="modal fade ventanaModalSesion" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-body text-center">
-                                        <h5 class="text-center mb-1 fw-light">Inicia sesión en tu cuenta</h5>
-                                        <p id="datos-ingreso">
-                                            <label for="user" class="form-label"></label>
-                                            <input type="email" class="form-control ingresar-usuario" id="user" placeholder="Ingresa tu email" onkeypress="if (event.keyCode===13) Login()">
-                                            <label for="password" class="form-label"></label>
-                                            <input type="password" class="form-control ingresar-password" id="password" placeholder="Ingresa tu contraseña" onkeypress="if (event.keyCode===13) Login()">
-                                        </p>
-                                        <input class="btn btn-success mt-2 text-white fw-light" id="botonVentanaRegistrarse" type="button" value="Registrarme">
-                                        <input class="btn btn-danger rounded mt-2 fw-light" id="botonVentanaIngresar" type="submit" value="Ingresar">
-                                </div>
-                                <div id="ventanaRegistrarse" class="modal-body text-center bg-light mt-1">
-                                    <hr class="mt-0">
-                                    <h5 class="text-center mb-4 fw-light">Registrate en Escuelas iade</h5>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="nombres" class="form-label">Nombres</label>
-                                        <input type="text" class="form-control registrar-nombres" id="nombres" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="apellidos" class="form-label">Apellidos</label>
-                                        <input type="text" class="form-control registrar-apellidos" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="ubicacion" class="form-label">Ubicación</label>
-                                        <input type="text" class="form-control registrar-ubicacion" id="ubicacion" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="telefono" class="form-label">Teléfono</label>
-                                        <input type="number" class="form-control registrar-telefono" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="user" class="form-label">Ingresa tu email</label>
-                                        <input type="email" class="form-control registrar-usuario" id="user" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <p class="parrafo-form d-flex justify-content-between">
-                                        <label for="password" class="form-label">Elige tu contraseña</label>
-                                        <input type="password" class="form-control registrar-password" id="password" placeholder="(6 caracteres mínimo)" style="width: 300px;" onkeypress="if (event.keyCode===13) Registrarse()">
-                                    </p>
-                                    <input id="registrarse" class="btn btn-success px-2 rounded mt-2" type="button" value="Registrarme" style="width: 250px;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / Iniciar sesión o Registrarse -->
-                    <!-- User -->
-                    <button id="usuario-conectado" class="btn-cart" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><div class="imagen-perfil"></div>
-                    </button>
-                    <div class="offcanvas offcanvas-end menu-usuario" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Hola <span id="nombre-de-usuario">!</span></h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body small">
-                            <ul class="list-group">
-                                <a href="#"><li class="list-group-item">Mi perfil</li></a>
-                                <a href="#"><li class="list-group-item">Mi aprendizaje</li></a>
-                                <a href="#"><li class="list-group-item">Cursos comprados</li></a>
-                                <a href="#"><li class="list-group-item">Mi carrito</li></a>
-                                <a href="#" onclick=logOut()><li class="list-group-item">Cerrar sesión</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- / User -->
-                </div>
-            </div>
-        </nav>
+        <?php
+            require './templates/navbar.php'
+        ?>
     </header>
 
     <main id="main" class="main">
@@ -324,7 +202,7 @@ require "../../data.php";
                 <div class="card-certificaciones">
                     <?php foreach ($certificaciones as $certificacion) {?>
 
-                    <img class="my-4" src="../../images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 70;} else {echo 150;} ?>">
+                    <img class="my-4" src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 70;} else {echo 150;} ?>">
                     
                     <?php }?>
                 </div>
@@ -335,11 +213,7 @@ require "../../data.php";
                     <?php
                     foreach ($componentes_institucional as $key => $componente) { ?>
 
-                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg mx-2" src="../../images/<?= $componente["icon"] ?>" alt="<?= $componente["title"] ?>" width="20px"><?= $componente["title"] ?></a>
-                
-                    <?php } ?>
-                    <?php
-                    foreach ($componentes_institucional as $key => $componente) { ?>
+                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg mx-2" src="./images/<?= $componente["imagen"] ?>" alt="<?= $componente["title"] ?>" width="20px"><?= $componente["title"] ?></a>
 
                     <!-- Modal -->
                     <div class="modal fade" id="modal-historia<?= $key ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -352,7 +226,7 @@ require "../../data.php";
                             </div>
                         </div>
                     </div>
-
+                
                     <?php } ?>
                 </div>
             </div>
@@ -509,7 +383,7 @@ require "../../data.php";
                 <hr>
                 <?php
                     foreach ($cursos as $key => $curso)
-                    if ($curso["category"] === "IT" && $curso["name"] != "Transformación Digital") { ?>
+                    if ($curso["content"] === "IT" && $curso["name"] != "Transformación Digital") { ?>
                     <div class="card-curso">
                         <div class="imagen">
                             <img src="../../images/cursos/<?= $curso["image"] ?>" alt="<?= $curso["name"] ?>">
@@ -614,7 +488,7 @@ require "../../data.php";
             </div>
         </div>
         <!-- Compra Directa -->
-        <!-- <div class="right-part animate__animated animate__fadeIn">
+        <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form">
                 <div class="imagen-curso"><img src="../images/transformacion-digital.jpeg" alt="transformacion-digital"></div>
                 <div class="precio">
@@ -636,18 +510,18 @@ require "../../data.php";
                     <p><img src="../images/icono1.svg" alt="campus"> Campus virtual las 24hs</p>
                     <p><img src="../images/icono2.svg" alt="diploma"> Certificado nacional e internacional</p>
                     <p><img src="../images/icono3.svg" alt=""> Profesor particular para ayudarte</p>
-                    <p><img src="../images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo)
+                    <!-- <p><img src="../images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo) -->
                     <p><img src="../images/icono5.svg" alt="contenido-descargable"> Contenido descargable</p>
                     <p><img src="../images/icono6.svg" alt="acceso-de-por-vida"> Acceso de por vida</p>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Formulario -->
-        <div class="right-part animate__animated animate__fadeIn">
+        <!-- <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form contact-form">
                 <h1>Contactate con nosotros y comenzá a estudiar!</h1>
                 <hr>
-                <form action="../../crm/functions/addNewLead.php" id="contact-form" method="get">
+                <form action="./crm/functions/addNewLead.php" id="contact-form" method="get">
                     <p class="parrafo">
                         <label for="stopspam" class="campo-escondido">Si ves esto no rellenes el campo</label>
                         <input name="stopspam" id="escondido" class="campo-escondido" />
@@ -672,11 +546,11 @@ require "../../data.php";
                         <label for="dia-contacto">Día/s de contacto</label>
                         <input id="dias-contacto" type="text" name="detail" required>
                     </p>
-                    <!-- <p class="parrafo">
+                    <p class="parrafo">
                         <label for="horario-contacto">Horario/s de contacto</label>
                         <input id="horario-contacto" type="text" name="contactTime" required>
                     </p> -->
-                    <p class="parrafo">
+                    <!-- <p class="parrafo">
                         <label for="curso">Curso/s de interés</label>
                         <input id="curso-interes" type="text" name="course" required>
                     </p>
@@ -684,12 +558,12 @@ require "../../data.php";
                     <p class="footer-card mt-3 mb-0">* Este formulario es una solicitud de información, no de inscripción.</p>
                     <p class="footer-card mt-1">* Asegúrese de ingresar bien sus datos, uno de nuestros ascesores se comunicará a la brevedad.</p>
                 </form>
-            </div>
-        </div>
+            </div> -->
+        </div> -->
     </main>
 
     <?php
-    require '../../templates/footer.php'
+    require './templates/footer.php'
     ?>
 
     <section id="responsive-footer" class="animate__animated">
@@ -733,13 +607,13 @@ require "../../data.php";
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <!-- JQuery -->
-    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
     <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Session File -->
-    <script src="../../js/session.js"></script>
+    <script src="./js/session.js"></script>
     <!-- JS Styles -->
-    <script src="../../js/index.js"></script>
+    <script src="./js/index.js"></script>
     <!-- Apareciendo el footer "Comprar" al ser pantalla más chica -->
     <script>
         window.onscroll = () => {
@@ -753,12 +627,11 @@ require "../../data.php";
             } else {
                 responsiveFooter.classList.remove('animate__fadeInUp');
                 responsiveFooter.classList.add('animate__fadeOutDown');
-
             }
         }
     </script>
     <!-- Validations File -->
-    <script src="../../js/validations.js"></script>
+    <script src="./js/validations.js"></script>
     <!-- Cart Section -->
 </body>
 

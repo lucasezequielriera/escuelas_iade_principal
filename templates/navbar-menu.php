@@ -12,7 +12,7 @@ $posicion_coincidencia = strpos($all_in_address_bar, $palabra_buscada);
         <a style="position: relative" href="<?= $value['link']?>" class="dropdown-item categoria<?=$escuela?>">
             <?=$value["name"]?>
             <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src=<?php if ($posicion_coincidencia == true) {
-                echo '../images/arrowright.svg';
+                echo './images/arrowright.svg';
             } else {
                 echo './images/arrowright.svg';
             } ?>>
@@ -20,8 +20,7 @@ $posicion_coincidencia = strpos($all_in_address_bar, $palabra_buscada);
             <span>Cursos Online</span>
         </a>
     </li>
-    <?php }
-?>
+<?php } ?>
 
 <!-- <script>
     sourceIcon = if (location.pathname == "/escuelas_iade_principal/" || "/pruebas/" || "/") {

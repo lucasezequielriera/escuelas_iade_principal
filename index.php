@@ -1,6 +1,21 @@
 <?php
 require "./globals/database.php";
-require "./data.php";
+$db = Database::getInstance();
+// Obteniendo todos los datos del navbar //
+$navbar = $db->getSiteNavbar('all');
+// Obteniendo datos del footer //
+$footer = $db->getSiteFooter('all');
+$footerButtons = $db->getSiteFooterButtons('all');
+// Obteniendo todos los datos del banner "características" //
+$bannerCaracteristicas = $db->getSiteBannerCharacteristics('all');
+// Obteniendo información del main//
+$informacionMain = $db->getSiteMain('all');
+// Obteniendo todas las certificaciones //
+$certificaciones = $db->getCertifications('all');
+// Obteniendo todas las escuelas //
+$escuelas = $db->getSiteSchools('all');
+// Obteniendo todos los alumnos //
+$alumnos = $db->getAlumnos('all');
 ?>
 
 <!DOCTYPE html>
@@ -53,11 +68,11 @@ require "./data.php";
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information1'] ?></p>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information2'] ?></p>
                         <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information3'] ?></p>
-                        <a class="btn btn-danger px-5 fw-light" href="<?= $datosMain['main_button1_link'] ?>"><?= $datosMain['main_button1'] ?></a>
+                        <a class="btn btn-danger px-5 fw-light" href="<?= $datosMain['main_button_link'] ?>"><?= $datosMain['main_button'] ?></a>
                     <?php } ?>
                 </div>
                 <div class="col-6 text-left right-part">
-                    <img src="<?= $datosMain['image'] ?>" alt="imagen_principal_iade" width="900px">
+                    <img src="<?= $datosMain['imagen'] ?>" alt="imagen_principal_iade" width="900px">
                 </div>
             </div>
         </div>
@@ -68,7 +83,7 @@ require "./data.php";
 
             <div class="card">
                 <div class="icono">
-                    <img class="mx-5" src="./images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>">
+                    <img class="mx-5" src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= $certificacion["nombre"] ?>">
                 </div>
             </div>
 
@@ -85,7 +100,7 @@ require "./data.php";
             <?php
             foreach ($escuelas as $escuela) { ?>
                 <a href="<?= $escuela["link"] ?>">
-                    <div class="escuela">
+                    <div class="escuela" style="background-image: url('../images/<?= $escuela["imagen"] ?>')">
                         <p><?= $escuela["name"] ?></p>
                     </div>
                 </a>
@@ -116,7 +131,7 @@ require "./data.php";
             $categoriasFiltradas = array();
                 
             foreach ($alumnos as $key => $alumno) { array_push($paisesFiltrados, $alumno["pais"]); }
-            foreach ($cursos as $key => $curso) { array_push($categoriasFiltradas, $curso["category"]); }?>
+            foreach ($escuelas as $key => $escuela) { array_push($categoriasFiltradas, $escuela["name"]); }?>
 
             <div class="col-sm-3 text-center d-flex flex-column my-5 align-items-center">
             <img class="rounded-circle mb-2 bg-transparent" src="./images/add_student.png" width="55px" style="border-color: transparent">

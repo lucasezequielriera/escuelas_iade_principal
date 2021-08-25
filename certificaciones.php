@@ -1,6 +1,13 @@
 <?php
-    require "./globals/database.php";
-    require "./data.php";
+require "./globals/database.php";
+$db = Database::getInstance();
+// Obteniendo todos los datos del navbar //
+$navbar = $db->getSiteNavbar('all');
+// Obteniendo datos del footer //
+$footer = $db->getSiteFooter('all');
+$footerButtons = $db->getSiteFooterButtons('all');
+// Obteniendo todas las certificaciones //
+$certificaciones = $db->getCertifications('all');
 ?>
 
 <!DOCTYPE html>
@@ -31,18 +38,19 @@
 
     <main id="main" class="main">
         <h1 class="title-certificaciones animate__animated animate__fadeIn">Nuestras certificaciones</h1>
-        <?php foreach ($certificaciones as $key => $certificacion) {?>
+        <?php foreach ($certificaciones as $certificacion) { ?>
+
             <div class="certificaciones-explicadas">
                 <div class="left-part animate__animated animate__fadeInLeft">
                     <p><?= $certificacion["descripción"] ?></p>
                 </div>
                 <div class="right-part animate__animated animate__fadeInRight">
-                    <img src="./images/certificaciones/<?= $certificacion["link"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 100;} else {echo 200;} ?>">
+                    <img src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 100;} else {echo 200;} ?>">
                 </div>
             </div>
             <hr class="separacion-certificaciones">
 
-        <?php }?>
+        <?php } ?>
     </main>
 
     <?php
