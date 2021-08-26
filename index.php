@@ -16,6 +16,8 @@ $certificaciones = $db->getCertifications('all');
 $escuelas = $db->getSiteSchools('all');
 // Obteniendo todos los alumnos //
 $alumnos = $db->getAlumnos('all');
+// Obteniendo todos los cursos//
+$cursos = $db->getCourses();
 ?>
 
 <!DOCTYPE html>

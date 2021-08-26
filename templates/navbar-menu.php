@@ -1,21 +1,9 @@
 <?php
-// Obteniendo url de la pagina actual //
-$all_in_address_bar = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-// Buscando palabra en url y se muestra link dependiendo si encuentra o no //
-$palabra_buscada = 'IT';
-$posicion_coincidencia = strpos($all_in_address_bar, $palabra_buscada);
-?>
-
-<?php
-    foreach ($escuelas as $escuela => $value) { ?>
+    foreach ($escuelas as $key => $escuela) { ?>
     <li>
-        <a style="position: relative" href="<?= $value['link']?>" class="dropdown-item categoria<?=$escuela?>">
-            <?=$value["name"]?>
-            <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src=<?php if ($posicion_coincidencia == true) {
-                echo './images/arrowright.svg';
-            } else {
-                echo './images/arrowright.svg';
-            } ?>>
+        <a style="position: relative" href="<?= $escuela['link']?>" class="dropdown-item categoria<?=$key?>">
+            <?= $escuela["name"] ?>
+            <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src='./images/arrowright.svg'>
             <br>
             <span>Cursos Online</span>
         </a>

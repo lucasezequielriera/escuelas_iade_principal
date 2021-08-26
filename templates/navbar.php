@@ -25,12 +25,13 @@ foreach ($navbar as $navbar_item) { ?>
                                     <?php
                                     foreach ($escuelas as $key => $escuela) { ?>
 
-                                        <li>
-                                            <a id="<?= $escuela['name']?>" style="position: relative" href="<?= $escuela['link']?>" class="dropdown-item categoria">
-                                                <?=$escuela["name"]?>
-                                                <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src='./images/arrowright.svg'>
-                                                <br>
-                                                <span>Cursos Online</span>
+                                        <li id="<?= $escuela['name']?>" class="<?= $key ?>">
+                                            <a
+                                            href="<?= $escuela['link']?>"
+                                            id="<?= $escuela["name"] ?>"
+                                            style="position: relative"
+                                            class="dropdown-item categoria">
+                                                <?= $escuela["name"] ?>
                                             </a>
                                         </li>
 
@@ -39,16 +40,25 @@ foreach ($navbar as $navbar_item) { ?>
                                 </div>
                                 <div class="right-part-dropdown">
                                     <div class="container-information-top">
-                                        <ul class="info-escuela">
-                                            <h6>Publicidad y Marketing</h6>
-                                            <a href="./IT/views/transformacion_digital.php"><li>Transformación Digital</li></a>
-                                            <a href="."><li>Facebook Ads</li></a>
-                                            <a href="."><li>Google Ads</li></a>
-                                            <a href="."><li>Microsoft Office</li></a>
-                                        </ul>
-                                        <div class="button-verCursos">
-                                            <button class='btn btn-dark'>Ver todos los cursos</button>
-                                        </div>
+                                    </div>
+                                    <div class="container-cursos" style="display: none">
+                                        <?php
+                                            foreach ($escuelas as $key => $escuela) { ?>
+                                                
+                                                <ul id="<?= $key ?>" class="info-escuela <?= $escuela['name'] ?>">
+                                                    <?php
+                                                    foreach ($cursos as $key => $curso)
+                                                        if ($escuela['name'] === $curso['category']) { ?>
+
+                                                        <a href="./curso.php"><li><?= $curso['title'] ?></li></a>
+
+                                                    <?php } ?>
+                                                </ul>
+
+                                            <?php } ?>
+                                            <div class="button-verCursos">
+                                                <button class='btn btn-dark'>Ver todos los cursos</button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>

@@ -56,18 +56,18 @@ const containerScroll = document.querySelector('.container-scroll');
 const containerEscuelas = document.querySelector(".container-escuelas");
 
 // Consts //
-const categoria = document.getElementsByClassName('categoria');
+const categorias = document.getElementsByClassName('categoria');
 const botonCursos = document.querySelector('.dropdown-toggle');
 const topSection = document.querySelector('.container-information-top');
 const bottomSection = document.querySelector('.container-information-bottom');
-const informacionEscuela = document.querySelector('.info-escuela').innerHTML;
+const divEscuela = document.getElementsByClassName('info-escuela');
 
-
-// Listeners //
-categoria.map((num) => {
-    console.log(num)
-    categoria[num].addEventListener("mouseover", mostrar)
-});
+// Tratando de hacer el navbar //
+for (let categoria of categorias) {
+    categoria.addEventListener("mouseover", (() => {
+        topSection.innerHTML = document.querySelector(`.${categoria.id}`).innerHTML
+    }))
+}
 
 // Add slideDown animation to Bootstrap dropdown when expanding.
 $('.dropdown').on('show.bs.dropdown', function() {
@@ -78,16 +78,6 @@ $('.dropdown').on('show.bs.dropdown', function() {
 $('.dropdown').on('hide.bs.dropdown', function() {
     $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
 });
-
-// Functions //
-function mostrar() {
-    if (num.path[0].id === "IT") {
-        alert("Esto es IT")
-    } else {
-        alert("Esto no es IT")
-    }
-    topSection.innerHTML = informacionEscuela;
-}
 
 /////----- / Navbar -----/////
 
