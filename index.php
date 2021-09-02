@@ -19,7 +19,9 @@ $escuelas = $db->getSiteSchools('all');
 // Obteniendo todos los alumnos //
 $alumnos = $db->getAlumnos('all');
 // Obteniendo todos los cursos//
-$cursos = $db->getCourses();
+$cursos = $db->getCourses('all');
+// Obteniendo información de las características//
+$caracteristicas = $db->getSiteCaracteristicas('all');
 // Obteniendo datos del footer //
 $comentarios = $db->getSiteReputation('all');
 ?>
@@ -170,28 +172,29 @@ $comentarios = $db->getSiteReputation('all');
                 <?php } ?>
             </div>
             <div class="right-part">
+                <?php foreach ($caracteristicas as $key => $caracteristica) ?>
                 <div class="columna">
                     <div class="content">
-                        <img src="./images/icon1.png" alt="icon" width="50px">
-                        <h5>Antes de la Clase</h5>
-                        <p>Ofrece la posibilidad de implementar la modalidad de Aula Invertida, pudiendo los estudiantes trabajar los contenidos y propuestas de aprendizaje desde cualquier dispositivo y lugar.</p>
+                        <img src="./images/<?= utf8_encode($caracteristicas[0]["imagen"]) ?>" alt="icon" width="50px">
+                        <h5><?= utf8_encode($caracteristicas[0]["titulo"]) ?></h5>
+                        <p><?= utf8_encode($caracteristicas[0]["descripcion"]) ?></p>
                     </div>
                     <div class="content">
-                        <img src="./images/icon2.png" alt="icon" width="50px">
-                        <h5>Evaulaciones</h5>
-                        <p>Evaluación formativa de los aprendizajes orientada al progreso continuo del estudiante, a partir del feedback permanente con el docente.</p>
+                        <img src="./images/<?= utf8_encode($caracteristicas[1]["imagen"]) ?>" alt="icon" width="50px">
+                        <h5><?= utf8_encode($caracteristicas[1]["titulo"]) ?></h5>
+                        <p><?= utf8_encode($caracteristicas[1]["descripcion"]) ?></p>
                     </div>
                 </div>
                 <div class="columna">
                     <div class="content">
-                        <img src="./images/icon4.png" alt="icon" width="50px">
-                        <h5>En la Clase</h5>
-                        <p>El docente asigna los contenidos atendiendo a la dinámica de la clase y fomentando el trabajo colaborativo, el pensamiento crítico y las habilidades del Siglo XXI.</p>
+                        <img src="./images/<?= utf8_encode($caracteristicas[2]["imagen"]) ?>" alt="icon" width="50px">
+                        <h5><?= utf8_encode($caracteristicas[2]["titulo"]) ?></h5>
+                        <p><?= utf8_encode($caracteristicas[2]["descripcion"]) ?></p>
                     </div>
                     <div class="content">
-                        <img src="./images/icon3.png" alt="icon" width="50px">
-                        <h5>Sin necesidad de conexión</h5>
-                        <p>El docente asigna trabajos diferenciados a los estudiantes de refuerzo y complementarios según sus progresos, modalidades de acercamiento al conocimiento y las necesidades de cada uno, acompañando el aprendizaje en forma personal.</p>
+                        <img src="./images/<?= utf8_encode($caracteristicas[3]["imagen"]) ?>" alt="icon" width="50px">
+                        <h5><?= utf8_encode($caracteristicas[3]["titulo"]) ?></h5>
+                        <p><?= utf8_encode($caracteristicas[3]["descripcion"]) ?></p>
                     </div>
                 </div>
             </div>

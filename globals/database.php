@@ -196,5 +196,13 @@ class Database {
         $resultset = $this->fetchAll();
         return $resultset;
     }
+
+    public function getSiteCaracteristicas($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM site_main_caracteristicas");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
 }
 ?>
