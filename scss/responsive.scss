@@ -18,6 +18,24 @@
     }
 }
 
+@media screen and (max-width:1133px) {
+    #institucional {
+        .nuestra-informacion {
+            flex-flow: column !important;
+            align-items: center;
+            margin-bottom: 190px !important;
+            .left-part {
+                width: 90% !important;
+                margin-top: 100px !important;
+            }
+            .right-part {
+                width: 100% !important;
+                justify-content: center;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:1122px) {
     .main-parts {
         flex-flow: column nowrap;
@@ -154,6 +172,18 @@
     }
 }
 
+@media screen and (max-width:755px) {
+    #formulario-contacto {
+        .formulario {
+            .columna {
+                input {
+                    width: 250px !important;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:738px) {
     #header {
         .navbar {
@@ -200,6 +230,31 @@
     }
 }
 
+@media screen and (max-width:711px) {
+    #institucional {
+        .nuestra-informacion {
+            height: 100% !important;
+            margin-bottom: 40px !important;
+            .left-part {
+                margin-top: 0 !important;
+                text-align: center;
+            }
+            .right-part {
+                width: 100% !important;
+                height: 100% !important;
+                justify-content: center;
+                flex-flow: column nowrap !important;
+                align-items: center;
+                .columna:last-child {
+                    margin: 0 !important;
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:700px) {
     #main .portada .left-part h1 {
         font-size: 80px !important;
@@ -231,6 +286,17 @@
     }
 }
 
+@media screen and (max-width:630px) {
+    #institucional {
+        .video {
+            iframe {
+                width: 460px !important;
+                height: 260px !important;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:578px) {
     #main {
         .title-certificaciones {
@@ -244,6 +310,13 @@
             .left-part {
                 text-align: center;
                 padding-right: 0 !important;
+            }
+        }
+    }
+    #institucional {
+        .nuestra-informacion {
+            .left-part {
+                text-align: center;
             }
         }
     }
@@ -296,6 +369,26 @@
             }
             .bisubtitulo {
                 display: none !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:541px) {
+    #institucional {
+        .video {
+            iframe {
+                width: 350px !important;
+                height: 197px !important;
+            }
+        }
+    }
+    #formulario-contacto {
+        .formulario {
+            .columna {
+                input {
+                    width: 185px !important;
+                }
             }
         }
     }

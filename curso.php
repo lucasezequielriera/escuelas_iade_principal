@@ -10,6 +10,8 @@ $footerButtons = $db->getSiteFooterButtons('all');
 $certificaciones = $db->getCertifications('all');
 // Obteniendo todos los datos de los componentes de "institucional" //
 $componentes_institucional = $db->getSiteContent('all');
+// Obteniendo todas las escuelas //
+$escuelas = $db->getSiteSchools('all');
 // Obteniendo todos los cursos//
 $cursos = $db->getCourses();
 ?>
@@ -43,7 +45,7 @@ $cursos = $db->getCourses();
         <div class="left-part">
             <nav class="nav-curso" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.php">Escuelas iade IT</a></li>
+                    <li class="breadcrumb-item"><a href="./index.php">Escuelas iade IT</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><?= utf8_encode($cursos[0]["title"]) ?></li>
                 </ol>
             </nav>
@@ -61,7 +63,7 @@ $cursos = $db->getCourses();
                 </div>
             </div>
             <!-- Aparece al ser Responsive -->
-            <div class="container-imagen-curso d-none">
+            <!-- <div class="container-imagen-curso d-none">
                 <div class="container-buttons-curso">
                     <div class="box-precio">
                         <div class="actual">
@@ -78,7 +80,7 @@ $cursos = $db->getCourses();
                         <input type="button" class="btn btn-dark addCarrito" value="Agregar al carrito">
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- / Aparece al ser Responsive -->
             <hr>
             <div class="container-profesor">
@@ -410,7 +412,7 @@ $cursos = $db->getCourses();
             </div>
         </div>
         <!-- Compra Directa -->
-        <div class="right-part animate__animated animate__fadeIn">
+        <!-- <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form">
                 <div class="imagen-curso"><img src="./images/transformacion-digital.jpeg" alt="transformacion-digital"></div>
                 <div class="precio">
@@ -432,14 +434,14 @@ $cursos = $db->getCourses();
                     <p><img src="./images/icono1.svg" alt="campus"> Campus virtual las 24hs</p>
                     <p><img src="./images/icono2.svg" alt="diploma"> Certificado nacional e internacional</p>
                     <p><img src="./images/icono3.svg" alt=""> Profesor particular para ayudarte</p>
-                    <!-- <p><img src="./images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo) -->
+                    <p><img src="./images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo)
                     <p><img src="./images/icono5.svg" alt="contenido-descargable"> Contenido descargable</p>
                     <p><img src="./images/icono6.svg" alt="acceso-de-por-vida"> Acceso de por vida</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Formulario -->
-        <!-- <div class="right-part animate__animated animate__fadeIn">
+        <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form contact-form">
                 <h1>Contactate con nosotros y comenzá a estudiar!</h1>
                 <hr>
@@ -471,8 +473,8 @@ $cursos = $db->getCourses();
                     <p class="parrafo">
                         <label for="horario-contacto">Horario/s de contacto</label>
                         <input id="horario-contacto" type="text" name="contactTime" required>
-                    </p> -->
-                    <!-- <p class="parrafo">
+                    </p>
+                    <p class="parrafo">
                         <label for="curso">Curso/s de interés</label>
                         <input id="curso-interes" type="text" name="course" required>
                     </p>
@@ -480,15 +482,15 @@ $cursos = $db->getCourses();
                     <p class="footer-card mt-3 mb-0">* Este formulario es una solicitud de información, no de inscripción.</p>
                     <p class="footer-card mt-1">* Asegúrese de ingresar bien sus datos, uno de nuestros ascesores se comunicará a la brevedad.</p>
                 </form>
-            </div> -->
-        </div> -->
+            </div>
+        </div>
     </main>
 
     <?php
     require './templates/footer.php'
     ?>
 
-    <section id="responsive-footer" class="animate__animated">
+    <!-- <section id="responsive-footer" class="animate__animated">
         <div class="contenido">
             <div class="precio">
                 <div class="actual">
@@ -502,7 +504,7 @@ $cursos = $db->getCourses();
             <input class="btn btn-success compraDirecta" type="button" value="Comprar">
             <input class="btn btn-dark addCarrito" type="button" value="Añadir al carrito">
         </div>
-    </section>
+    </section> -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
@@ -537,7 +539,7 @@ $cursos = $db->getCourses();
     <!-- JS Styles -->
     <script src="./js/index.js"></script>
     <!-- Apareciendo el footer "Comprar" al ser pantalla más chica -->
-    <script>
+    <!-- <script>
         window.onscroll = () => {
             const y = window.scrollY;
             const responsiveFooter = document.querySelector("#responsive-footer");
@@ -551,7 +553,7 @@ $cursos = $db->getCourses();
                 responsiveFooter.classList.add('animate__fadeOutDown');
             }
         }
-    </script>
+    </script> -->
     <!-- Validations File -->
     <script src="./js/validations.js"></script>
     <!-- Cart Section -->

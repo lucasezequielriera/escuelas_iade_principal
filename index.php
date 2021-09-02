@@ -128,7 +128,7 @@ $comentarios = $db->getSiteReputation('all');
         <div class="titulo">
             <h1>Nuestra institución, tu lugar de aprendizaje</h1>
         </div>
-        <div class="text-center mb-5 pb-5">
+        <div class="video text-center mb-5 pb-5">
             <iframe class="rounded shadow" width="560" height="315" src="https://www.youtube.com/embed/iFMJmHBVVYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="card row d-flex flex-row w-100 m-0 p-0 mt-5 bg-transparent" style="border-color: transparent; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)">
@@ -170,14 +170,30 @@ $comentarios = $db->getSiteReputation('all');
                 <?php } ?>
             </div>
             <div class="right-part">
-                <p>
-                    <img class="mx-4 my-0 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
-                    <img class="mx-2 mt-5 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
-                </p>
-                <p>
-                    <img class="mx-4 my-0 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
-                    <img class="mx-2 mt-5 rounded shadow" src="./images/fondo.jpg" alt="imagen" width="300px" height="200px">
-                </p>
+                <div class="columna">
+                    <div class="content">
+                        <img src="./images/icon1.png" alt="icon" width="50px">
+                        <h5>Antes de la Clase</h5>
+                        <p>Ofrece la posibilidad de implementar la modalidad de Aula Invertida, pudiendo los estudiantes trabajar los contenidos y propuestas de aprendizaje desde cualquier dispositivo y lugar.</p>
+                    </div>
+                    <div class="content">
+                        <img src="./images/icon2.png" alt="icon" width="50px">
+                        <h5>Evaulaciones</h5>
+                        <p>Evaluación formativa de los aprendizajes orientada al progreso continuo del estudiante, a partir del feedback permanente con el docente.</p>
+                    </div>
+                </div>
+                <div class="columna">
+                    <div class="content">
+                        <img src="./images/icon4.png" alt="icon" width="50px">
+                        <h5>En la Clase</h5>
+                        <p>El docente asigna los contenidos atendiendo a la dinámica de la clase y fomentando el trabajo colaborativo, el pensamiento crítico y las habilidades del Siglo XXI.</p>
+                    </div>
+                    <div class="content">
+                        <img src="./images/icon3.png" alt="icon" width="50px">
+                        <h5>Sin necesidad de conexión</h5>
+                        <p>El docente asigna trabajos diferenciados a los estudiantes de refuerzo y complementarios según sus progresos, modalidades de acercamiento al conocimiento y las necesidades de cada uno, acompañando el aprendizaje en forma personal.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

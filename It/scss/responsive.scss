@@ -68,19 +68,27 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     #header {
         .navbar {
             .container-fluid {
                 .navbar-collapse {
+                    position: relative;
                     form {
                         display: flex !important;
                         width: 93% !important;
                     }
                     .btn-cart {
+                        display: flex;
                         position: absolute;
-                        bottom: 1px;
                         right: 0px;
+                        bottom: 1px;
+                    }
+                    .btn-login {
+                        display: flex;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0;
                     }
                 }
             }

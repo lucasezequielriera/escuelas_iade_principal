@@ -26,9 +26,6 @@ body #header .navbar {
 body #header .navbar .container-fluid .navbar-brand img {
   width: 80px;
 }
-body #header .navbar .container-fluid .navbar-collapse {
-  position: relative;
-}
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item {
   margin: 0px 5px;
   align-self: center;
@@ -89,9 +86,9 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dr
 }
 body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .dropdown-menu .container-dropdown .right-part-dropdown .container-information-top {
   display: flex;
-  flex-flow: row nowrap;
-  width: 98%;
-  height: 79%;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
   border: 1px solid #d5d5d5;
   margin: 0 auto;
   border-radius: 5px;
@@ -162,6 +159,11 @@ body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:las
   padding: 7.5px 15px;
   text-decoration: bold;
   margin-left: 7.5px;
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.253);
+  transition: all 0.3s;
+}
+body #header .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item:last-child a:hover {
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0);
 }
 body #header .navbar .container-fluid .navbar-collapse form {
   white-space: nowrap;
@@ -200,7 +202,7 @@ body #header .navbar .container-fluid .navbar-collapse .btn-cart .imagen-perfil 
   height: 32px;
   background-color: #da0012;
   border-radius: 90px;
-  background-image: url("../images/persona.jpeg");
+  background-image: url("../../images/persona.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -319,7 +321,7 @@ body #main .left-part .subtitulo-curso .iconos p img {
 body #main .left-part .container-imagen-curso {
   width: 100%;
   height: 300px;
-  background-image: url("../images/transformacion-digital.jpeg");
+  background-image: url("../../images/transformacion-digital.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

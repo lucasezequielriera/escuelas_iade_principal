@@ -93,14 +93,24 @@
   }
 }
 @media screen and (max-width: 991px) {
+  #header .navbar .container-fluid .navbar-collapse {
+    position: relative;
+  }
   #header .navbar .container-fluid .navbar-collapse form {
     display: flex !important;
     width: 93% !important;
   }
-  #header .navbar .container-fluid .navbar-collapse .btn-cart, #header .navbar .container-fluid .navbar-collapse .btn-login {
+  #header .navbar .container-fluid .navbar-collapse .btn-cart {
+    display: flex;
     position: absolute;
-    bottom: 1px;
     right: 0px;
+    bottom: 1px;
+  }
+  #header .navbar .container-fluid .navbar-collapse .btn-login {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 975px) {

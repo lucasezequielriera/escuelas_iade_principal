@@ -14,6 +14,21 @@
     font-size: 80px !important;
   }
 }
+@media screen and (max-width: 1133px) {
+  #institucional .nuestra-informacion {
+    flex-flow: column !important;
+    align-items: center;
+    margin-bottom: 190px !important;
+  }
+  #institucional .nuestra-informacion .left-part {
+    width: 90% !important;
+    margin-top: 100px !important;
+  }
+  #institucional .nuestra-informacion .right-part {
+    width: 100% !important;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 1122px) {
   .main-parts {
     flex-flow: column nowrap;
@@ -129,6 +144,11 @@
     justify-content: flex-start !important;
   }
 }
+@media screen and (max-width: 755px) {
+  #formulario-contacto .formulario .columna input {
+    width: 250px !important;
+  }
+}
 @media screen and (max-width: 738px) {
   #header .navbar .container-fluid .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
     width: 500px !important;
@@ -153,6 +173,28 @@
     text-align: right;
   }
 }
+@media screen and (max-width: 711px) {
+  #institucional .nuestra-informacion {
+    height: 100% !important;
+    margin-bottom: 40px !important;
+  }
+  #institucional .nuestra-informacion .left-part {
+    margin-top: 0 !important;
+    text-align: center;
+  }
+  #institucional .nuestra-informacion .right-part {
+    width: 100% !important;
+    height: 100% !important;
+    justify-content: center;
+    flex-flow: column nowrap !important;
+    align-items: center;
+  }
+  #institucional .nuestra-informacion .right-part .columna:last-child {
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 @media screen and (max-width: 700px) {
   #main .portada .left-part h1 {
     font-size: 80px !important;
@@ -175,6 +217,12 @@
     right: 0px;
   }
 }
+@media screen and (max-width: 630px) {
+  #institucional .video iframe {
+    width: 460px !important;
+    height: 260px !important;
+  }
+}
 @media screen and (max-width: 578px) {
   #main .title-certificaciones {
     font-size: 35px !important;
@@ -188,6 +236,10 @@
   #main .certificaciones-explicadas .left-part {
     text-align: center;
     padding-right: 0 !important;
+  }
+
+  #institucional .nuestra-informacion .left-part {
+    text-align: center;
   }
 
   #footer {
@@ -225,6 +277,16 @@
   }
   #mainInstitucional .imagen-fondo .bisubtitulo {
     display: none !important;
+  }
+}
+@media screen and (max-width: 541px) {
+  #institucional .video iframe {
+    width: 350px !important;
+    height: 197px !important;
+  }
+
+  #formulario-contacto .formulario .columna input {
+    width: 185px !important;
   }
 }
 @media screen and (max-width: 525px) {
