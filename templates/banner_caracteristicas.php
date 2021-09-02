@@ -7,7 +7,7 @@ foreach ($bannerCaracteristicas as $caracteristica) { ?>
             <img class="animate__animated animate__fadeInRight animate__delay-1s" src="./<?= $caracteristica["imagen"] ?>" alt="icono_caracteristica">
         </div>
         <div class="informacion">
-            <h5 class="animate__animated animate__fadeInLeft"><?= $caracteristica["caracteristica"] ?></h5>
+            <h5 class="animate__animated animate__fadeInLeft"><?= utf8_encode($caracteristica["caracteristica"]) ?></h5>
         </div>
     </div>
 

@@ -12,11 +12,11 @@ foreach ($navbar as $navbar_item) { ?>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.php"><?= $navbar_item["button1"] ?></a>
+                        <a class="nav-link" href="./index.php"><?= utf8_encode($navbar_item["button1"]) ?></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false"> <?= $navbar_item["button2"] ?>
+                            data-bs-toggle="dropdown" aria-expanded="false"> <?= utf8_encode($navbar_item["button2"]) ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <div class="container-dropdown">
@@ -25,13 +25,14 @@ foreach ($navbar as $navbar_item) { ?>
                                     <?php
                                     foreach ($escuelas as $key => $escuela) { ?>
 
-                                        <li id="<?= $escuela['name']?>" class="<?= $key ?>">
+                                        <li id="<?= utf8_encode($escuela['name']) ?>" class="<?= $key ?>">
                                             <a
-                                            href="<?= $escuela['link']?>"
-                                            id="<?= $escuela["name"] ?>"
-                                            style="position: relative"
+                                            href="<?= $escuela['link'] ?>"
+                                            id="<?= utf8_encode($escuela["name"]) ?>"
+                                            style="position: relative; display: flex; align-items: center"
                                             class="dropdown-item categoria">
-                                                <?= $escuela["name"] ?>
+                                                <?= utf8_encode($escuela["name"]) ?>
+                                                <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src='./images/arrowright.svg'>
                                             </a>
                                         </li>
 
@@ -40,46 +41,51 @@ foreach ($navbar as $navbar_item) { ?>
                                 </div>
                                 <div class="right-part-dropdown">
                                     <div class="container-information-top">
+                                        <div class="information-top">
+                                        </div>
+                                        <div class="button-verCursos">
+                                            <button class='btn btn-dark'>Ver todos los cursos</button>
+                                        </div>
                                     </div>
                                     <div class="container-cursos" style="display: none">
                                         <?php
-                                            foreach ($escuelas as $key => $escuela) { ?>
-                                                
-                                                <ul id="<?= $key ?>" class="info-escuela <?= $escuela['name'] ?>">
-                                                    <?php
-                                                    foreach ($cursos as $key => $curso)
-                                                        if ($escuela['name'] === $curso['category']) { ?>
+                                        foreach ($escuelas as $key => $escuela) { ?>
+                                            
+                                            <ul id="<?= $key ?>" class="info-escuela <?= utf8_encode($escuela['name']) ?>">
+                                                <?php
+                                                foreach ($cursos as $key => $curso)
+                                                    if (utf8_encode($escuela['name']) === utf8_encode($curso['category'])) { ?>
 
-                                                        <a href="./curso.php"><li><?= $curso['title'] ?></li></a>
+                                                    <a href="./curso.php"><li><?= utf8_encode($curso['title']) ?></li></a>
 
-                                                    <?php } ?>
-                                                </ul>
+                                                <?php } ?>
+                                            </ul>
 
-                                            <?php } ?>
-                                            <div class="button-verCursos">
-                                                <button class='btn btn-dark'>Ver todos los cursos</button>
-                                            </div>
+                                        <?php } ?>
+                                        <div class="button-verCursos">
+                                            <button class='btn btn-dark'>Ver todos los cursos</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./institucional.php"><?= $navbar_item["button3"] ?></a>
+                        <a class="nav-link" href="./institucional.php"><?= utf8_encode($navbar_item["button3"]) ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./certificaciones.php"><?= $navbar_item["button4"] ?></a>
+                        <a class="nav-link" href="./certificaciones.php"><?= utf8_encode($navbar_item["button4"]) ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn btn-danger text-white"
                             href="http://www.escuelasiade.com/iade_campus_exp/login.php" tabindex="-1"
-                            aria-disabled="true"><?= $navbar_item["button5"] ?></a>
+                            aria-disabled="true"><?= utf8_encode($navbar_item["button5"]) ?></a>
                     </li>
                 </ul>
                 <form id="formSearch" class="d-flex">
                     <input id="search" class="form-control me-2" type="search" placeholder="Buscar por curso"
                         aria-label="Search">
-                    <button id="submit-button" class="btn btn-outline-danger" type="submit"><?= $navbar_item["button6"] ?></button>
+                    <button id="submit-button" class="btn btn-outline-danger" type="submit"><?= utf8_encode($navbar_item["button6"]) ?></button>
                 </form>
                 <!-- Iniciar sesión o Registrarse -->
                 <button id="usuario-desconectado" class="btn btn-danger btn-login" type="button"

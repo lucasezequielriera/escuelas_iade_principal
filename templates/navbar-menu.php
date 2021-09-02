@@ -2,7 +2,7 @@
     foreach ($escuelas as $key => $escuela) { ?>
     <li>
         <a style="position: relative" href="<?= $escuela['link']?>" class="dropdown-item categoria<?=$key?>">
-            <?= $escuela["name"] ?>
+            <?= utf8_encode($escuela["name"]) ?>
             <img class="icono-navbar" style="position: absolute; right: 10px; top: 13px" src='./images/arrowright.svg'>
             <br>
             <span>Cursos Online</span>

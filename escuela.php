@@ -3,13 +3,15 @@ require "./globals/database.php";
 $db = Database::getInstance();
 // Obteniendo todos los datos del navbar //
 $navbar = $db->getSiteNavbar('all');
+// Obteniendo todas las escuelas //
+$escuelas = $db->getSiteSchools('all');
+// Obteniendo todos los cursos//
+$cursos = $db->getCourses();
 // Obteniendo datos del footer //
 $footer = $db->getSiteFooter('all');
 $footerButtons = $db->getSiteFooterButtons('all');
 // Obteniendo todos los datos del banner "características" //
 $bannerCaracteristicas = $db->getSiteBannerCharacteristics('all');
-// Obteniendo todos los cursos//
-$cursos = $db->getCourses();
 ?>
 
 <!DOCTYPE html>
@@ -63,25 +65,27 @@ $cursos = $db->getCourses();
                 <?php
                 $cursosFiltrados = array();
                 foreach ($cursos as $curso) {
-                    if (strtolower($curso["content"]) === "it") {
+
+                    if (strtolower($curso["category"]) === "it") {
                         array_push($cursosFiltrados, $curso);
                     } else {
                         continue;
                     }
                 }?>
+
                 <?php
 
                 foreach ($cursosFiltrados as $cursoBuscado) { ?>
 
-                <a href="<?= $cursoBuscado["url_doc"] ?>">
-                    <div class="course">
+                <a href="<?= utf8_encode($cursoBuscado["url_doc"]) ?>">
+                    <div class="course" style="background-image: url(./images/<?= $cursoBuscado["imagen"] ?>)">
                         <?php if($cursoBuscado["nuevoCurso"] == true) : ?>
                             <span class="badge bg-success">Nuevo curso</span>
                         <?php endif; ?>
                         <?php if($cursoBuscado["certificacionInternacional"] == true) : ?>
                             <span class="badge bg-primary text-white">Certificación Internacional</span>
                         <?php endif; ?>
-                        <p><?= $cursoBuscado["name"] ?></p>
+                        <p><?= utf8_encode($cursoBuscado["title"]) ?></p>
                     </div>
                 </a>
 

@@ -44,20 +44,20 @@ $cursos = $db->getCourses();
             <nav class="nav-curso" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../index.php">Escuelas iade IT</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><?= $cursos[1]["name"] ?></li>
+                    <li class="breadcrumb-item active" aria-current="page"><?= utf8_encode($cursos[0]["title"]) ?></li>
                 </ol>
             </nav>
             <div class="titulo-curso">
-                <h1 class="animate__animated animate__fadeIn"><?= $cursos[1]["title"] ?></h1>
+                <h1 class="animate__animated animate__fadeIn"><?= utf8_encode($cursos[0]["title"]) ?></h1>
             </div>
             <div class="subtitulo-curso">
-                <h2><?= $cursos[1]["content"] ?></h2>
+                <h2><?= utf8_encode($cursos[0]["content"]) ?></h2>
                 <div class="iconos">
-                    <p class="animate__animated animate__fadeInLeft"><img src="../images/check.png" alt="check"> Más vendido</p>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-1s"><img src="../images/grow.png" alt="grow"> Alta demanda laboral</p>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-2s"><img src="../images/student.png" alt="student"> 7642 alumnos nuevos</p>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-3s"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-incompleta.png" alt="star"> <?= $cursos[1]["valoracion"] ?></p>
-                    <p class="animate__animated animate__fadeInLeft animate__delay-4s"><img src="../images/cv.png" alt="cv"> Hacé crecer tu CV</p>
+                    <p class="animate__animated animate__fadeInLeft"><img src="./images/check.png" alt="check"> Más vendido</p>
+                    <p class="animate__animated animate__fadeInLeft animate__delay-1s"><img src="./images/grow.png" alt="grow"> Alta demanda laboral</p>
+                    <p class="animate__animated animate__fadeInLeft animate__delay-2s"><img src="./images/student.png" alt="student"> 7642 alumnos nuevos</p>
+                    <p class="animate__animated animate__fadeInLeft animate__delay-3s"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-incompleta.png" alt="star"> <?= $cursos[0]["valoracion"] ?></p>
+                    <p class="animate__animated animate__fadeInLeft animate__delay-4s"><img src="./images/cv.png" alt="cv"> Hacé crecer tu CV</p>
                 </div>
             </div>
             <!-- Aparece al ser Responsive -->
@@ -88,14 +88,14 @@ $cursos = $db->getCourses();
                     <div class="informacion-profesor">
                         <p>Claudio Montaner</p>
                         <p>3976 Estudiantes</p>
-                        <p><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"><img src="../images/estrella-completa.png" alt="star"> 5/5</p>
+                        <p><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"><img src="./images/estrella-completa.png" alt="star"> 5/5</p>
                     </div>
                 </div>
             </div>
             <div class="container-descripcion">
                 <h3>Descripción del curso</h3>
                 <ul>
-                    <li><?= $cursos[1]["description"] ?></li>
+                    <li><?= utf8_encode($cursos[0]["description"]) ?></li>
                 </ul>
             </div>
             <div class="container-modalidad">
@@ -202,7 +202,7 @@ $cursos = $db->getCourses();
                 <div class="card-certificaciones">
                     <?php foreach ($certificaciones as $certificacion) {?>
 
-                    <img class="my-4" src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 70;} else {echo 150;} ?>">
+                    <img class="my-4" src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= utf8_encode($certificacion["nombre"]) ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 70;} else {echo 150;} ?>">
                     
                     <?php }?>
                 </div>
@@ -213,16 +213,16 @@ $cursos = $db->getCourses();
                     <?php
                     foreach ($componentes_institucional as $key => $componente) { ?>
 
-                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg mx-2" src="./images/<?= $componente["imagen"] ?>" alt="<?= $componente["title"] ?>" width="20px"><?= $componente["title"] ?></a>
+                    <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>"><img class="svgimg mx-2" src="./images/<?= $componente["imagen"] ?>" alt="<?= utf8_encode($componente["title"]) ?>" width="20px"><?= utf8_encode($componente["title"]) ?></a>
 
                     <!-- Modal -->
                     <div class="modal fade" id="modal-historia<?= $key ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel"><?= $componente["subtitle"] ?></h5>
+                                <h5 class="modal-title" id="exampleModalLabel"><?= utf8_encode($componente["subtitle"]) ?></h5>
                                 </div>
-                                <div class="modal-body"><?= $componente["content"] ?></div>
+                                <div class="modal-body"><?= utf8_encode($componente["content"]) ?></div>
                             </div>
                         </div>
                     </div>
@@ -234,13 +234,13 @@ $cursos = $db->getCourses();
                 <h3>Valoraciones del curso</h3>
                 <div class="card-puntaje">
                     <div class="puntaje">
-                        <h1><?= $cursos[1]["valoracion"] ?></h1>
+                        <h1><?= $cursos[0]["valoracion"] ?></h1>
                         <p>
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-incompleta.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-incompleta.png" alt="star">
                     </p>
                     </div>
                     <div class="porcentaje column">
@@ -251,11 +251,11 @@ $cursos = $db->getCourses();
                                 </div>
                             </div>
                             <div class="estrellas col-2">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
                             </div>
                         </div>
                         <div class="caja-barra-porcentaje row">
@@ -265,11 +265,11 @@ $cursos = $db->getCourses();
                                 </div>
                             </div>
                             <div class="estrellas col-2">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
                             </div>
                         </div>
                         <div class="caja-barra-porcentaje row">
@@ -279,11 +279,11 @@ $cursos = $db->getCourses();
                                 </div>
                             </div>
                             <div class="estrellas col-2">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
                             </div>
                         </div>
                         <div class="caja-barra-porcentaje row">
@@ -293,11 +293,11 @@ $cursos = $db->getCourses();
                                 </div>
                             </div>
                             <div class="estrellas col-2">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
                             </div>
                         </div>
                         <div class="caja-barra-porcentaje row">
@@ -307,11 +307,11 @@ $cursos = $db->getCourses();
                                 </div>
                             </div>
                             <div class="estrellas col-2">
-                                <img src="../images/estrella-completa.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
-                                <img src="../images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-completa.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
+                                <img src="./images/estrella-vacia.png" alt="star">
                             </div>
                         </div>
                     </div>
@@ -321,15 +321,15 @@ $cursos = $db->getCourses();
             <div class="container-valoraciones">
                 <div class="card-valoracion">
                     <div class="imagen">
-                        <img src="../images/persona.jpeg" alt="alumno">
+                        <img src="./images/persona.jpeg" alt="alumno">
                     </div>
                     <div class="informacion">
                         <h1>Alberto Paredes</h1>
-                        <div class="estrellas"><img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
+                        <div class="estrellas"><img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
                             <p>Hace 1 día</p>
                         </div>
                         <div class="valoracion">
@@ -340,16 +340,16 @@ $cursos = $db->getCourses();
                 <hr>
                 <div class="card-valoracion">
                     <div class="imagen">
-                        <img src="../images/persona.jpeg" alt="alumno">
+                        <img src="./images/persona.jpeg" alt="alumno">
                     </div>
                     <div class="informacion">
                         <h1>Cristian Sanchez</h1>
                         <div class="estrellas">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-vacia.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-vacia.png" alt="star">
                             <p>Hace 2 días</p>
                         </div>
                         <div class="valoracion">
@@ -360,15 +360,15 @@ $cursos = $db->getCourses();
                 <hr>
                 <div class="card-valoracion">
                     <div class="imagen">
-                        <img src="../images/persona.jpeg" alt="alumno">
+                        <img src="./images/persona.jpeg" alt="alumno">
                     </div>
                     <div class="informacion">
                         <h1>Laura Roldan</h1>
-                        <div class="estrellas"><img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
-                            <img src="../images/estrella-completa.png" alt="star">
+                        <div class="estrellas"><img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
+                            <img src="./images/estrella-completa.png" alt="star">
                             <p>Hace 5 días</p>
                         </div>
                         <div class="valoracion">
@@ -383,114 +383,36 @@ $cursos = $db->getCourses();
                 <hr>
                 <?php
                     foreach ($cursos as $key => $curso)
-                    if ($curso["content"] === "IT" && $curso["name"] != "Transformación Digital") { ?>
+                    if ($curso["category"] === "IT" && utf8_encode($curso["title"]) != "Transformación Digital") { ?>
+
                     <div class="card-curso">
                         <div class="imagen">
-                            <img src="../../images/cursos/<?= $curso["image"] ?>" alt="<?= $curso["name"] ?>">
+                            <img src="./images/<?= $curso["imagen"] ?>" alt="<?= utf8_encode($curso["title"]) ?>">
                         </div>
                         <div class="titulo">
-                            <p><span><?= $curso["name"] ?></span>:<br><?= $curso["content"] ?></p>
+                            <p><span><?= utf8_encode($curso["title"]) ?></span>:<br><?= utf8_encode($curso["content"]) ?></p>
                             <p><?= $curso["duracion"] ?> horas de duración total</p>
                         </div>
                         <div class="valoracion">
-                            <p><?= $curso["valoracion"] ?> <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
+                            <p><?= $curso["valoracion"] ?> <img src="./images/estrella-completa.png" alt="star" width="13px"></p>
                         </div>
                         <div class="precio">
                             <p><span class="badge">$<?= $curso["precio"] ?></span></p>
                         </div>
                         <div class="comprar-guardar">
-                            <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
-                            <p><input type="button" class="btn btn-danger addCarrito"><img src="../../images/add-cart.png" alt="agregar-al-carrito"></p>
+                            <p><input type="button" class="btn btn-success compraDirecta"><img src="./images/eye.png" alt="comprar"></p>
+                            <p><input type="button" class="btn btn-danger addCarrito"><img src="./images/add-cart.png" alt="agregar-al-carrito"></p>
                         </div>
                     </div>
                     <hr>
+
                 <?php } ?>
-                <!-- <div class="card-curso">
-                    <div class="imagen">
-                        <img src="../images/facebook-ads.png" alt="curso">
-                    </div>
-                    <div class="titulo">
-                        <p><span>Facebook Ads</span>:<br>Aprende a publicitar en la red social con más trayectoria en el mundo.</p>
-                        <p>10,2 horas de duración total</p>
-                    </div>
-                    <div class="valoracion">
-                        <p>5 <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
-                    </div>
-                    <div class="precio">
-                        <p><span class="badge">$11000</span></p>
-                    </div>
-                    <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
-                        <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="card-curso">
-                    <div class="imagen">
-                        <img src="../images/google-ads.jpeg" alt="curso">
-                    </div>
-                    <div class="titulo">
-                        <p><span>Google Ads</span>:<br>Aprende a publicitar tu negocio o tus proyectos en la empresa más reconocida y valorada del mundo.</p>
-                        <p>22,2 horas de duración total</p>
-                    </div>
-                    <div class="valoracion">
-                        <p>4,4 <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
-                    </div>
-                    <div class="precio">
-                        <p><span class="badge">$13000</span></p>
-                    </div>
-                    <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
-                        <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="card-curso">
-                    <div class="imagen">
-                        <img src="../images/curso-html.png" alt="curso">
-                    </div>
-                    <div class="titulo">
-                        <p><span>HTML</span>:<br>¿Querías aprender programación? Este es tu momento, aprende HTML, CSS y Javascript en un solo curso, de 0 a experto.</p>
-                        <p>15 horas de duración total</p>
-                    </div>
-                    <div class="valoracion">
-                        <p>4,0 <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
-                    </div>
-                    <div class="precio">
-                        <p><span class="badge">$15000</span></p>
-                    </div>
-                    <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
-                        <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="card-curso">
-                    <div class="imagen">
-                        <img src="../images/curso-office.png" alt="curso">
-                    </div>
-                    <div class="titulo">
-                        <p><span>Microsoft Office</span>:<br>Comienza a utilizar el paquete de Microsoft más famoso y eficiente para uso personal o laboral.</p>
-                        <p>31 horas de duración total</p>
-                    </div>
-                    <div class="valoracion">
-                        <p>4,8 <img src="../images/estrella-completa.png" alt="star" width="13px"></p>
-                    </div>
-                    <div class="precio">
-                        <p><span class="badge">$10000</span></p>
-                    </div>
-                    <div class="comprar-guardar">
-                        <p><input type="button" class="btn btn-success compraDirecta"><img src="../../images/eye.png" alt="comprar"></p>
-                        <p><input type="button" class="btn btn-danger addCarrito"><img src="../images/add-cart.png" alt="agregar-al-carrito"></p>
-                    </div>
-                </div>
-                <hr> -->
             </div>
         </div>
         <!-- Compra Directa -->
         <div class="right-part animate__animated animate__fadeIn">
             <div class="container-form">
-                <div class="imagen-curso"><img src="../images/transformacion-digital.jpeg" alt="transformacion-digital"></div>
+                <div class="imagen-curso"><img src="./images/transformacion-digital.jpeg" alt="transformacion-digital"></div>
                 <div class="precio">
                     <div class="actual">
                         <h1>$10000</h1>
@@ -507,12 +429,12 @@ $cursos = $db->getCourses();
                 </div>
                 <div class="informacion-extra">
                     <h5>Este curso incluye:</h5>
-                    <p><img src="../images/icono1.svg" alt="campus"> Campus virtual las 24hs</p>
-                    <p><img src="../images/icono2.svg" alt="diploma"> Certificado nacional e internacional</p>
-                    <p><img src="../images/icono3.svg" alt=""> Profesor particular para ayudarte</p>
-                    <!-- <p><img src="../images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo) -->
-                    <p><img src="../images/icono5.svg" alt="contenido-descargable"> Contenido descargable</p>
-                    <p><img src="../images/icono6.svg" alt="acceso-de-por-vida"> Acceso de por vida</p>
+                    <p><img src="./images/icono1.svg" alt="campus"> Campus virtual las 24hs</p>
+                    <p><img src="./images/icono2.svg" alt="diploma"> Certificado nacional e internacional</p>
+                    <p><img src="./images/icono3.svg" alt=""> Profesor particular para ayudarte</p>
+                    <!-- <p><img src="./images/icono4.svg" alt="diploma-iade"> Diploma avalado por nosotros</p> (Este ocultarlo) -->
+                    <p><img src="./images/icono5.svg" alt="contenido-descargable"> Contenido descargable</p>
+                    <p><img src="./images/icono6.svg" alt="acceso-de-por-vida"> Acceso de por vida</p>
                 </div>
             </div>
         </div>

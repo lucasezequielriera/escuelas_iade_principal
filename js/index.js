@@ -58,7 +58,7 @@ const containerEscuelas = document.querySelector(".container-escuelas");
 // Consts //
 const categorias = document.getElementsByClassName('categoria');
 const botonCursos = document.querySelector('.dropdown-toggle');
-const topSection = document.querySelector('.container-information-top');
+const topSection = document.querySelector('.information-top');
 const bottomSection = document.querySelector('.container-information-bottom');
 const divEscuela = document.getElementsByClassName('info-escuela');
 
@@ -67,6 +67,7 @@ for (let categoria of categorias) {
     categoria.addEventListener("mouseover", (() => {
         topSection.innerHTML = document.querySelector(`.${categoria.id}`).innerHTML
     }))
+    console.log(categoria)
 }
 
 // Add slideDown animation to Bootstrap dropdown when expanding.

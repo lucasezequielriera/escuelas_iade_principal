@@ -3,6 +3,10 @@ require "./globals/database.php";
 $db = Database::getInstance();
 // Obteniendo todos los datos del navbar //
 $navbar = $db->getSiteNavbar('all');
+// Obteniendo todas las escuelas //
+$escuelas = $db->getSiteSchools('all');
+// Obteniendo todos los cursos//
+$cursos = $db->getCourses();
 // Obteniendo datos del footer //
 $footer = $db->getSiteFooter('all');
 $footerButtons = $db->getSiteFooterButtons('all');
@@ -44,26 +48,26 @@ $componentes_institucional = $db->getSiteContent('all');
             foreach ($institucional as $info_institucional) { ?>
 
             <div class="titulo">
-                <h1 class="animate__animated animate__fadeInLeft animate__delay-1s"><?= $info_institucional["subtitle1"] ?></h1>
-                <h1 class="animate__animated animate__fadeInLeft animate__delay-1s"><?= $info_institucional["subtitle2"] ?></h1>
+                <h1 class="animate__animated animate__fadeInLeft animate__delay-1s"><?= utf8_encode($info_institucional["subtitle1"]) ?></h1>
+                <h1 class="animate__animated animate__fadeInLeft animate__delay-1s"><?= utf8_encode($info_institucional["subtitle2"]) ?></h1>
             </div>
             <div class="subtitulo text-center">
-                <h1 class="animate__animated animate__fadeIn"><?= $info_institucional["title"] ?></h1>
+                <h1 class="animate__animated animate__fadeIn"><?= utf8_encode($info_institucional["title"]) ?></h1>
             </div>
             <div class="bisubtitulo">
-                <h1 class="animate__animated animate__fadeInRight animate__delay-1s"><?= $info_institucional["subtitle3"] ?></h1>
-                <h1 class="animate__animated animate__fadeInLeft animate__delay-1s"><?= $info_institucional["subtitle4"] ?></h1>
+                <h1 class="animate__animated animate__fadeInRight animate__delay-1s"><?= utf8_encode($info_institucional["subtitle3"]) ?></h1>
+                <h1 class="animate__animated animate__fadeInLeft animate__delay-1s"><?= utf8_encode($info_institucional["subtitle4"]) ?></h1>
             </div>
 
             <?php } ?>
         </div>
         <div class="informationSection">
-            <p class="d-flex iconos">
+            <div class="d-flex iconos">
                 <?php
                 foreach ($componentes_institucional as $key => $componente) { ?>
 
                 <a type="button" class="btn btn-danger animate__animated animate__fadeIn animate__delay-1s" data-bs-toggle="modal" data-bs-target="#modal-historia<?= $key ?>">
-                    <img class="svgimg" src="./images/<?= $componente["imagen"] ?>" alt=""><?= $componente["title"] ?>
+                    <img class="svgimg" src="./images/<?= $componente['imagen'] ?>" alt=""><?= utf8_encode($componente['title']) ?>
                 </a>
 
                 <!-- Modal -->
@@ -71,15 +75,15 @@ $componentes_institucional = $db->getSiteContent('all');
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><?= $componente["subtitle"] ?></h5>
+                            <h5 class="modal-title" id="exampleModalLabel"><?= utf8_encode($componente['subtitle']) ?></h5>
                             </div>
-                            <div class="modal-body"><?= $componente["content"] ?></div>
+                            <div class="modal-body"><?= utf8_encode($componente['content']) ?></div>
                         </div>
                     </div>
                 </div>
             
                 <?php } ?>
-            </p>
+            </div>
             <div class="container-texto-flotante animate__animated animate__fadeIn animate__delay-1s">
                 <p class="texto-flotante text-center mt-5 fs-4 fw-light">Haz click para ver más información</p>
             </div>

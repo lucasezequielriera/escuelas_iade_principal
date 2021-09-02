@@ -3,6 +3,10 @@ require "./globals/database.php";
 $db = Database::getInstance();
 // Obteniendo todos los datos del navbar //
 $navbar = $db->getSiteNavbar('all');
+// Obteniendo todas las escuelas //
+$escuelas = $db->getSiteSchools('all');
+// Obteniendo todos los cursos//
+$cursos = $db->getCourses();
 // Obteniendo datos del footer //
 $footer = $db->getSiteFooter('all');
 $footerButtons = $db->getSiteFooterButtons('all');
@@ -42,10 +46,10 @@ $certificaciones = $db->getCertifications('all');
 
             <div class="certificaciones-explicadas">
                 <div class="left-part animate__animated animate__fadeInLeft">
-                    <p><?= $certificacion["descripción"] ?></p>
+                    <p><?= utf8_encode($certificacion["descripcion"]) ?></p>
                 </div>
                 <div class="right-part animate__animated animate__fadeInRight">
-                    <img src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= $certificacion["nombre"] ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 100;} else {echo 200;} ?>">
+                    <img src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= utf8_encode($certificacion["nombre"]) ?>" width="<?php if($certificacion["nombre"] === "ISO 9000" || $certificacion["nombre"] === "ISO 9002") {echo 100;} else {echo 200;} ?>">
                 </div>
             </div>
             <hr class="separacion-certificaciones">

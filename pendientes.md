@@ -92,6 +92,8 @@ HECHO:
 - 24/09/21: VER "CURSOS" EN ESCUELA.PHP
 - 24/09/21: VER COMO ARMAR EL CURSO SELECCIONADO Y SUS CARACTERÍSTICAS EN CURSO.PHP
 - 24/09/21: VER "CURSOS" EN CURSO.PHP
+- 25/09/21: Haciendo el navbar dinámico para carga de escuelas y cursos contectado con db <1/2>
+- 26/09/21: Haciendo el navbar dinámico para carga de escuelas y cursos contectado con db <2/2>
 
 POR HACER:
 

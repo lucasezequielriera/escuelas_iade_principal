@@ -73,7 +73,7 @@ class Database {
 
     //Site builder
     public function getCourses() {
-        $this->query("SELECT category, description, image, name, title, content, url_doc, nuevoCurso, certificacionInternacional, valoracion, precio, duracion FROM courses");
+        $this->query("SELECT category, description, imagen, name, title, content, url_doc, nuevoCurso, certificacionInternacional, valoracion, precio, duracion FROM courses");
         $resultset = $this->fetchAll();
         return $resultset;
     }
@@ -185,6 +185,14 @@ class Database {
         $item = $this->escapeWildcards($this->escape($item));
         if ($item === 'all') $item = '*';
         $this->query("SELECT $item FROM certificaciones");
+        $resultset = $this->fetchAll();
+        return $resultset;
+    }
+
+    public function getSiteMainInformation($item) {
+        $item = $this->escapeWildcards($this->escape($item));
+        if ($item === 'all') $item = '*';
+        $this->query("SELECT $item FROM site_main_information");
         $resultset = $this->fetchAll();
         return $resultset;
     }

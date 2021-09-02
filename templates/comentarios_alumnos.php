@@ -1,25 +1,20 @@
 <?php
-// Obteniendo datos del footer //
-$comentarios = $db->getSiteReputation('all');
-?>
-
-<?php
     foreach($comentarios as $comentario) { ?>
 
     <div class="card-valoracion">
         <div class="left-part">
-            <img src="<?= $comentario['imagen_alumno'] ?>" alt="persona" onError="this.onerror=null;this.src='./images/alumno_sin_foto.png'">
+            <img src="<?= $comentario['imagen'] ?>" alt="persona" onError="this.onerror=null;this.src='./images/alumno_sin_foto.png'">
         </div>
         <div class="right-part">
             <div class="titulo">
-                <h3><?= $comentario['nombre_alumno'] ?></h3>
+                <h3><?= utf8_encode($comentario['nombre']) ?></h3>
                 <p>
                     <!-- <img src="./images/arrowright.svg" alt="imagen"> -->
-                    <?= $comentario['curso_realizado'] ?>
+                    <?= utf8_encode($comentario['curso']) ?>
                 </p>
             </div>
             <div class="texto">
-                <p>"<?= $comentario['reseña_alumno'] ?>"</p>
+                <p>"<?= utf8_encode($comentario['review']) ?>"</p>
             </div>
         </div>
     </div>

@@ -8,8 +8,10 @@ $footer = $db->getSiteFooter('all');
 $footerButtons = $db->getSiteFooterButtons('all');
 // Obteniendo todos los datos del banner "características" //
 $bannerCaracteristicas = $db->getSiteBannerCharacteristics('all');
+// Obteniendo main//
+$main = $db->getSiteMain('all');
 // Obteniendo información del main//
-$informacionMain = $db->getSiteMain('all');
+$mainInformation = $db->getSiteMainInformation('all');
 // Obteniendo todas las certificaciones //
 $certificaciones = $db->getCertifications('all');
 // Obteniendo todas las escuelas //
@@ -18,6 +20,8 @@ $escuelas = $db->getSiteSchools('all');
 $alumnos = $db->getAlumnos('all');
 // Obteniendo todos los cursos//
 $cursos = $db->getCourses();
+// Obteniendo datos del footer //
+$comentarios = $db->getSiteReputation('all');
 ?>
 
 <!DOCTYPE html>
@@ -65,12 +69,12 @@ $cursos = $db->getCourses();
         <div class="portada">
             <div class="main-parts row">
                 <div class="col-6 text-right left-part">
-                    <?php foreach ($informacionMain as $datosMain) { ?>
-                        <h1 class="animate__animated animate__fadeIn"><?= $datosMain['main_title'] ?></h1>
-                        <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information1'] ?></p>
-                        <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information2'] ?></p>
-                        <p class="animate__animated animate__fadeInLeft"><?= $datosMain['main_information3'] ?></p>
-                        <a class="btn btn-danger px-5 fw-light" href="<?= $datosMain['main_button_link'] ?>"><?= $datosMain['main_button'] ?></a>
+                    <?php foreach ($main as $datosMain) { ?>
+                        <h1 class="animate__animated animate__fadeIn"><?= utf8_encode($datosMain['main_title']) ?></h1>
+                        <p class="animate__animated animate__fadeInLeft"><?= utf8_encode($datosMain['main_information1']) ?></p>
+                        <p class="animate__animated animate__fadeInLeft"><?= utf8_encode($datosMain['main_information2']) ?></p>
+                        <p class="animate__animated animate__fadeInLeft"><?= utf8_encode($datosMain['main_information3']) ?></p>
+                        <a class="btn btn-danger px-5 fw-light" href="<?= utf8_encode($datosMain['main_button_link']) ?>"><?= utf8_encode($datosMain['main_button']) ?></a>
                     <?php } ?>
                 </div>
                 <div class="col-6 text-left right-part">
@@ -81,11 +85,11 @@ $cursos = $db->getCourses();
 
         <div class="slider-iconos">
             <?php foreach ($certificaciones as $certificacion)
-            if ($certificacion["nombre"] != "ISO 9000" & $certificacion["nombre"] != "ISO 9002") {?>
+            if ($certificacion["nombre"] != "ISO 9000" & utf8_encode($certificacion["nombre"]) != "ISO 9002") {?>
 
             <div class="card">
                 <div class="icono">
-                    <img class="mx-5" src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= $certificacion["nombre"] ?>">
+                    <img class="mx-5" src="./images/certificaciones/<?= $certificacion["imagen"] ?>" alt="<?= utf8_encode($certificacion["nombre"]) ?>">
                 </div>
             </div>
 
@@ -101,9 +105,9 @@ $cursos = $db->getCourses();
             <div class="container-escuelas">
             <?php
             foreach ($escuelas as $escuela) { ?>
-                <a href="<?= $escuela["link"] ?>">
-                    <div class="escuela" style="background-image: url('../images/<?= $escuela["imagen"] ?>')">
-                        <p><?= $escuela["name"] ?></p>
+                <a href="<?= utf8_encode($escuela["link"]) ?>">
+                    <div class="escuela" style="background-image: url('./images/<?= $escuela["imagen"] ?>')">
+                        <p><?= utf8_encode($escuela["name"]) ?></p>
                     </div>
                 </a>
             <?php }
@@ -159,10 +163,10 @@ $cursos = $db->getCourses();
         </div>
         <div class="nuestra-informacion">
             <div class="left-part">
-                <?php foreach ($informacionMain as $datosMain) { ?>
-                    <span><?= $datosMain["mini_title"] ?></span>
-                    <h1><?= $datosMain["title_description"] ?></h1>
-                    <p class="mt-3"><?= $datosMain["main_information2"] ?></p>
+                <?php foreach ($mainInformation as $information) { ?>
+                    <span><?= utf8_encode($information["mini_title"]) ?></span>
+                    <h1><?= utf8_encode($information["title"]) ?></h1>
+                    <p class="mt-3"><?= utf8_encode($information["description"]) ?></p>
                 <?php } ?>
             </div>
             <div class="right-part">
